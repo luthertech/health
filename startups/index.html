@@ -873,38 +873,79 @@
         <div class="header-outer">
           <div class="header-container">
             <div class="logo">
-              <a href="../index.html" class="custom-logo-link" rel="home"
-                ><img
-                  width="828"
-                  height="166"
-                  src="../wp-content/uploads/2025/04/Hyper-Logo-Large-Black-Transparent-Borderless-1.png"
-                  class="custom-logo"
-                  alt="Hyper"
-                  decoding="async"
-                  fetchpriority="high"
-                  srcset="
-                    https://hyperhq.com/wp-content/uploads/2025/04/Hyper-Logo-Large-Black-Transparent-Borderless-1.png         828w,
-                    https://hyperhq.com/wp-content/uploads/2025/04/Hyper-Logo-Large-Black-Transparent-Borderless-1-300x60.png  300w,
-                    https://hyperhq.com/wp-content/uploads/2025/04/Hyper-Logo-Large-Black-Transparent-Borderless-1-768x154.png 768w
-                  "
-                  sizes="(max-width: 828px) 100vw, 828px"
-              /></a>
+              <a
+                href="../index.html"
+                class="custom-logo-link"
+                rel="home"
+                aria-current="page"
+              >
+                <picture>
+                  <!-- Mobile: for screens < 768px -->
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="../wp-content/uploads/2025/04/Logo-Mobile.svg"
+                    type="image/svg+xml"
+                  />
+                  <!-- Desktop / fallback -->
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ../wp-content/uploads/2025/04/Logo.svg         828w,
+                      ../wp-content/uploads/2025/04/Logo-768x154.svg 768w,
+                      ../wp-content/uploads/2025/04/Logo-300x60.svg  300w
+                    "
+                    type="image/svg+xml"
+                  />
+                  <!-- Fallback image -->
+                  <img
+                    class="custom-logo"
+                    width="828"
+                    height="166"
+                    src="../wp-content/uploads/2025/04/Logo.svg"
+                    alt="Logo"
+                    decoding="async"
+                    fetchpriority="high"
+                    sizes="(max-width: 828px) 100vw, 828px"
+                    style="
+                      max-width: 100%;
+                      height: auto;
+                      display: block;
+                      align-items: center;
+                    "
+                  />
+                </picture>
+              </a>
             </div>
 
+            <style>
+              .custom-logo {
+                max-width: 180px;
+                height: auto;
+              }
+
+              @media (max-width: 768px) {
+                .custom-logo {
+                  max-width: 35px !important;
+                  height: auto !important;
+                  margin-top: 6px;
+                }
+              }
+            </style>
+
             <div class="menu-links">
-              <a href="../accelerate/index.html" class="menu-item">
-                Our process
-              </a>
+              <!-- <a href="../accelerate/index.html" class="menu-item">
+              Our process
+            </a> -->
               <a href="index.html" class="menu-item active"> Portfolio </a>
               <a href="../insights/index.html" class="menu-item"> Insights </a>
-              <a
-                href="https://apollo.hyperhq.com/feed"
-                class="menu-item"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Apollo
-              </a>
+              <!-- <a
+              href="https://apollo.hyperhq.com/feed"
+              class="menu-item"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Apollo
+            </a> -->
               <a href="../start/index.html" class="menu-item cta">
                 Find out more
               </a>
@@ -949,19 +990,19 @@
         </div>
         <div class="menu-mobile">
           <div class="menu-mobile__inner">
-            <a href="../accelerate/index.html" class="menu-item">
+            <!-- <a href="../accelerate/index.html" class="menu-item">
               Our process
-            </a>
+            </a> -->
             <a href="index.html" class="menu-item active"> Portfolio </a>
             <a href="../insights/index.html" class="menu-item"> Insights </a>
-            <a
+            <!-- <a
               href="https://apollo.hyperhq.com/feed"
               class="menu-item"
               target="_blank"
               rel="noopener noreferrer"
             >
               Apollo
-            </a>
+            </a> -->
             <a href="../start/index.html" class="menu-item cta">
               Find out more
             </a>
@@ -975,7 +1016,7 @@
               <div class="banner-container banner-container--two-column">
                 <div class="banner-header column-type-image">
                   <div class="heading">
-                    <h1>Featured startups</h1>
+                    <h1>Featured Works</h1>
                   </div>
                 </div>
 
@@ -1102,6 +1143,7 @@
           </section> -->
 
           <section
+            style="padding-top: 35px; padding-bottom: 40px"
             class="section testimonials transition-top"
             data-trigger-distance="top 100%"
           >
@@ -1154,10 +1196,15 @@
                             </p>
                           </div>
                           <div class="testimonials-profile">
-                           
+                            <div class="testimonials-image-wrapper">
+                              <img
+                                src="../wp-content/uploads/2025/04/Testimonial1.png"
+                                alt="Sarah M."
+                              />
+                            </div>
                             <div class="testimonials-details">
-                              <p class="name">Tom Brown</p>
-                              <p class="company">Beny</p>
+                              <p class="name">Sarah M.</p>
+                              <p class="company">Opine</p>
                             </div>
                           </div>
                         </div>
@@ -1208,10 +1255,15 @@
                             </p>
                           </div>
                           <div class="testimonials-profile">
-                           
+                            <div class="testimonials-image-wrapper">
+                              <img
+                                src="../wp-content/uploads/2025/04/Testimonial2.png"
+                                alt="Gabriel M."
+                              />
+                            </div>
                             <div class="testimonials-details">
-                              <p class="name">Ash Brown</p>
-                              <p class="company">Empiraa</p>
+                              <p class="name">Gabriel M.</p>
+                              <p class="company">Enigma</p>
                             </div>
                           </div>
                         </div>
@@ -1262,10 +1314,15 @@
                             </p>
                           </div>
                           <div class="testimonials-profile">
-                           
+                            <div class="testimonials-image-wrapper">
+                              <img
+                                src="../wp-content/uploads/2025/04/Testimonial3.png"
+                                alt="Hadley S."
+                              />
+                            </div>
                             <div class="testimonials-details">
-                              <p class="name">Mark Sellar</p>
-                              <p class="company">Kubo</p>
+                              <p class="name">Hadley S.</p>
+                              <p class="company">Reply</p>
                             </div>
                           </div>
                         </div>
@@ -1275,20 +1332,54 @@
                   <div class="swiper-pagination"></div>
                 </div>
 
-                <div class="testimonials-cta">
-                  <p>
-                    See our other 200+ reviews on our
-                    <a
-                      href="https://www.facebook.com/hyperhq/reviews"
-                      target="_blank"
-                      >Facebook page</a
-                    >
-                  </p>
-                </div>
+                <!-- <div
+                  class="testimonials-cta"
+                  style="
+                    margin-top: -45px;
+                    text-align: center; 
+                    text-decoration: underline;
+                  "
+                >
+                  Enhance your clinic’s digital presence and start attracting
+                  more patients today
+                </div> -->
 
+                <script>
+                  (function () {
+                    const cta = document.querySelector(".testimonials-cta");
+                    function adjustCta() {
+                      if (window.innerWidth < 768) {
+                        cta.style.marginTop = "-25px";
+                        cta.style.textAlign = "center";
+                      } else {
+                        cta.style.marginTop = "-45px";
+                        cta.style.textAlign = "left";
+                      }
+                    }
+                    window.addEventListener("resize", adjustCta);
+                    adjustCta();
+                  })();
+                </script>
               </div>
             </div>
           </section>
+
+          <script>
+            (function () {
+              const testimonialsSection = document.querySelector(
+                ".section.testimonials"
+              );
+              function adjustPadding() {
+                if (window.innerWidth < 768) {
+                  testimonialsSection.style.paddingTop = "0px";
+                } else {
+                  testimonialsSection.style.paddingTop = "35px";
+                }
+              }
+              window.addEventListener("resize", adjustPadding);
+              adjustPadding();
+            })();
+          </script>
 
           <section class="section startups">
             <div class="startups-outer">
@@ -1297,7 +1388,11 @@
                   <div class="startups-item transition-top">
                     <div class="item-content">
                       <div class="content-header">
-                        <h2><a href="moorfields-eye-hospital/index.html">Moorfields Eye Hospital</a></h2>
+                        <h2>
+                          <a href="moorfields-eye-hospital/index.html"
+                            >Moorfields Eye Hospital</a
+                          >
+                        </h2>
                         <div class="content-chips">
                           <p class="status" style="background-color: #e4ece8">
                             Status: <span>Delivered</span>
@@ -1309,7 +1404,11 @@
                         <div class="body-main">
                           <!-- <p class="type">Founder Story:</p> -->
                           <p class="quote">
-                            As part of the Wallace Health Studio we engaged Moorfields Eye Hospital, producing banner ads, MPU units and website graphics to communicate important healthcare information to patients, while ensuring the visuals aligned with the hospital’s brand.
+                            As part of the Wallace Health Studio we engaged
+                            Moorfields Eye Hospital, producing banner ads, MPU
+                            units and website graphics to communicate important
+                            healthcare information to patients, while ensuring
+                            the visuals aligned with the hospital’s brand.
                           </p>
                         </div>
                         <!--                                         <a class="website" href="https://splend.com.au" target="_blank" rel="noopener noreferrer">
@@ -1354,7 +1453,11 @@
                       <div class="content-body">
                         <div class="body-main">
                           <p class="quote">
-                            As an outsourced marketing studio to Publicis, we supported the Diprobase campaign in collaboration with lead creative. We delivered 3D product pack graphics, typography and design helping the brand communicate clearly and engage patients.
+                            As an outsourced marketing studio to Publicis, we
+                            supported the Diprobase campaign in collaboration
+                            with lead creative. We delivered 3D product pack
+                            graphics, typography and design helping the brand
+                            communicate clearly and engage patients.
                           </p>
                         </div>
                         <!--                                         <a class="website" href="https://app.ambl.co" target="_blank" rel="noopener noreferrer">
@@ -1440,7 +1543,9 @@
                   <div class="startups-item transition-top">
                     <div class="item-content">
                       <div class="content-header">
-                        <h2><a href="astraZeneca/index.html">AstraZeneca</a></h2>
+                        <h2>
+                          <a href="astraZeneca/index.html">AstraZeneca</a>
+                        </h2>
                         <div class="content-chips">
                           <p class="status" style="background-color: #e4ece8">
                             Status: <span>Delivered</span>
@@ -1451,7 +1556,12 @@
                       <div class="content-body">
                         <div class="body-main">
                           <p class="quote">
-                            In collaboration with Thinking Juice we created the AstraZeneca Thrive platform for healthcare professionals and investors. We delivered high fidelity design making complex information clear and engaging, helping the brand connect with its audience.
+                            In collaboration with Thinking Juice we created the
+                            AstraZeneca Thrive platform for healthcare
+                            professionals and investors. We delivered high
+                            fidelity design making complex information clear and
+                            engaging, helping the brand connect with its
+                            audience.
                           </p>
                         </div>
                         <!--                                         <a class="website" href="https://empiraa.com" target="_blank" rel="noopener noreferrer">
@@ -1529,7 +1639,7 @@
                     <div class="item-featured-image">
                       <a href="astraZeneca/index.html"
                         ><img
-                          src="../wp-content/uploads/2025/04/Showcasing-product-design%402x.jpg"
+                          src="../wp-content/uploads/2025/04/AstraZeneca_CS_0.png"
                           alt="Empiraa"
                       /></a>
                     </div>
@@ -1537,7 +1647,11 @@
                   <div class="startups-item transition-top">
                     <div class="item-content">
                       <div class="content-header">
-                        <h2><a href="alliance-medical/index.html">Alliance Medical</a></h2>
+                        <h2>
+                          <a href="alliance-medical/index.html"
+                            >Alliance Medical</a
+                          >
+                        </h2>
                         <div class="content-chips">
                           <p class="status" style="background-color: #e4ece8">
                             Status: <span>Delivered</span>
@@ -1548,7 +1662,11 @@
                       <div class="content-body">
                         <div class="body-main">
                           <p class="quote">
-                            As part of the Wallace Health Studio we delivered graphics, advertising, and design for Alliance Medical’s brochures and web marketing collateral. We created clear, engaging visuals that strengthened the brand and helped communicate effectively.
+                            As part of the Wallace Health Studio we delivered
+                            graphics, advertising, and design for Alliance
+                            Medical’s brochures and web marketing collateral. We
+                            created clear, engaging visuals that strengthened
+                            the brand and helped communicate effectively.
                           </p>
                         </div>
                         <!--                                         <a class="website" href="https://beny.com.au" target="_blank" rel="noopener noreferrer">
@@ -1635,7 +1753,7 @@
                     <div class="item-content">
                       <div class="content-header">
                         <h2>
-                          <a href="adelphi/index.html">Adelphi</a>
+                          <a href="neuro-compass/index.html">Neuro-Compass</a>
                         </h2>
                         <div class="content-chips">
                           <p class="status" style="background-color: #e4ece8">
@@ -1647,7 +1765,12 @@
                       <div class="content-body">
                         <div class="body-main">
                           <p class="quote">
-                            Engineered creative assets for Adelphi’s Neuro-Compass app for healthcare professionals supporting people with multiple sclerosis. We crafted visuals that made complex information clear and accessible, while reinforcing the brand’s professional identity.
+                            Engineered creative assets for Adelphi’s
+                            Neuro-Compass app for healthcare professionals
+                            supporting people with multiple sclerosis. We
+                            crafted visuals that made complex information clear
+                            and accessible, while reinforcing the brand’s
+                            professional identity.
                           </p>
                         </div>
                         <!--                                         <a class="website" href="https://pitchbook.com/profiles/company/496282-42" target="_blank" rel="noopener noreferrer">
@@ -1723,9 +1846,9 @@
                       </div> -->
                     </div>
                     <div class="item-featured-image">
-                      <a href="adelphi/index.html"
+                      <a href="neuro-compass/index.html"
                         ><img
-                          src="../wp-content/uploads/2025/05/Magic-Mountain-Featured-Image-2.jpg"
+                          src="../wp-content/uploads/2025/04/Neuro-Compass_CS_0.png"
                           alt="Magic Mountain"
                       /></a>
                     </div>
@@ -1744,7 +1867,11 @@
                       <div class="content-body">
                         <div class="body-main">
                           <p class="quote">
-                            Designed web and online marketing assets for Orla Healthcare, focused on reaching patients directly. We crafted visuals and content that made information clear and engaging, strengthening the brand’s professional and approachable identity.
+                            Designed web and online marketing assets for Orla
+                            Healthcare, focused on reaching patients directly.
+                            We crafted visuals and content that made information
+                            clear and engaging, strengthening the brand’s
+                            professional and approachable identity.
                           </p>
                         </div>
                         <!--                                         <a class="website" href="https://bndle.com" target="_blank" rel="noopener noreferrer">
@@ -1822,7 +1949,7 @@
                     <div class="item-featured-image">
                       <a href="orla/index.html"
                         ><img
-                            src="../wp-content/uploads/2025/05/Magic-Mountain-Featured-Image-2.jpg"
+                          src="../wp-content/uploads/2025/04/Orla_CS_0.png"
                           alt="Bndle"
                       /></a>
                     </div>
@@ -1841,7 +1968,11 @@
                       <div class="content-body">
                         <div class="body-main">
                           <p class="quote">
-                            Created digital design and marketing assets for Avenna, a personalised precision medicine company for inflammatory diseases. We crafted visuals and content that made complex information clear and engaging.
+                            Created digital design and marketing assets for
+                            Avenna, a personalised precision medicine company
+                            for inflammatory diseases. We crafted visuals and
+                            content that made complex information clear and
+                            engaging.
                           </p>
                         </div>
                         <!--                                         <a class="website" href="https://strabo.app" target="_blank" rel="noopener noreferrer">
@@ -2123,31 +2254,22 @@
           <section class="section prefooter transition-top">
             <div class="prefooter-outer">
               <div class="prefooter-container">
-                <h2>
-                  Become the entrepreneur you&#039;ve always wanted to be.
-                </h2>
+                <h2>Let’s grow your clinic together</h2>
                 <a href="../start/index.html">
                   <span>Book a confidential session with a strategist</span>
                   <svg
-                    class="orange"
                     width="42"
                     height="42"
                     viewBox="0 0 42 42"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <rect
-                      class="rect"
-                      width="42"
-                      height="42"
-                      rx="21"
-                      fill="#FA8A4B"
-                    />
+                    <rect width="42" height="42" rx="21" fill="#6CE057" />
                     <path
                       fill-rule="evenodd"
                       clip-rule="evenodd"
                       d="M26.9932 16.0488C26.9932 15.4998 26.5493 15.0528 25.9993 15.0498L18.0062 14.9998H18.0003C17.4503 14.9998 17.0043 15.4438 17.0003 15.9938C16.9963 16.5458 17.4413 16.9968 17.9943 16.9998L23.5522 17.0348L15.2932 25.2928C14.9022 25.6838 14.9022 26.3168 15.2932 26.7068C15.4882 26.9028 15.7442 26.9998 16.0002 26.9998C16.2563 26.9998 16.5122 26.9028 16.7072 26.7068L24.9952 18.4188L25.0002 24.0008C25.0002 24.5528 25.4482 24.9998 26.0002 24.9998H26.0013C26.5533 24.9998 27.0002 24.5508 27.0002 23.9988L26.9932 16.0488Z"
-                      fill="#231F20"
+                      fill="#6CE057"
                     />
                     <mask
                       id="mask0_1515_22608"
@@ -2179,7 +2301,11 @@
               <div class="footer-container">
                 <div class="footer-main">
                   <div class="footer-left">
-                    <div class="footer-company">
+                    <div
+                      style="margin-bottom: 30px"
+                      class="footer-company"
+                      id="footerCompany"
+                    >
                       <div class="logo">
                         <a
                           href="../index.html"
@@ -2188,25 +2314,40 @@
                           ><img
                             width="828"
                             height="166"
-                            src="../wp-content/uploads/2025/04/Hyper-Logo-Large-Black-Transparent-Borderless-1.png"
-                            class="custom-logo"
+                            src="../wp-content/uploads/2025/04/Logo-Mobile.svg"
+                            class="custom-logo-footer"
                             alt="Hyper"
                             decoding="async"
                             srcset="
-                              https://hyperhq.com/wp-content/uploads/2025/04/Hyper-Logo-Large-Black-Transparent-Borderless-1.png         828w,
-                              https://hyperhq.com/wp-content/uploads/2025/04/Hyper-Logo-Large-Black-Transparent-Borderless-1-300x60.png  300w,
-                              https://hyperhq.com/wp-content/uploads/2025/04/Hyper-Logo-Large-Black-Transparent-Borderless-1-768x154.png 768w
+                              ../wp-content/uploads/2025/04/Logo-Mobile.svg         828w,
+                              ../wp-content/uploads/2025/04/Logo-Mobile-300x60.svg  300w,
+                              ../wp-content/uploads/2025/04/Logo-Mobile-768x154.svg 768w
                             "
                             sizes="(max-width: 828px) 100vw, 828px"
                         /></a>
                       </div>
                       <p>
-                        <a href="mailto:team@hyperhq.com">team@hyperhq.com</a>
+                        <a href="mailto:jj@luther.tech">jj@luther.tech</a>
                       </p>
                     </div>
 
+                    <style>
+                      .custom-logo-footer {
+                        max-width: 30px;
+                        height: auto;
+                      }
+
+                      @media (max-width: 768px) {
+                        .custom-logo-footer {
+                          max-width: 35px !important;
+                          height: auto !important;
+                          margin-top: 6px;
+                        }
+                      }
+                    </style>
+
                     <div class="social-links">
-                      <a
+                      <!-- <a
                         href="https://www.facebook.com/hyperhq"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2224,7 +2365,7 @@
                             fill="#0B0D0F"
                           ></path>
                         </svg>
-                      </a>
+                      </a> -->
                       <a
                         href="https://www.instagram.com/teamhyper/"
                         target="_blank"
@@ -2290,48 +2431,13 @@
                   </div>
 
                   <div class="footer-links">
-                    <div class="footer-column">
+                    <div
+                      id="footerColumn"
+                      style="margin-bottom: 30px"
+                      class="footer-column"
+                    >
                       <h4>Company</h4>
                       <ul>
-                        <li>
-                          <a href="../accelerate/index.html"
-                            >The Accelerate Process</a
-                          >
-                        </li>
-                        <li>
-                          <a href="index.html">Our portfolio of startups</a>
-                        </li>
-                        <li>
-                          <a href="https://apollo.hyperhq.com/feed"
-                            >Apollo community</a
-                          >
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="footer-column">
-                      <h4>Resources</h4>
-                      <ul>
-                        <li>
-                          <a href="../insights/index.html"
-                            >Insights from our team</a
-                          >
-                        </li>
-                        <li>
-                          <a href="https://apollo.hyperhq.com/c/weekly-events"
-                            >Free events for founders</a
-                          >
-                        </li>
-                        <li>
-                          <a href="../start/index.html"
-                            >Get started with Hyper</a
-                          >
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="footer-column">
-                      <h4>Help</h4>
-                      <ul>
-                        <li><a href="../contact/index.html">Contact Us</a></li>
                         <li>
                           <a href="../privacy-policy/index.html"
                             >Privacy Policy</a
@@ -2344,21 +2450,78 @@
                         </li>
                       </ul>
                     </div>
+                    <div
+                      id="footerColumn"
+                      style="margin-bottom: 30px"
+                      class="footer-column"
+                    >
+                      <h4>Resources</h4>
+                      <ul>
+                        <li>
+                          <a href="../insights/index.html"
+                            >Insights from our team</a
+                          >
+                        </li>
+                        <li>
+                          <a href="https://apollo.hyperhq.com/c/weekly-events"
+                            >Free events for clinic owners</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                    <div
+                      id="footerColumn"
+                      style="margin-bottom: 30px"
+                      class="footer-column"
+                    >
+                      <h4>Help</h4>
+                      <ul>
+                        <li>
+                          <a href="../contact/index.html">Contact Us</a>
+                        </li>
+                        <li>
+                          <a style="font-weight: 500" href="tel:+442080045580"
+                            >+44 20 8004 5580</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
 
+                <script>
+                  (function () {
+                    if (window.innerWidth <= 768) {
+                      document.getElementById(
+                        "footerCompany"
+                      ).style.marginBottom = "30px";
+                    }
+                  })();
+                </script>
+
+                <script>
+                  (function () {
+                    if (window.innerWidth <= 768) {
+                      document.getElementById(
+                        "footerColumn"
+                      ).style.marginBottom = "30px";
+                    }
+                  })();
+                </script>
+
                 <div class="footer-bottom">
                   <div class="site-details">
-                    <p class="site">Hyper Startup Studio</p>
+                    <p class="site">Luther Tech Ltd</p>
                     <p class="rights">All rights reserved 2025</p>
                   </div>
-
+                  <!-- 
                   <div class="business-details">
                     <p class="abn">
-                      Australian ABN is 51 607 921 648<br />
-                      United Kingdom CRN is 11317088
+                      First Floor Office, 3 Hornton Place, London, United
+                      Kingdom, W8 4LZ<br />
+                      Company registration number 10216070
                     </p>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
