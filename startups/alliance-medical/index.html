@@ -1418,6 +1418,11 @@
                     >
                       Request now
                     </button>
+
+                    <div
+                      id="form_message"
+                      style="margin-top: 15px; font-weight: 500; color: #00d084"
+                    ></div>
                   </form>
                 </div>
               </div>
@@ -1428,6 +1433,9 @@
             const form = document.getElementById("intro-request-form");
             const nameInput = document.getElementById("full_name");
             const emailInput = document.getElementById("email");
+            const phoneInput = document.getElementById("phone_number");
+            const submitBtn = document.getElementById("submit_button");
+            const formMessage = document.getElementById("form_message");
 
             const fields = {
               full_name: {
@@ -1447,20 +1455,34 @@
                   value.trim() !== "" &&
                   /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim()),
               },
+              phone_number: {
+                input: phoneInput,
+                item: document.getElementById("phone_item"),
+                errors: [
+                  document.getElementById("phone_error"),
+                  document.getElementById("phone_number_format_error"),
+                ],
+                validate: (value) => /^[0-9+\-\s]{8,15}$/.test(value.trim()),
+              },
             };
 
-            function validateField(fieldKey) {
-              const field = fields[fieldKey];
+            function validateField(key) {
+              const field = fields[key];
               const value = field.input.value.trim();
               const isValid = field.validate(value);
 
               field.item.classList.toggle("input-error", !isValid);
               field.errors.forEach((errorEl, i) => {
-                if (fieldKey === "email" && i === 1) {
-                  errorEl.style.display =
-                    !value || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
-                      ? "none"
-                      : "block";
+                if (key === "email" && i === 1) {
+                  errorEl.style.display = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(
+                    value
+                  )
+                    ? "none"
+                    : "block";
+                } else if (key === "phone_number" && i === 1) {
+                  errorEl.style.display = /^[0-9+\-\s]{8,15}$/.test(value)
+                    ? "none"
+                    : "block";
                 } else {
                   errorEl.style.display = value ? "none" : "block";
                 }
@@ -1475,28 +1497,58 @@
               );
             });
 
-            document
-              .getElementById("submit_button")
-              .addEventListener("click", () => {
-                const startup = form.getAttribute("data-startup");
-                const name = nameInput.value.trim();
-                const email = emailInput.value.trim();
+            submitBtn.addEventListener("click", async () => {
+              const isNameValid = validateField("full_name");
+              const isEmailValid = validateField("email");
+              const isPhoneValid = validateField("phone_number");
 
-                const isNameValid = validateField("full_name");
-                const isEmailValid = validateField("email");
+              if (!isNameValid || !isEmailValid || !isPhoneValid) return;
 
-                if (isNameValid && isEmailValid) {
-                  const url = new URL(
-                    "https://gethyper.typeform.com/founder-intro"
-                  );
-                  url.hash = `startup=${encodeURIComponent(
-                    startup
-                  )}&name=${encodeURIComponent(
-                    name
-                  )}&email=${encodeURIComponent(email)}`;
-                  window.open(url.toString(), "_blank");
+              const formData = {
+                to: "jj@luther.tech",
+                subject: "New Callback Request",
+                html: `
+        <h2>New Callback Request</h2>
+        <p><strong>Name:</strong> ${nameInput.value.trim()}</p>
+        <p><strong>Email:</strong> ${emailInput.value.trim()}</p>
+        <p><strong>Phone:</strong> ${phoneInput.value.trim()}</p>
+      `,
+              };
+
+              try {
+                const response = await fetch(
+                  "https://luther-tech-health-pdmd.vercel.app/send-email",
+                  {
+                    method: "POST",
+                    headers: {
+                      "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(formData),
+                  }
+                );
+
+                const result = await response.json();
+
+                if (response.ok) {
+                  formMessage.textContent =
+                    "Your request has been sent successfully!";
+                  formMessage.style.color = "green";
+                  nameInput.value = "";
+                  emailInput.value = "";
+                  phoneInput.value = "";
+                } else {
+                  formMessage.textContent =
+                    "Failed to send request: " +
+                    (result.error || "Unknown error");
+                  formMessage.style.color = "red";
                 }
-              });
+              } catch (error) {
+                console.error("Error sending request:", error);
+                formMessage.textContent =
+                  "Something went wrong. Please try again later.";
+                formMessage.style.color = "red";
+              }
+            });
           </script>
 
           <footer>
