@@ -44,7 +44,7 @@
       window.userCountry = userCountry;
     </script>
 
-    <title>Magic Mountain &#x2d; Hyper Startup Studio</title>
+    <title>Moorfields Eye Hospital &#x2d; Luther Tech</title>
     <style>
       img:is([sizes="auto" i], [sizes^="auto," i]) {
         contain-intrinsic-size: 3000px 1500px;
@@ -63,8 +63,8 @@
     />
     <meta property="og:type" content="article" />
     <meta property="og:locale" content="en_US" />
-    <meta property="og:site_name" content="Hyper Startup Studio" />
-    <meta property="og:title" content="Magic Mountain" />
+    <meta property="og:site_name" content="Luther Tech" />
+    <meta property="og:title" content="Moorfields Eye Hospital" />
     <meta
       property="og:description"
       content="Adam&rsquo;s Journey with Hyper &ldquo;The biggest challenge I faced before joining Hyper was that we knew we wanted to solve a globally scalable problem, but we simply didn&rsquo;t know how to approach it."
@@ -892,39 +892,76 @@
                 class="custom-logo-link"
                 rel="home"
                 aria-current="page"
-                ><img
-                  width="828"
-                  height="166"
-                  src="../../wp-content/uploads/2025/04/Logo.svg"
-                  class="custom-logo"
-                  alt="Logo"
-                  decoding="async"
-                  fetchpriority="high"
-                  srcset="
-                    ../../wp-content/uploads/2025/04/Logo.svg         828w,
-                    ../../wp-content/uploads/2025/04/Logo-300x60.svg  300w,
-                    ../../wp-content/uploads/2025/04/Logo-768x154.svg 768w
-                  "
-                  sizes="(max-width: 828px) 100vw, 828px"
-              /></a>
+              >
+                <picture>
+                  <!-- Mobile: for screens < 768px -->
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="../../wp-content/uploads/2025/04/Logo-Mobile.svg"
+                    type="image/svg+xml"
+                  />
+                  <!-- Desktop / fallback -->
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ../../wp-content/uploads/2025/04/Logo.svg         828w,
+                      ../../wp-content/uploads/2025/04/Logo-768x154.svg 768w,
+                      ../../wp-content/uploads/2025/04/Logo-300x60.svg  300w
+                    "
+                    type="image/svg+xml"
+                  />
+                  <!-- Fallback image -->
+                  <img
+                    class="custom-logo"
+                    width="828"
+                    height="166"
+                    src="../../wp-content/uploads/2025/04/Logo.svg"
+                    alt="Logo"
+                    decoding="async"
+                    fetchpriority="high"
+                    sizes="(max-width: 828px) 100vw, 828px"
+                    style="
+                      max-width: 100%;
+                      height: auto;
+                      display: block;
+                      align-items: center;
+                    "
+                  />
+                </picture>
+              </a>
             </div>
 
+            <style>
+              .custom-logo {
+                max-width: 180px;
+                height: auto;
+              }
+
+              @media (max-width: 768px) {
+                .custom-logo {
+                  max-width: 35px !important;
+                  height: auto !important;
+                  margin-top: 6px;
+                }
+              }
+            </style>
+
             <div class="menu-links">
-              <a href="../../accelerate/index.html" class="menu-item">
-                Our process
-              </a>
+              <!-- <a href="../../accelerate/index.html" class="menu-item">
+              Our process
+            </a> -->
               <a href="../index.html" class="menu-item active"> Portfolio </a>
               <a href="../../insights/index.html" class="menu-item">
                 Insights
               </a>
-              <a
-                href="https://apollo.hyperhq.com/feed"
-                class="menu-item"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Apollo
-              </a>
+              <!-- <a
+              href="https://apollo.hyperhq.com/feed"
+              class="menu-item"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Apollo
+            </a> -->
               <a href="../../start/index.html" class="menu-item cta">
                 Find out more
               </a>
@@ -969,19 +1006,19 @@
         </div>
         <div class="menu-mobile">
           <div class="menu-mobile__inner">
-            <a href="../../accelerate/index.html" class="menu-item">
+            <!-- <a href="../../accelerate/index.html" class="menu-item">
               Our process
-            </a>
+            </a> -->
             <a href="../index.html" class="menu-item active"> Portfolio </a>
             <a href="../../insights/index.html" class="menu-item"> Insights </a>
-            <a
+            <!-- <a
               href="https://apollo.hyperhq.com/feed"
               class="menu-item"
               target="_blank"
               rel="noopener noreferrer"
             >
               Apollo
-            </a>
+            </a> -->
             <a href="../../start/index.html" class="menu-item cta">
               Find out more
             </a>
@@ -993,7 +1030,7 @@
           <section class="section startup-breadcrumbs transition-top">
             <div class="startup-breadcrumbs-outer">
               <div class="startup-breadcrumbs-container">
-                <a href="/index.html"> Home </a>
+                <a href="../index.html"> Our startups </a>
                 <svg
                   width="32"
                   height="32"
@@ -1018,7 +1055,7 @@
               <div class="startup-banner-container">
                 <div class="banner-image-wrapper">
                   <img
-                    src="../../wp-content/uploads/2025/04/MoorfieldEyeHospital.png"
+                    src="../../wp-content/uploads/2025/04/Moorfields_CS_1.png"
                     alt=""
                   />
                 </div>
@@ -1063,33 +1100,10 @@
                     <div class="main-content-header">
                       <h1>Moorfields Eye Hospital</h1>
                       <div class="details">
-                        <p
-                          style="
-                            font-family: Outfit;
-                            font-weight: 600;
-                            font-style: SemiBold;
-                            font-size: 20px;
-                            line-height: 24px;
-                            letter-spacing: 0%;
-                            background-color: #e4ece8;
-                          "
-                          class="status"
-                        >
-                          Status: <span> Delivered</span>
+                        <p class="status" style="background-color: #e4ece8">
+                          Status: <span>Delivered</span>
                         </p>
-                        <p
-                          style="
-                            font-family: Outfit;
-                            font-weight: 600;
-                            font-style: SemiBold;
-                            font-size: 20px;
-                            line-height: 24px;
-                            letter-spacing: 0%;
-                          "
-                          class="info"
-                        >
-                          National
-                        </p>
+                        <p class="info">National</p>
                       </div>
                     </div>
                     <div class="main-content-body">
@@ -1133,19 +1147,31 @@
                         height: 600px;
                         position: relative;
                         overflow: hidden;
+                        text-align: center;
                       "
                     >
                       <img
-                        src="../../wp-content/uploads/2025/04/Moorfields_Section.png"
+                        id="sidebar-image"
+                        src="../../wp-content/uploads/2025/04/Moorfields_CS_2.png"
                         alt=""
-                        style="
-                          width: 100%;
-                          height: 100%;
-                          object-fit: cover;
-                          display: block;
-                        "
+                        style="width: 100%; height: 100%"
                       />
                     </div>
+
+                    <style>
+                      @media (max-width: 768px) {
+                        #sidebar-image-wrapper {
+                          height: auto !important;
+                        }
+                        #sidebar-image {
+                          width: 50% !important;
+                          height: auto !important;
+                          display: block;
+                          margin: 0 auto;
+                          object-fit: contain;
+                        }
+                      }
+                    </style>
 
                     <script>
                       if (window.innerWidth <= 768) {
@@ -1160,37 +1186,42 @@
                     </script>
 
                     <a
+                      class="cta-mobile"
                       style="
                         border: 1px solid #152e40;
-                        width: 464px;
-                        height: 76.34px;
-                        opacity: 1;
-                        border-radius: 122px;
                         display: flex;
-                        align-items: center;
                         justify-content: center;
-                        text-decoration: none;
+                        align-items: center;
+                        gap: 0.75em;
+                        background-color: #fff;
+                        border-radius: 3.75em;
+                        font-weight: 500;
+                        line-height: 2.0625em;
+                        letter-spacing: 0.4px;
+                        padding: 0.75em;
+                        width: 416px;
+                        text-align: center;
                       "
                       href="../../start/index.html"
                     >
-                      <span style="margin-right: 10px; font-weight: 600"
-                        >Book a confidential session with a strategist</span
+                      <span
+                        style="
+                          margin-right: 0;
+                          font-weight: 500;
+                          flex: 1;
+                          text-align: center;
+                        "
                       >
+                        Book a confidential session with a strategist
+                      </span>
                       <svg
-                        class="#6CE057"
                         width="42"
                         height="42"
                         viewBox="0 0 42 42"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
                       >
-                        <rect
-                          class="rect"
-                          width="42"
-                          height="42"
-                          rx="21"
-                          fill="#6CE057"
-                        />
+                        <rect width="42" height="42" rx="21" fill="#6CE057" />
                         <path
                           fill-rule="evenodd"
                           clip-rule="evenodd"
@@ -1224,6 +1255,21 @@
                         </g>
                       </svg>
                     </a>
+
+                    <style>
+                      @media (max-width: 768px) {
+                        .cta-mobile {
+                          width: 100% !important;
+                          line-height: 1.25em !important;
+                          letter-spacing: 0.4px !important;
+                          justify-content: center !important;
+                          padding: 0.75em 1em !important;
+                        }
+                        .cta-mobile span {
+                          flex: unset !important;
+                        }
+                      }
+                    </style>
                   </div>
                 </div>
               </div>
@@ -1339,7 +1385,7 @@
                   Whether you’d like to discuss a partnership, propose a copy
                   change or simply find out more information, we will facilitate
                   a warm introduction for you. Simply enter your information
-                  below and we will action this within 48 business hours.
+                  below and we will call you within 48 business hours.
                 </p>
 
                 <div class="startup-intro-form">
@@ -1417,6 +1463,7 @@
             const form = document.getElementById("intro-request-form");
             const nameInput = document.getElementById("full_name");
             const emailInput = document.getElementById("email");
+            const phoneInput = document.getElementById("phone_number");
 
             const fields = {
               full_name: {
@@ -1435,6 +1482,15 @@
                 validate: (value) =>
                   value.trim() !== "" &&
                   /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim()),
+              },
+              phone_number: {
+                input: phoneInput,
+                item: document.getElementById("phone_item"),
+                errors: [
+                  document.getElementById("phone_error"),
+                  document.getElementById("phone_number_format_error"),
+                ],
+                validate: (value) => /^[0-9+\-\s]{8,15}$/.test(value.trim()),
               },
             };
 
@@ -1467,14 +1523,11 @@
             document
               .getElementById("submit_button")
               .addEventListener("click", () => {
-                const startup = form.getAttribute("data-startup");
-                const name = nameInput.value.trim();
-                const email = emailInput.value.trim();
-
                 const isNameValid = validateField("full_name");
                 const isEmailValid = validateField("email");
+                const isPhoneValid = validateField("phone_number");
 
-                if (isNameValid && isEmailValid) {
+                if (isNameValid && isEmailValid && isPhoneValid) {
                   const url = new URL(
                     "https://gethyper.typeform.com/founder-intro"
                   );
@@ -1493,7 +1546,11 @@
               <div class="footer-container">
                 <div class="footer-main">
                   <div class="footer-left">
-                    <div class="footer-company">
+                    <div
+                      style="margin-bottom: 30px"
+                      class="footer-company"
+                      id="footerCompany"
+                    >
                       <div class="logo">
                         <a
                           href="../../index.html"
@@ -1502,14 +1559,14 @@
                           ><img
                             width="828"
                             height="166"
-                            src="../../wp-content/uploads/2025/04/Logo.svg"
-                            class="custom-logo"
+                            src="../../wp-content/uploads/2025/04/Logo-Mobile.svg"
+                            class="custom-logo-footer"
                             alt="Hyper"
                             decoding="async"
                             srcset="
-                              ../../wp-content/uploads/2025/04/Logo.svg         828w,
-                              ../../wp-content/uploads/2025/04/Logo-300x60.svg  300w,
-                              ../../wp-content/uploads/2025/04/Logo-768x154.svg 768w
+                              ../../wp-content/uploads/2025/04/Logo-Mobile.svg         828w,
+                              ../../wp-content/uploads/2025/04/Logo-Mobile-300x60.svg  300w,
+                              ../../wp-content/uploads/2025/04/Logo-Mobile-768x154.svg 768w
                             "
                             sizes="(max-width: 828px) 100vw, 828px"
                         /></a>
@@ -1519,8 +1576,23 @@
                       </p>
                     </div>
 
+                    <style>
+                      .custom-logo-footer {
+                        max-width: 30px;
+                        height: auto;
+                      }
+
+                      @media (max-width: 768px) {
+                        .custom-logo-footer {
+                          max-width: 35px !important;
+                          height: auto !important;
+                          margin-top: 6px;
+                        }
+                      }
+                    </style>
+
                     <div class="social-links">
-                      <a
+                      <!-- <a
                         href="https://www.facebook.com/hyperhq"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1538,7 +1610,7 @@
                             fill="#0B0D0F"
                           ></path>
                         </svg>
-                      </a>
+                      </a> -->
                       <a
                         href="https://www.instagram.com/teamhyper/"
                         target="_blank"
@@ -1604,52 +1676,13 @@
                   </div>
 
                   <div class="footer-links">
-                    <div class="footer-column">
+                    <div
+                      id="footerColumn"
+                      style="margin-bottom: 30px"
+                      class="footer-column"
+                    >
                       <h4>Company</h4>
                       <ul>
-                        <li>
-                          <a href="../../accelerate/index.html"
-                            >The Accelerate Process</a
-                          >
-                        </li>
-                        <li>
-                          <a href="../../accelerate/index.html"
-                            >The Accelerate Process</a
-                          >
-                        </li>
-                        <li>
-                          <a href="../../accelerate/index.html"
-                            >The Accelerate Process</a
-                          >
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="footer-column">
-                      <h4>Resources</h4>
-                      <ul>
-                        <li>
-                          <a href="../../insights/index.html"
-                            >Insights from our team</a
-                          >
-                        </li>
-                        <li>
-                          <a href="https://apollo.hyperhq.com/c/weekly-events"
-                            >Free events for clinic owners</a
-                          >
-                        </li>
-                        <li>
-                          <a href="../../start/index.html"
-                            >Get started with Luther</a
-                          >
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="footer-column">
-                      <h4>Help</h4>
-                      <ul>
-                        <li>
-                          <a href="../../contact/index.html">Contact Us</a>
-                        </li>
                         <li>
                           <a href="../../privacy-policy/index.html"
                             >Privacy Policy</a
@@ -1662,22 +1695,78 @@
                         </li>
                       </ul>
                     </div>
+                    <div
+                      id="footerColumn"
+                      style="margin-bottom: 30px"
+                      class="footer-column"
+                    >
+                      <h4>Resources</h4>
+                      <ul>
+                        <li>
+                          <a href="../../insights/index.html"
+                            >Insights from our team</a
+                          >
+                        </li>
+                        <li>
+                          <a href="https://apollo.hyperhq.com/c/weekly-events"
+                            >Free events for clinic owners</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                    <div
+                      id="footerColumn"
+                      style="margin-bottom: 30px"
+                      class="footer-column"
+                    >
+                      <h4>Help</h4>
+                      <ul>
+                        <li>
+                          <a href="../../contact/index.html">Contact Us</a>
+                        </li>
+                        <li>
+                          <a style="font-weight: 500" href="tel:+442080045580"
+                            >+44 20 8004 5580</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
+
+                <script>
+                  (function () {
+                    if (window.innerWidth <= 768) {
+                      document.getElementById(
+                        "footerCompany"
+                      ).style.marginBottom = "30px";
+                    }
+                  })();
+                </script>
+
+                <script>
+                  (function () {
+                    if (window.innerWidth <= 768) {
+                      document.getElementById(
+                        "footerColumn"
+                      ).style.marginBottom = "30px";
+                    }
+                  })();
+                </script>
 
                 <div class="footer-bottom">
                   <div class="site-details">
                     <p class="site">Luther Tech Ltd</p>
                     <p class="rights">All rights reserved 2025</p>
                   </div>
-
+                  <!-- 
                   <div class="business-details">
                     <p class="abn">
                       First Floor Office, 3 Hornton Place, London, United
                       Kingdom, W8 4LZ<br />
                       Company registration number 10216070
                     </p>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>

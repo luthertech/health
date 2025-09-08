@@ -44,9 +44,7 @@
       window.userCountry = userCountry;
     </script>
 
-    <title>
-      Hyper | Startups Australia &#038; UK | Do you have an app idea?
-    </title>
+    <title>Luther Tech</title>
     <style>
       img:is([sizes="auto" i], [sizes^="auto," i]) {
         contain-intrinsic-size: 3000px 1500px;
@@ -878,37 +876,74 @@
                 class="custom-logo-link"
                 rel="home"
                 aria-current="page"
-                ><img
-                  width="828"
-                  height="166"
-                  src="wp-content/uploads/2025/04/Logo.svg"
-                  class="custom-logo"
-                  alt="Logo"
-                  decoding="async"
-                  fetchpriority="high"
-                  srcset="
-                    wp-content/uploads/2025/04/Logo.svg         828w,
-                    wp-content/uploads/2025/04/Logo-300x60.svg  300w,
-                    wp-content/uploads/2025/04/Logo-768x154.svg 768w
-                  "
-                  sizes="(max-width: 828px) 100vw, 828px"
-              /></a>
+              >
+                <picture>
+                  <!-- Mobile: for screens < 768px -->
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="wp-content/uploads/2025/04/Logo-Mobile.svg"
+                    type="image/svg+xml"
+                  />
+                  <!-- Desktop / fallback -->
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      wp-content/uploads/2025/04/Logo.svg         828w,
+                      wp-content/uploads/2025/04/Logo-768x154.svg 768w,
+                      wp-content/uploads/2025/04/Logo-300x60.svg  300w
+                    "
+                    type="image/svg+xml"
+                  />
+                  <!-- Fallback image -->
+                  <img
+                    class="custom-logo"
+                    width="828"
+                    height="166"
+                    src="wp-content/uploads/2025/04/Logo.svg"
+                    alt="Logo"
+                    decoding="async"
+                    fetchpriority="high"
+                    sizes="(max-width: 828px) 100vw, 828px"
+                    style="
+                      max-width: 100%;
+                      height: auto;
+                      display: block;
+                      align-items: center;
+                    "
+                  />
+                </picture>
+              </a>
             </div>
 
+            <style>
+              .custom-logo {
+                max-width: 180px;
+                height: auto;
+              }
+
+              @media (max-width: 768px) {
+                .custom-logo {
+                  max-width: 35px !important;
+                  height: auto !important;
+                  margin-top: 6px;
+                }
+              }
+            </style>
+
             <div class="menu-links">
-              <a href="accelerate/index.html" class="menu-item">
+              <!-- <a href="accelerate/index.html" class="menu-item">
                 Our process
-              </a>
+              </a> -->
               <a href="startups/index.html" class="menu-item"> Portfolio </a>
               <a href="insights/index.html" class="menu-item"> Insights </a>
-              <a
+              <!-- <a
                 href="https://apollo.hyperhq.com/feed"
                 class="menu-item"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Apollo
-              </a>
+              </a> -->
               <a href="start/index.html" class="menu-item cta">
                 Find out more
               </a>
@@ -972,12 +1007,11 @@
         <div id="smooth-content">
           <section class="section banner transition-top">
             <div class="banner-outer">
-              <div class="banner-container">
+              <div style="padding-bottom: 150px" class="banner-container">
                 <div class="banner-header">
                   <div class="heading">
                     <h1>Book more patients every month with predictability</h1>
                   </div>
-
                   <div>
                     <p>
                       Driving patient bookings through smart design and
@@ -987,7 +1021,25 @@
                 </div>
 
                 <div class="banner-cta">
-                  <a href="start/index.html">Get started</a>
+                  <a
+                    style="
+                      background-color: #6ce057;
+                      color: black;
+                      font-weight: 500;
+                      width: 218px;
+                      height: 68px;
+                      gap: 8px;
+                      opacity: 1;
+                      border-radius: 12px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      text-decoration: none;
+                    "
+                    href="start/index.html"
+                  >
+                    Get started
+                  </a>
 
                   <div class="cta-text">
                     <p>
@@ -1001,29 +1053,68 @@
           </section>
 
           <section
-            class="section testimonials transition-top"
-            data-trigger-distance="top 100%"
+            class="section video-section transition-top"
             style="
-              width: 100%;
-              height: 500px;
-              max-width: 900px;
-              margin: 0 auto;
-              display: block;
+              max-width: 1200px;
+              width: 90%;
+              margin: -150px auto 0;
               border-radius: 10px;
+              overflow: hidden;
               box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+              display: block;
             "
           >
-            <iframe
-              src="https://www.youtube.com/embed/swE8cjgAyac?si=1GXHYGTnCsHl_fAZ"
-              title="YouTube video player"
-              style="border: 0; border-radius: 10px"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
+            <div
+              style="
+                position: relative;
+                padding-bottom: 56.25%;
+                height: 0;
+                overflow: hidden;
+              "
+            >
+              <video
+                style="
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  border: 0;
+                  object-fit: cover;
+                "
+                controls
+                autoplay
+                muted
+                loop
+                playsinline
+              >
+                <source
+                  src="wp-content/uploads/2025/04/The Luther Tech Marketing Method For Medical Aesthetics.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </section>
 
+          <script>
+            // Adjust width dynamically based on screen size
+            (function () {
+              const section = document.querySelector(".video-section");
+              function adjustWidth() {
+                if (window.innerWidth < 768) {
+                  section.style.width = "90%";
+                } else {
+                  section.style.width = "100%";
+                }
+              }
+              window.addEventListener("resize", adjustWidth);
+              adjustWidth();
+            })();
+          </script>
+
           <section
+            style="padding-top: 35px"
             class="section testimonials transition-top"
             data-trigger-distance="top 100%"
           >
@@ -1078,13 +1169,13 @@
                           <div class="testimonials-profile">
                             <div class="testimonials-image-wrapper">
                               <img
-                                src="wp-content/uploads/2025/04/f2b053306ff7b08c16bd67c9e397271f.png"
-                                alt="Tom Brown"
+                                src="wp-content/uploads/2025/04/Testimonial1.png"
+                                alt="Sarah M."
                               />
                             </div>
                             <div class="testimonials-details">
-                              <p class="name">Tom Brown</p>
-                              <p class="company">Beny</p>
+                              <p class="name">Sarah M.</p>
+                              <p class="company">Opine</p>
                             </div>
                           </div>
                         </div>
@@ -1137,13 +1228,13 @@
                           <div class="testimonials-profile">
                             <div class="testimonials-image-wrapper">
                               <img
-                                src="wp-content/uploads/2025/04/86b4f894f921a7967e587ca782f23a6f.png"
-                                alt="Ash Brown"
+                                src="wp-content/uploads/2025/04/Testimonial2.png"
+                                alt="Gabriel M."
                               />
                             </div>
                             <div class="testimonials-details">
-                              <p class="name">Ash Brown</p>
-                              <p class="company">Empiraa</p>
+                              <p class="name">Gabriel M.</p>
+                              <p class="company">Enigma</p>
                             </div>
                           </div>
                         </div>
@@ -1196,13 +1287,13 @@
                           <div class="testimonials-profile">
                             <div class="testimonials-image-wrapper">
                               <img
-                                src="wp-content/uploads/2025/04/Mark-Sellar.png"
-                                alt="Mark Sellar"
+                                src="wp-content/uploads/2025/04/Testimonial3.png"
+                                alt="Hadley S."
                               />
                             </div>
                             <div class="testimonials-details">
-                              <p class="name">Mark Sellar</p>
-                              <p class="company">Kubo</p>
+                              <p class="name">Hadley S.</p>
+                              <p class="company">Reply</p>
                             </div>
                           </div>
                         </div>
@@ -1212,21 +1303,96 @@
                   <div class="swiper-pagination"></div>
                 </div>
 
-                <div class="testimonials-cta">
-                  <!-- <p>
-                    See our other 200+ reviews on our
-                    <a
-                      href="https://www.facebook.com/hyperhq/reviews"
-                      target="_blank"
-                      >Facebook page</a
-                    >
-                  </p> -->
+                <div class="banner-cta" id="banner-cta">
+                  <a
+                    style="
+                      background-color: #6ce057;
+                      color: black;
+                      font-weight: 500;
+                      width: 218px;
+                      height: 68px;
+                      gap: 8px;
+                      opacity: 1;
+                      border-radius: 12px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      text-decoration: none;
+                    "
+                    href="start/index.html"
+                  >
+                    Get started
+                  </a>
+
+                  <div
+                    class="cta-text"
+                    style="border-bottom: 1px solid #b6b7b7"
+                  >
+                    <p style="text-align: center">
+                      Enhance your clinic’s digital presence and start
+                      attracting more patients today
+                    </p>
+                  </div>
+                </div>
+
+                <!-- <div
+                  class="testimonials-cta"
+                  style="
+                    margin-top: -45px;
+                    text-align: center; 
+                    text-decoration: underline;
+                  "
+                >
                   Enhance your clinic’s digital presence and start attracting
                   more patients today
-                </div>
+                </div> -->
+
+                <script>
+                  (function () {
+                    var banner = document.getElementById("banner-cta");
+                    if (window.innerWidth <= 767) {
+                      banner.style.marginTop = "50px";
+                    } else {
+                      banner.style.marginTop = "0px";
+                    }
+                  })();
+                </script>
+
+                <script>
+                  (function () {
+                    const cta = document.querySelector(".testimonials-cta");
+                    function adjustCta() {
+                      if (window.innerWidth < 768) {
+                        cta.style.textAlign = "center";
+                      } else {
+                        cta.style.marginTop = "-45px";
+                        cta.style.textAlign = "left";
+                      }
+                    }
+                    window.addEventListener("resize", adjustCta);
+                    adjustCta();
+                  })();
+                </script>
               </div>
             </div>
           </section>
+
+          <script>
+            (function () {
+              const testimonialsSection = document.querySelector(
+                ".section.testimonials"
+              );
+              function adjustPadding() {
+                if (window.innerWidth < 768) {
+                  testimonialsSection.style.paddingTop = "0px";
+                } else {
+                  testimonialsSection.style.paddingTop = "35px";
+                }
+              }
+              window.addEventListener("resize", adjustPadding);
+              adjustPadding();
+            })();
+          </script>
 
           <section class="section metrics transition-top">
             <div class="metrics-outer">
@@ -1234,11 +1400,12 @@
                 <div class="metrics-header">
                   <h2>Proven results for predictable systems</h2>
                   <p>
-                    Hyper is designed for industry professionals who have a
-                    great idea for a startup but don’t know where to begin. Over
-                    the last 10+ years, we’ve helped hundreds of first-time
-                    founders who simply lack the time, experience or funds turn
-                    their idea into a successful business
+                    Luther Tech works with medical and healthcare providers to
+                    grow their practice with predictable, results-driven
+                    marketing. Over the past 10+ years, we’ve helped hundreds of
+                    clinics and providers increase patient acquisition,
+                    streamline marketing campaigns and achieve measurable
+                    growth.
                   </p>
                 </div>
 
@@ -1427,9 +1594,7 @@
                       </div>
                       <div class="item-content-wrapper">
                         <div class="item-header">
-                          <a href="startups/diprobase/index.html    "
-                            >Diprobase</a
-                          >
+                          <a href="startups/diprobase/index.html">Diprobase</a>
                           <!-- <p>
                             <a href="https://nelli.com.au/" target="_blank"
                               >nelli.com.au</a
@@ -1488,15 +1653,15 @@
                           <img
                             width="1288"
                             height="1080"
-                            src="wp-content/uploads/2025/05/Strabo-Featured-Image-2.jpg"
+                            src="wp-content/uploads/2025/04/AstraZeneca_CS_0.png"
                             class="attachment-full size-full wp-post-image"
                             alt="Strabo"
                             decoding="async"
                             srcset="
-                              https://hyperhq.com/wp-content/uploads/2025/05/Strabo-Featured-Image-2.jpg          1288w,
-                              https://hyperhq.com/wp-content/uploads/2025/05/Strabo-Featured-Image-2-300x252.jpg   300w,
-                              https://hyperhq.com/wp-content/uploads/2025/05/Strabo-Featured-Image-2-1024x859.jpg 1024w,
-                              https://hyperhq.com/wp-content/uploads/2025/05/Strabo-Featured-Image-2-768x644.jpg   768w
+                              wp-content/uploads/2025/04/AstraZeneca_CS_0.png          1288w,
+                              wp-content/uploads/2025/04/AstraZeneca_CS_0-300x252.png   300w,
+                              wp-content/uploads/2025/04/AstraZeneca_CS_0-1024x859.png 1024w,
+                              wp-content/uploads/2025/04/AstraZeneca_CS_0-768x644.png   768w
                             "
                             sizes="(max-width: 1288px) 100vw, 1288px"
                           />
@@ -1504,7 +1669,9 @@
                       </div>
                       <div class="item-content-wrapper">
                         <div class="item-header">
-                          <a href="startups/astraZeneca/index.html">AstraZeneca</a>
+                          <a href="startups/astraZeneca/index.html"
+                            >AstraZeneca</a
+                          >
                           <!-- <p>
                             <a href="https://strabo.app/" target="_blank"
                               >strabo.app</a
@@ -1614,19 +1781,19 @@
                     </div>
                     <div class="founders-item swiper-slide">
                       <div class="featured-image-wrapper">
-                        <a href="startups/adelphi/index.html">
+                        <a href="startups/neuro-compass/index.html">
                           <img
                             width="1288"
                             height="1080"
-                            src="wp-content/uploads/2025/06/Splend-Featured-Image-2.jpg"
+                            src="wp-content/uploads/2025/04/Neuro-Compass_CS_0.png"
                             class="attachment-full size-full wp-post-image"
                             alt="Splend"
                             decoding="async"
                             srcset="
-                              https://hyperhq.com/wp-content/uploads/2025/06/Splend-Featured-Image-2.jpg          1288w,
-                              https://hyperhq.com/wp-content/uploads/2025/06/Splend-Featured-Image-2-300x252.jpg   300w,
-                              https://hyperhq.com/wp-content/uploads/2025/06/Splend-Featured-Image-2-1024x859.jpg 1024w,
-                              https://hyperhq.com/wp-content/uploads/2025/06/Splend-Featured-Image-2-768x644.jpg   768w
+                              wp-content/uploads/2025/04/Neuro-Compass_CS_0.png 1288w,
+                              wp-content/uploads/2025/04/Neuro-Compass_CS_0.png  300w,
+                              wp-content/uploads/2025/04/Neuro-Compass_CS_0.png 1024w,
+                              wp-content/uploads/2025/04/Neuro-Compass_CS_0.png  768w
                             "
                             sizes="(max-width: 1288px) 100vw, 1288px"
                           />
@@ -1634,7 +1801,9 @@
                       </div>
                       <div class="item-content-wrapper">
                         <div class="item-header">
-                          <a href="startups/adelphi/index.html">Adelphi</a>
+                          <a href="startups/neuro-compass/index.html"
+                            >Neuro-Compass</a
+                          >
                           <!-- <p>
                             <a href="https://splend.com.au/" target="_blank"
                               >splend.com.au</a
@@ -1682,15 +1851,15 @@
                           <img
                             width="1288"
                             height="1080"
-                            src="wp-content/uploads/2025/05/Magic-Mountain-Featured-Image-2.jpg"
+                            src="wp-content/uploads/2025/04/Orla_CS_0.png"
                             class="attachment-full size-full wp-post-image"
                             alt="Magic Mountain"
                             decoding="async"
                             srcset="
-                              https://hyperhq.com/wp-content/uploads/2025/05/Magic-Mountain-Featured-Image-2.jpg          1288w,
-                              https://hyperhq.com/wp-content/uploads/2025/05/Magic-Mountain-Featured-Image-2-300x252.jpg   300w,
-                              https://hyperhq.com/wp-content/uploads/2025/05/Magic-Mountain-Featured-Image-2-1024x859.jpg 1024w,
-                              https://hyperhq.com/wp-content/uploads/2025/05/Magic-Mountain-Featured-Image-2-768x644.jpg   768w
+                              wp-content/uploads/2025/04/Orla_CS_0.png 1288w,
+                              wp-content/uploads/2025/04/Orla_CS_0.png  300w,
+                              wp-content/uploads/2025/04/Orla_CS_0.png 1024w,
+                              wp-content/uploads/2025/04/Orla_CS_0.png  768w
                             "
                             sizes="(max-width: 1288px) 100vw, 1288px"
                           />
@@ -1763,9 +1932,7 @@
                       </div>
                       <div class="item-content-wrapper">
                         <div class="item-header">
-                          <a href="startups/magic-mountain/index.html"
-                            >Avenna</a
-                          >
+                          <a href="startups/avenna/index.html">Avenna</a>
                           <!-- <p>
                             <a
                               href="https://pitchbook.com/profiles/company/496282-42"
@@ -1829,12 +1996,13 @@
                         success.
                       </p>
                     </div>
+
                     <div class="process-header-cta">
-                      <a href="start/index.html">
+                      <a href="start/index.html" class="cta-link">
                         <span
                           >Book a confidential session with a strategist</span
                         >
-                        <svg
+                        <!-- <svg
                           class="default"
                           width="42"
                           height="43"
@@ -1881,14 +2049,60 @@
                               fill="white"
                             />
                           </g>
+                        </svg> -->
+                        <svg
+                          class="cta-icon"
+                          width="42"
+                          height="42"
+                          viewBox="0 0 42 42"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect class="cta-bg" width="42" height="42" rx="21" />
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M26.9932 16.0488C26.9932 15.4998 26.5493 15.0528 25.9993 15.0498L18.0062 14.9998H18.0003C17.4503 14.9998 17.0043 15.4438 17.0003 15.9938C16.9963 16.5458 17.4413 16.9968 17.9943 16.9998L23.5522 17.0348L15.2932 25.2928C14.9022 25.6838 14.9022 26.3168 15.2932 26.7068C15.4882 26.9028 15.7442 26.9998 16.0002 26.9998C16.2563 26.9998 16.5122 26.9028 16.7072 26.7068L24.9952 18.4188L25.0002 24.0008C25.0002 24.5528 25.4482 24.9998 26.0002 24.9998H26.0013C26.5533 24.9998 27.0002 24.5508 27.0002 23.9988L26.9932 16.0488Z"
+                            fill="white"
+                          />
                         </svg>
                       </a>
                     </div>
+
+                    <style>
+                      .cta-link {
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 8px;
+                        text-decoration: none;
+                        color: inherit;
+                      }
+
+                      .cta-link span {
+                        font-weight: 500;
+                      }
+
+                      .cta-icon {
+                        margin-top: -20px;
+                      }
+                      .cta-bg {
+                        fill: #214248;
+                        transition: fill 0.3s ease;
+                      }
+
+                      .cta-link:hover .cta-bg {
+                        fill: #6ce057;
+                      }
+
+                      .cta-icon path {
+                        fill: white;
+                        transition: fill 0.3s ease;
+                      }
+                    </style>
                   </div>
                   <div class="process-header-image-wrapper">
-                    <div class="overlay"></div>
                     <img
-                      src="wp-content/uploads/2025/07/team-photo.jpg"
+                      src="wp-content/uploads/2025/04/Our Trusted Process.png"
                       alt=""
                     />
                   </div>
@@ -1910,7 +2124,7 @@
 
                         <p class="cta">
                           Learn more about
-                          <a href="accelerate/index.html">how it works</a>
+                          <a href="start/index.html">how it works</a>
                         </p>
                       </div>
                     </div>
@@ -1959,6 +2173,21 @@
               </div>
             </div>
           </section>
+
+          <script>
+            (function () {
+              const processSection = document.querySelector(".section.process");
+              function adjustProcessMargin() {
+                if (window.innerWidth < 768) {
+                  processSection.style.marginTop = "0px";
+                } else {
+                  processSection.style.marginTop = "-120px";
+                }
+              }
+              window.addEventListener("resize", adjustProcessMargin);
+              adjustProcessMargin();
+            })();
+          </script>
 
           <script>
             document.addEventListener("DOMContentLoaded", function () {
@@ -2106,14 +2335,15 @@
               </div>
             </div>
           </section>
+
           <section class="section team transition-top">
             <div class="team-outer">
               <div class="team-container">
                 <div class="team-header">
-                  <h2>Your Team Strategic Partners</h2>
+                  <h2>Your strategic partners</h2>
                   <div class="header-image-wrapper">
                     <img
-                      src="wp-content/uploads/2025/07/team-photos-full.jpg"
+                      src="wp-content/uploads/2025/04/Luther Team.png"
                       alt=""
                     />
                   </div>
@@ -2152,29 +2382,22 @@
           <section class="section prefooter transition-top">
             <div class="prefooter-outer">
               <div class="prefooter-container">
-                <h2>Let’s Grow Your Clinic Together</h2>
+                <h2>Let’s grow your clinic together</h2>
                 <a href="start/index.html">
                   <span>Book a confidential session with a strategist</span>
                   <svg
-                    class="orange"
                     width="42"
                     height="42"
                     viewBox="0 0 42 42"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <rect
-                      class="rect"
-                      width="42"
-                      height="42"
-                      rx="21"
-                      fill="#FA8A4B"
-                    />
+                    <rect width="42" height="42" rx="21" fill="#6CE057" />
                     <path
                       fill-rule="evenodd"
                       clip-rule="evenodd"
                       d="M26.9932 16.0488C26.9932 15.4998 26.5493 15.0528 25.9993 15.0498L18.0062 14.9998H18.0003C17.4503 14.9998 17.0043 15.4438 17.0003 15.9938C16.9963 16.5458 17.4413 16.9968 17.9943 16.9998L23.5522 17.0348L15.2932 25.2928C14.9022 25.6838 14.9022 26.3168 15.2932 26.7068C15.4882 26.9028 15.7442 26.9998 16.0002 26.9998C16.2563 26.9998 16.5122 26.9028 16.7072 26.7068L24.9952 18.4188L25.0002 24.0008C25.0002 24.5528 25.4482 24.9998 26.0002 24.9998H26.0013C26.5533 24.9998 27.0002 24.5508 27.0002 23.9988L26.9932 16.0488Z"
-                      fill="#231F20"
+                      fill="#6CE057"
                     />
                     <mask
                       id="mask0_1515_22608"
@@ -2206,7 +2429,11 @@
               <div class="footer-container">
                 <div class="footer-main">
                   <div class="footer-left">
-                    <div class="footer-company">
+                    <div
+                      style="margin-bottom: 30px"
+                      class="footer-company"
+                      id="footerCompany"
+                    >
                       <div class="logo">
                         <a
                           href="/index.html"
@@ -2215,14 +2442,14 @@
                           ><img
                             width="828"
                             height="166"
-                            src="wp-content/uploads/2025/04/Logo.svg"
-                            class="custom-logo"
+                            src="wp-content/uploads/2025/04/Logo-Mobile.svg"
+                            class="custom-logo-footer"
                             alt="Hyper"
                             decoding="async"
                             srcset="
-                              wp-content/uploads/2025/04/Logo.svg         828w,
-                              wp-content/uploads/2025/04/Logo-300x60.svg  300w,
-                              wp-content/uploads/2025/04/Logo-768x154.svg 768w
+                              wp-content/uploads/2025/04/Logo-Mobile.svg         828w,
+                              wp-content/uploads/2025/04/Logo-Mobile-300x60.svg  300w,
+                              wp-content/uploads/2025/04/Logo-Mobile-768x154.svg 768w
                             "
                             sizes="(max-width: 828px) 100vw, 828px"
                         /></a>
@@ -2232,8 +2459,23 @@
                       </p>
                     </div>
 
+                    <style>
+                      .custom-logo-footer {
+                        max-width: 30px;
+                        height: auto;
+                      }
+
+                      @media (max-width: 768px) {
+                        .custom-logo-footer {
+                          max-width: 35px !important;
+                          height: auto !important;
+                          margin-top: 6px;
+                        }
+                      }
+                    </style>
+
                     <div class="social-links">
-                      <a
+                      <!-- <a
                         href="https://www.facebook.com/hyperhq"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2251,7 +2493,7 @@
                             fill="#0B0D0F"
                           ></path>
                         </svg>
-                      </a>
+                      </a> -->
                       <a
                         href="https://www.instagram.com/teamhyper/"
                         target="_blank"
@@ -2317,31 +2559,34 @@
                   </div>
 
                   <div class="footer-links">
-                    <div class="footer-column">
+                    <div
+                      id="footerColumn"
+                      style="margin-bottom: 30px"
+                      class="footer-column"
+                    >
                       <h4>Company</h4>
                       <ul>
                         <li>
-                          <a href="../../accelerate/index.html"
-                            >The Accelerate Process</a
+                          <a href="./privacy-policy/index.html"
+                            >Privacy Policy</a
                           >
                         </li>
                         <li>
-                          <a href="../../accelerate/index.html"
-                            >The Accelerate Process</a
-                          >
-                        </li>
-                        <li>
-                          <a href="../../accelerate/index.html"
-                            >The Accelerate Process</a
+                          <a href="./terms-and-conditions/index.html"
+                            >Terms and Conditions</a
                           >
                         </li>
                       </ul>
                     </div>
-                    <div class="footer-column">
+                    <div
+                      id="footerColumn"
+                      style="margin-bottom: 30px"
+                      class="footer-column"
+                    >
                       <h4>Resources</h4>
                       <ul>
                         <li>
-                          <a href="../../insights/index.html"
+                          <a href="./insights/index.html"
                             >Insights from our team</a
                           >
                         </li>
@@ -2350,27 +2595,21 @@
                             >Free events for clinic owners</a
                           >
                         </li>
-                        <li>
-                          <a href="../../start/index.html"
-                            >Get started with Luther</a
-                          >
-                        </li>
                       </ul>
                     </div>
-                    <div class="footer-column">
+                    <div
+                      id="footerColumn"
+                      style="margin-bottom: 30px"
+                      class="footer-column"
+                    >
                       <h4>Help</h4>
                       <ul>
                         <li>
-                          <a href="../../contact/index.html">Contact Us</a>
+                          <a href="./contact/index.html">Contact Us</a>
                         </li>
                         <li>
-                          <a href="../../privacy-policy/index.html"
-                            >Privacy Policy</a
-                          >
-                        </li>
-                        <li>
-                          <a href="../../terms-and-conditions/index.html"
-                            >Terms and Conditions</a
+                          <a style="font-weight: 500" href="tel:+442080045580"
+                            >+44 20 8004 5580</a
                           >
                         </li>
                       </ul>
@@ -2378,19 +2617,39 @@
                   </div>
                 </div>
 
+                <script>
+                  (function () {
+                    if (window.innerWidth <= 768) {
+                      document.getElementById(
+                        "footerCompany"
+                      ).style.marginBottom = "30px";
+                    }
+                  })();
+                </script>
+
+                <script>
+                  (function () {
+                    if (window.innerWidth <= 768) {
+                      document.getElementById(
+                        "footerColumn"
+                      ).style.marginBottom = "30px";
+                    }
+                  })();
+                </script>
+
                 <div class="footer-bottom">
                   <div class="site-details">
                     <p class="site">Luther Tech Ltd</p>
                     <p class="rights">All rights reserved 2025</p>
                   </div>
-
+                  <!-- 
                   <div class="business-details">
                     <p class="abn">
                       First Floor Office, 3 Hornton Place, London, United
                       Kingdom, W8 4LZ<br />
                       Company registration number 10216070
                     </p>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>

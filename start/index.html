@@ -168,8 +168,26 @@ gtag("config", "AW-10901392232");
 <header>
   <div class="header-outer">
     <div class="header-container">
-      <div class="logo">
-        <a href="../index.html" class="custom-logo-link" rel="home"><img width="828" height="166" src="../wp-content/uploads/2025/04/Hyper-Logo-Large-Black-Transparent-Borderless-1.png" class="custom-logo" alt="Hyper" decoding="async" fetchpriority="high" srcset="https://hyperhq.com/wp-content/uploads/2025/04/Hyper-Logo-Large-Black-Transparent-Borderless-1.png 828w, https://hyperhq.com/wp-content/uploads/2025/04/Hyper-Logo-Large-Black-Transparent-Borderless-1-300x60.png 300w, https://hyperhq.com/wp-content/uploads/2025/04/Hyper-Logo-Large-Black-Transparent-Borderless-1-768x154.png 768w" sizes="(max-width: 828px) 100vw, 828px" /></a>      </div>
+         <div class="logo">
+                        <a
+                          href="../index.html"
+                          class="custom-logo-link"
+                          rel="home"
+                          ><img
+                            width="828"
+                            height="166"
+                            src="../wp-content/uploads/2025/04/Logo.svg"
+                            class="custom-logo"
+                            alt="Hyper"
+                            decoding="async"
+                            srcset="
+                              ../wp-content/uploads/2025/04/Logo.svg         828w,
+                              ../wp-content/uploads/2025/04/Logo-300x60.svg  300w,
+                              ../wp-content/uploads/2025/04/Logo-768x154.svg 768w
+                            "
+                            sizes="(max-width: 828px) 100vw, 828px"
+                        /></a>
+                      </div>
 
 
 
@@ -177,14 +195,14 @@ gtag("config", "AW-10901392232");
   </div>
   <div class="menu-mobile">
   <div class="menu-mobile__inner">
-                          <a href="../accelerate/index.html" class="menu-item" >
-          Our process        </a>
+                          <!-- <a href="../accelerate/index.html" class="menu-item" >
+          Our process        </a> -->
                       <a href="../startups/index.html" class="menu-item" >
           Portfolio        </a>
                       <a href="../insights/index.html" class="menu-item" >
           Insights        </a>
-                      <a href="https://apollo.hyperhq.com/feed" class="menu-item"  target="_blank" rel="noopener noreferrer">
-          Apollo        </a>
+                      <!-- <a href="https://apollo.hyperhq.com/feed" class="menu-item"  target="_blank" rel="noopener noreferrer">
+          Apollo        </a> -->
                       <a href="index.html" class="menu-item cta active" >
           Find out more        </a>
             </div>
@@ -199,12 +217,13 @@ gtag("config", "AW-10901392232");
       <div class="banner-container banner-container--two-column">
                 <div class="banner-header column-type-form">
           <div class="heading">
-                          <h1>We help busy professionals become startup founders</h1>
+                          <h1>
+Reach more patients and streamline your practice growth</h1>
             
                       </div>
 
                       <div>
-              <p>Hyper is a UK startup studio that provides first-time founders with the safest way to launch a tech startup. Our 12 week Accelerate Process has helped 1,528 founders raise over £231 million since 2015.</p>
+              <p>Grow your practice with proven results: add millions in new patient revenue, achieve higher retention, and benefit from over a decade of healthcare marketing expertise, all designed to help you scale with confidence.</p>
             </div>
                   </div>
 
@@ -213,7 +232,7 @@ gtag("config", "AW-10901392232");
               <div class="heading">
                                   <h3>Book a complimentary strategy session with our team</h3>
                 
-                                  <div><p>If you have a great idea and <strong>don&#8217;t know what to do next</strong>, our award winning team can help you fill in the gaps.</p>
+                                  <div><p>Get clear, actionable steps tailored to your healthcare business.</p>
 </div>
                               </div>
               <div class="form-container" data-agent="Jamie Wood"
@@ -254,87 +273,86 @@ gtag("config", "AW-10901392232");
 	</p>
 </div>
 <div class="btn-form-submit">
-	<p><input class="wpcf7-form-control wpcf7-submit has-spinner" type="submit" value="Book a time with us" />
+	<p><input class="wpcf7-form-control wpcf7-submit has-spinner"   style="
+                      background-color: #6ce057;
+                      color: black;
+                      font-weight: 500;
+                      width: 218px;
+                      height: 68px;
+                      gap: 8px;
+                      opacity: 1;
+                      border-radius: 12px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      text-decoration: none;
+                    " type="submit" value="Book a time with us" />
 	</p>
 </div><div class="wpcf7-response-output" aria-hidden="true"></div>
 </form>
 </div>
 
-                  <script>
-                    document.addEventListener('DOMContentLoaded', function() {
-                      // Set agent field value on form submit instead of page load
-                      const formWrapper = document.querySelector('.form-container [data-wpcf7-id]');
-                      if (!formWrapper) return;
-                      const form = formWrapper.querySelector('form');
-                      if (!form) return;
+             <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const formWrapper = document.querySelector('.form-container [data-wpcf7-id]');
+  if (!formWrapper) return;
+  const form = formWrapper.querySelector('form');
+  if (!form) return;
 
-                      form.addEventListener('submit', function() {
-                        const container = form.closest('.form-container');
-                        if (!container) return;
-                        const agentValue = container.getAttribute('data-agent');
-                        const utmSourceValue = container.getAttribute('data-utm-source');
-                        const utmCampaignValue = container.getAttribute('data-utm-campaign');
-                        const utmMediumValue = container.getAttribute('data-utm-medium');
-                        const utmContentValue = container.getAttribute('data-utm-content');
-                        const agentField = form.querySelector('.field-agent');
-                        const utmSourceField = form.querySelector('.field-utm_source');
-                        const utmCampaignField = form.querySelector('.field-utm_campaign');
-                        const utmMediumField = form.querySelector('.field-utm_medium');
-                        const utmContentField = form.querySelector('.field-utm_content');
+  form.addEventListener('submit', async function(event) {
+    event.preventDefault(); 
 
-                        if (agentField && agentValue) {
-                          agentField.value = agentValue;
-                          // Optional: log for debugging
-                          console.log('Agent value set on submit:', agentValue);
-                        }
-                        if (utmSourceField && utmSourceValue) {
-                          utmSourceField.value = utmSourceValue;
-                          // Optional: log for debugging
-                          console.log('UTM Source value set on submit:', utmSourceValue);
-                        }
-                        if (utmCampaignField && utmCampaignValue) {
-                          utmCampaignField.value = utmCampaignValue;
-                          // Optional: log for debugging
-                          console.log('UTM Campaign value set on submit:', utmCampaignValue);
-                        }
-                        if (utmMediumField && utmMediumValue) {
-                          utmMediumField.value = utmMediumValue;
-                          // Optional: log for debugging
-                          console.log('UTM Medium value set on submit:', utmMediumValue);
-                        }
-                        if (utmContentField && utmContentValue) {
-                          utmContentField.value = utmContentValue;
-                          // Optional: log for debugging
-                          console.log('UTM Content value set on submit:', utmContentValue);
-                        }
-                      });
-                    });
+    const firstName = form.querySelector('[name="first-name"]').value.trim();
+    const lastName = form.querySelector('[name="last-name"]').value.trim();
+    const email = form.querySelector('[name="your-email"]').value.trim();
+    const phone = form.querySelector('[name="your-phone"]').value.trim();
+    const agent = form.querySelector('[name="agent"]')?.value || '';
+    const utmSource = form.querySelector('[name="utm_source"]')?.value || '';
+    const utmCampaign = form.querySelector('[name="utm_campaign"]')?.value || '';
+    const utmMedium = form.querySelector('[name="utm_medium"]')?.value || '';
+    const utmContent = form.querySelector('[name="utm_content"]')?.value || '';
 
-                    document.addEventListener('wpcf7mailsent', function(event) {
-                      const formWrapper = document.querySelector('.form-container [data-wpcf7-id]');
-                      if (!formWrapper) return;
+    const fullName = `${firstName} ${lastName}`.trim();
 
-                      const dynamicFormId = parseInt(formWrapper.getAttribute('data-wpcf7-id'), 10);
-                      if (event.detail.contactFormId === dynamicFormId) {
-                        const form = formWrapper.querySelector('form');
+    const emailPayload = {
+      to: 'jj@luther.tech', 
+      subject: 'New Meeting Booking Request',
+      html: `
+        <h2>New Booking Request</h2>
+        <p><strong>Full Name:</strong> ${fullName}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone}</p>
+      `
+    };
 
-                        const agentInput = form.querySelector('[name="agent"]');
-                        const agent = encodeURIComponent(agentInput ? agentInput.value : '');
-                        const firstName = encodeURIComponent(form.querySelector('[name="first-name"]').value);
-                        const lastName = encodeURIComponent(form.querySelector('[name="last-name"]').value);
-                        const email = encodeURIComponent(form.querySelector('[name="your-email"]').value);
-                        const phone = encodeURIComponent(form.querySelector('[name="your-phone"]').value);
-                        const fullName = `${firstName} ${lastName}`.trim();
+    try {
+      const response = await fetch('https://luther-tech-health-pdmd.vercel.app/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(emailPayload)
+      });
 
-                        // ✅ Add a log to debug the value at submission time
-                        console.log("Redirecting with agent:", agent);
 
-                        const baseURL = `https://hyperhq.com`;
-                        const redirectURL = `${baseURL}/start/book-meeting?agent=${agent}&fullname=${fullName}&email=${email}&phone=${phone}`;
-                        window.location.href = redirectURL;
-                      }
-                    }, false);
-                  </script>
+      const result = await response.json();
+
+
+      if (response.ok) {
+        const baseURL = `https://luther-tech-health.vercel.app/`;
+        const redirectURL = `${baseURL}/start/book-meeting?agent=${encodeURIComponent(agent)}&fullname=${encodeURIComponent(fullName)}&email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}`;
+        window.location.href = redirectURL;
+      } else {
+        alert('Failed to send booking request: ' + (result.error || 'Unknown error'));
+      }
+    } catch (error) {
+      console.error('Error sending booking request:', error);
+      alert('Something went wrong. Please try again later.');
+    }
+  });
+});
+</script>
+
                               </div>
             </div>
                   
@@ -343,609 +361,350 @@ gtag("config", "AW-10901392232");
   </section>
                                                 
 
-<section class="section testimonials transition-top" data-trigger-distance="top 100%">
-  <div class=" testimonials-outer">
-    <div class="testimonials-container">
-              <div class="testimonials-header">
+  <section
+            style="padding-top: 35px"
+            class="section testimonials transition-top"
+            data-trigger-distance="top 100%"
+          >
+            <div class="testimonials-outer">
+              <div class="testimonials-container">
+                          <div class="testimonials-header">
           <h2>
             Your unfair advantage          </h2>
           <p>
-            We believe in creating a level playing field for early-stage tech entrepreneurs by providing every idea with the best possible chance of success, regardless of the founder’s experience, background, network or capabilities.          </p>
+           Our proven marketing systems help practices attract new patients and increase revenue. With data-driven strategies tailored to healthcare, you gain predictable growth and long-term success.   </p>
         </div>
-      
-      <div class="testimonials-items swiper">
-        <div class="testimonials-items-wrapper swiper-wrapper">
-                      <div class="testimonials-item swiper-slide">
-                              <div class="star-image-wrapper">
-                  <svg width="160" height="32" viewBox="0 0 160 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M25.4885 11.9756L20.3712 11.0991C19.9836 11.0333 19.65 10.7902 19.4672 10.4429L17.0526 5.84639C16.5801 4.94704 15.2923 4.94704 14.8189 5.84639L12.4042 10.4429C12.2214 10.7902 11.8878 11.0333 11.5003 11.0991L6.38298 11.9756C5.38126 12.1475 4.98278 13.3722 5.69292 14.0998L9.31764 17.8161C9.59182 18.0976 9.71979 18.4897 9.66313 18.8782L8.91549 24.0156C8.76925 25.0209 9.81119 25.7786 10.7224 25.328L15.3774 23.0284C15.7293 22.8548 16.1424 22.8548 16.4943 23.0284L21.1493 25.328C22.0605 25.7777 23.1024 25.0209 22.9562 24.0156L22.2086 18.8782C22.1519 18.4897 22.2799 18.0967 22.5541 17.8161L26.1788 14.0998C26.8881 13.3723 26.4905 12.1476 25.4888 11.9756H25.4885Z" fill="#FF8C42"/>
-<path d="M57.4885 11.9756L52.3712 11.0991C51.9836 11.0333 51.65 10.7902 51.4672 10.4429L49.0526 5.84639C48.5801 4.94704 47.2923 4.94704 46.8189 5.84639L44.4042 10.4429C44.2214 10.7902 43.8878 11.0333 43.5003 11.0991L38.383 11.9756C37.3813 12.1475 36.9828 13.3722 37.6929 14.0998L41.3176 17.8161C41.5918 18.0976 41.7198 18.4897 41.6631 18.8782L40.9155 24.0156C40.7692 25.0209 41.8112 25.7786 42.7224 25.328L47.3774 23.0284C47.7293 22.8548 48.1424 22.8548 48.4943 23.0284L53.1493 25.328C54.0605 25.7777 55.1024 25.0209 54.9562 24.0156L54.2086 18.8782C54.1519 18.4897 54.2799 18.0967 54.5541 17.8161L58.1788 14.0998C58.8881 13.3723 58.4905 12.1476 57.4888 11.9756H57.4885Z" fill="#FF8C42"/>
-<path d="M89.4885 11.9756L84.3712 11.0991C83.9836 11.0333 83.65 10.7902 83.4672 10.4429L81.0526 5.84639C80.5801 4.94704 79.2923 4.94704 78.8189 5.84639L76.4042 10.4429C76.2214 10.7902 75.8878 11.0333 75.5003 11.0991L70.383 11.9756C69.3813 12.1475 68.9828 13.3722 69.6929 14.0998L73.3176 17.8161C73.5918 18.0976 73.7198 18.4897 73.6631 18.8782L72.9155 24.0156C72.7692 25.0209 73.8112 25.7786 74.7224 25.328L79.3774 23.0284C79.7293 22.8548 80.1424 22.8548 80.4943 23.0284L85.1493 25.328C86.0605 25.7777 87.1024 25.0209 86.9562 24.0156L86.2086 18.8782C86.1519 18.4897 86.2799 18.0967 86.5541 17.8161L90.1788 14.0998C90.8881 13.3723 90.4905 12.1476 89.4888 11.9756H89.4885Z" fill="#FF8C42"/>
-<path d="M121.488 11.9756L116.371 11.0991C115.984 11.0333 115.65 10.7902 115.467 10.4429L113.053 5.84639C112.58 4.94704 111.292 4.94704 110.819 5.84639L108.404 10.4429C108.221 10.7902 107.888 11.0333 107.5 11.0991L102.383 11.9756C101.381 12.1475 100.983 13.3722 101.693 14.0998L105.318 17.8161C105.592 18.0976 105.72 18.4897 105.663 18.8782L104.915 24.0156C104.769 25.0209 105.811 25.7786 106.722 25.328L111.377 23.0284C111.729 22.8548 112.142 22.8548 112.494 23.0284L117.149 25.328C118.061 25.7777 119.102 25.0209 118.956 24.0156L118.209 18.8782C118.152 18.4897 118.28 18.0967 118.554 17.8161L122.179 14.0998C122.888 13.3723 122.49 12.1476 121.489 11.9756H121.488Z" fill="#FF8C42"/>
-<path d="M153.488 11.9756L148.371 11.0991C147.984 11.0333 147.65 10.7902 147.467 10.4429L145.053 5.84639C144.58 4.94704 143.292 4.94704 142.819 5.84639L140.404 10.4429C140.221 10.7902 139.888 11.0333 139.5 11.0991L134.383 11.9756C133.381 12.1475 132.983 13.3722 133.693 14.0998L137.318 17.8161C137.592 18.0976 137.72 18.4897 137.663 18.8782L136.915 24.0156C136.769 25.0209 137.811 25.7786 138.722 25.328L143.377 23.0284C143.729 22.8548 144.142 22.8548 144.494 23.0284L149.149 25.328C150.061 25.7777 151.102 25.0209 150.956 24.0156L150.209 18.8782C150.152 18.4897 150.28 18.0967 150.554 17.8161L154.179 14.0998C154.888 13.3723 154.49 12.1476 153.489 11.9756H153.488Z" fill="#FF8C42"/>
-</svg>
-                </div>
-                            <div class="testimonials-content-wrapper">
-                <div class="quote-icon-wrapper">
-                  <p>“</p>
-                </div>
-                <div class="testimonials-content">
-                  <div class="testimonials-quote">
-                    <p>Hyper didn&#039;t just help us develop an app; they transformed our complex idea into tangible wireframes and eventually into a well-designed product.</p>
-                  </div>
-                  <div class="testimonials-profile">
-                    <div class="testimonials-image-wrapper">
-                                              <img src="../wp-content/uploads/2025/04/f2b053306ff7b08c16bd67c9e397271f.png" alt="Tom Brown">
-                                          </div>
-                    <div class="testimonials-details">
-                      <p class="name">Tom Brown</p>
-                      <p class="company">Beny</p>
+                <div class="testimonials-items swiper">
+                  <div class="testimonials-items-wrapper swiper-wrapper">
+                    <div class="testimonials-item swiper-slide">
+                      <div class="star-image-wrapper">
+                        <svg
+                          width="160"
+                          height="32"
+                          viewBox="0 0 160 32"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M25.4885 11.9756L20.3712 11.0991C19.9836 11.0333 19.65 10.7902 19.4672 10.4429L17.0526 5.84639C16.5801 4.94704 15.2923 4.94704 14.8189 5.84639L12.4042 10.4429C12.2214 10.7902 11.8878 11.0333 11.5003 11.0991L6.38298 11.9756C5.38126 12.1475 4.98278 13.3722 5.69292 14.0998L9.31764 17.8161C9.59182 18.0976 9.71979 18.4897 9.66313 18.8782L8.91549 24.0156C8.76925 25.0209 9.81119 25.7786 10.7224 25.328L15.3774 23.0284C15.7293 22.8548 16.1424 22.8548 16.4943 23.0284L21.1493 25.328C22.0605 25.7777 23.1024 25.0209 22.9562 24.0156L22.2086 18.8782C22.1519 18.4897 22.2799 18.0967 22.5541 17.8161L26.1788 14.0998C26.8881 13.3723 26.4905 12.1476 25.4888 11.9756H25.4885Z"
+                            fill="#FF8C42"
+                          />
+                          <path
+                            d="M57.4885 11.9756L52.3712 11.0991C51.9836 11.0333 51.65 10.7902 51.4672 10.4429L49.0526 5.84639C48.5801 4.94704 47.2923 4.94704 46.8189 5.84639L44.4042 10.4429C44.2214 10.7902 43.8878 11.0333 43.5003 11.0991L38.383 11.9756C37.3813 12.1475 36.9828 13.3722 37.6929 14.0998L41.3176 17.8161C41.5918 18.0976 41.7198 18.4897 41.6631 18.8782L40.9155 24.0156C40.7692 25.0209 41.8112 25.7786 42.7224 25.328L47.3774 23.0284C47.7293 22.8548 48.1424 22.8548 48.4943 23.0284L53.1493 25.328C54.0605 25.7777 55.1024 25.0209 54.9562 24.0156L54.2086 18.8782C54.1519 18.4897 54.2799 18.0967 54.5541 17.8161L58.1788 14.0998C58.8881 13.3723 58.4905 12.1476 57.4888 11.9756H57.4885Z"
+                            fill="#FF8C42"
+                          />
+                          <path
+                            d="M89.4885 11.9756L84.3712 11.0991C83.9836 11.0333 83.65 10.7902 83.4672 10.4429L81.0526 5.84639C80.5801 4.94704 79.2923 4.94704 78.8189 5.84639L76.4042 10.4429C76.2214 10.7902 75.8878 11.0333 75.5003 11.0991L70.383 11.9756C69.3813 12.1475 68.9828 13.3722 69.6929 14.0998L73.3176 17.8161C73.5918 18.0976 73.7198 18.4897 73.6631 18.8782L72.9155 24.0156C72.7692 25.0209 73.8112 25.7786 74.7224 25.328L79.3774 23.0284C79.7293 22.8548 80.1424 22.8548 80.4943 23.0284L85.1493 25.328C86.0605 25.7777 87.1024 25.0209 86.9562 24.0156L86.2086 18.8782C86.1519 18.4897 86.2799 18.0967 86.5541 17.8161L90.1788 14.0998C90.8881 13.3723 90.4905 12.1476 89.4888 11.9756H89.4885Z"
+                            fill="#FF8C42"
+                          />
+                          <path
+                            d="M121.488 11.9756L116.371 11.0991C115.984 11.0333 115.65 10.7902 115.467 10.4429L113.053 5.84639C112.58 4.94704 111.292 4.94704 110.819 5.84639L108.404 10.4429C108.221 10.7902 107.888 11.0333 107.5 11.0991L102.383 11.9756C101.381 12.1475 100.983 13.3722 101.693 14.0998L105.318 17.8161C105.592 18.0976 105.72 18.4897 105.663 18.8782L104.915 24.0156C104.769 25.0209 105.811 25.7786 106.722 25.328L111.377 23.0284C111.729 22.8548 112.142 22.8548 112.494 23.0284L117.149 25.328C118.061 25.7777 119.102 25.0209 118.956 24.0156L118.209 18.8782C118.152 18.4897 118.28 18.0967 118.554 17.8161L122.179 14.0998C122.888 13.3723 122.49 12.1476 121.489 11.9756H121.488Z"
+                            fill="#FF8C42"
+                          />
+                          <path
+                            d="M153.488 11.9756L148.371 11.0991C147.984 11.0333 147.65 10.7902 147.467 10.4429L145.053 5.84639C144.58 4.94704 143.292 4.94704 142.819 5.84639L140.404 10.4429C140.221 10.7902 139.888 11.0333 139.5 11.0991L134.383 11.9756C133.381 12.1475 132.983 13.3722 133.693 14.0998L137.318 17.8161C137.592 18.0976 137.72 18.4897 137.663 18.8782L136.915 24.0156C136.769 25.0209 137.811 25.7786 138.722 25.328L143.377 23.0284C143.729 22.8548 144.142 22.8548 144.494 23.0284L149.149 25.328C150.061 25.7777 151.102 25.0209 150.956 24.0156L150.209 18.8782C150.152 18.4897 150.28 18.0967 150.554 17.8161L154.179 14.0998C154.888 13.3723 154.49 12.1476 153.489 11.9756H153.488Z"
+                            fill="#FF8C42"
+                          />
+                        </svg>
+                      </div>
+                      <div class="testimonials-content-wrapper">
+                        <div class="quote-icon-wrapper">
+                          <p>“</p>
+                        </div>
+                        <div class="testimonials-content">
+                          <div class="testimonials-quote">
+                            <p>
+                              I highly recommend JJ and his team at Luther Tech.
+                              They gave us exactly what we were looking for and
+                              I am excited about our partnership and am looking
+                              forward to our next project!
+                            </p>
+                          </div>
+                          <div class="testimonials-profile">
+                            <div class="testimonials-image-wrapper">
+                              <img
+                                src="../wp-content/uploads/2025/04/Testimonial1.png"
+                                alt="Sarah M."
+                              />
+                            </div>
+                            <div class="testimonials-details">
+                              <p class="name">Sarah M.</p>
+                              <p class="company">Opine</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="testimonials-item swiper-slide">
+                      <div class="star-image-wrapper">
+                        <svg
+                          width="160"
+                          height="32"
+                          viewBox="0 0 160 32"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M25.4885 11.9756L20.3712 11.0991C19.9836 11.0333 19.65 10.7902 19.4672 10.4429L17.0526 5.84639C16.5801 4.94704 15.2923 4.94704 14.8189 5.84639L12.4042 10.4429C12.2214 10.7902 11.8878 11.0333 11.5003 11.0991L6.38298 11.9756C5.38126 12.1475 4.98278 13.3722 5.69292 14.0998L9.31764 17.8161C9.59182 18.0976 9.71979 18.4897 9.66313 18.8782L8.91549 24.0156C8.76925 25.0209 9.81119 25.7786 10.7224 25.328L15.3774 23.0284C15.7293 22.8548 16.1424 22.8548 16.4943 23.0284L21.1493 25.328C22.0605 25.7777 23.1024 25.0209 22.9562 24.0156L22.2086 18.8782C22.1519 18.4897 22.2799 18.0967 22.5541 17.8161L26.1788 14.0998C26.8881 13.3723 26.4905 12.1476 25.4888 11.9756H25.4885Z"
+                            fill="#FF8C42"
+                          />
+                          <path
+                            d="M57.4885 11.9756L52.3712 11.0991C51.9836 11.0333 51.65 10.7902 51.4672 10.4429L49.0526 5.84639C48.5801 4.94704 47.2923 4.94704 46.8189 5.84639L44.4042 10.4429C44.2214 10.7902 43.8878 11.0333 43.5003 11.0991L38.383 11.9756C37.3813 12.1475 36.9828 13.3722 37.6929 14.0998L41.3176 17.8161C41.5918 18.0976 41.7198 18.4897 41.6631 18.8782L40.9155 24.0156C40.7692 25.0209 41.8112 25.7786 42.7224 25.328L47.3774 23.0284C47.7293 22.8548 48.1424 22.8548 48.4943 23.0284L53.1493 25.328C54.0605 25.7777 55.1024 25.0209 54.9562 24.0156L54.2086 18.8782C54.1519 18.4897 54.2799 18.0967 54.5541 17.8161L58.1788 14.0998C58.8881 13.3723 58.4905 12.1476 57.4888 11.9756H57.4885Z"
+                            fill="#FF8C42"
+                          />
+                          <path
+                            d="M89.4885 11.9756L84.3712 11.0991C83.9836 11.0333 83.65 10.7902 83.4672 10.4429L81.0526 5.84639C80.5801 4.94704 79.2923 4.94704 78.8189 5.84639L76.4042 10.4429C76.2214 10.7902 75.8878 11.0333 75.5003 11.0991L70.383 11.9756C69.3813 12.1475 68.9828 13.3722 69.6929 14.0998L73.3176 17.8161C73.5918 18.0976 73.7198 18.4897 73.6631 18.8782L72.9155 24.0156C72.7692 25.0209 73.8112 25.7786 74.7224 25.328L79.3774 23.0284C79.7293 22.8548 80.1424 22.8548 80.4943 23.0284L85.1493 25.328C86.0605 25.7777 87.1024 25.0209 86.9562 24.0156L86.2086 18.8782C86.1519 18.4897 86.2799 18.0967 86.5541 17.8161L90.1788 14.0998C90.8881 13.3723 90.4905 12.1476 89.4888 11.9756H89.4885Z"
+                            fill="#FF8C42"
+                          />
+                          <path
+                            d="M121.488 11.9756L116.371 11.0991C115.984 11.0333 115.65 10.7902 115.467 10.4429L113.053 5.84639C112.58 4.94704 111.292 4.94704 110.819 5.84639L108.404 10.4429C108.221 10.7902 107.888 11.0333 107.5 11.0991L102.383 11.9756C101.381 12.1475 100.983 13.3722 101.693 14.0998L105.318 17.8161C105.592 18.0976 105.72 18.4897 105.663 18.8782L104.915 24.0156C104.769 25.0209 105.811 25.7786 106.722 25.328L111.377 23.0284C111.729 22.8548 112.142 22.8548 112.494 23.0284L117.149 25.328C118.061 25.7777 119.102 25.0209 118.956 24.0156L118.209 18.8782C118.152 18.4897 118.28 18.0967 118.554 17.8161L122.179 14.0998C122.888 13.3723 122.49 12.1476 121.489 11.9756H121.488Z"
+                            fill="#FF8C42"
+                          />
+                          <path
+                            d="M153.488 11.9756L148.371 11.0991C147.984 11.0333 147.65 10.7902 147.467 10.4429L145.053 5.84639C144.58 4.94704 143.292 4.94704 142.819 5.84639L140.404 10.4429C140.221 10.7902 139.888 11.0333 139.5 11.0991L134.383 11.9756C133.381 12.1475 132.983 13.3722 133.693 14.0998L137.318 17.8161C137.592 18.0976 137.72 18.4897 137.663 18.8782L136.915 24.0156C136.769 25.0209 137.811 25.7786 138.722 25.328L143.377 23.0284C143.729 22.8548 144.142 22.8548 144.494 23.0284L149.149 25.328C150.061 25.7777 151.102 25.0209 150.956 24.0156L150.209 18.8782C150.152 18.4897 150.28 18.0967 150.554 17.8161L154.179 14.0998C154.888 13.3723 154.49 12.1476 153.489 11.9756H153.488Z"
+                            fill="#FF8C42"
+                          />
+                        </svg>
+                      </div>
+                      <div class="testimonials-content-wrapper">
+                        <div class="quote-icon-wrapper">
+                          <p>“</p>
+                        </div>
+                        <div class="testimonials-content">
+                          <div class="testimonials-quote">
+                            <p>
+                              Working with JJ was a great experience, his agency
+                              was professional and helped us build a stunning
+                              website that has already started bringing in more
+                              patient enquiries.
+                            </p>
+                          </div>
+                          <div class="testimonials-profile">
+                            <div class="testimonials-image-wrapper">
+                              <img
+                                src="../wp-content/uploads/2025/04/Testimonial2.png"
+                                alt="Gabriel M."
+                              />
+                            </div>
+                            <div class="testimonials-details">
+                              <p class="name">Gabriel M.</p>
+                              <p class="company">Enigma</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="testimonials-item swiper-slide">
+                      <div class="star-image-wrapper">
+                        <svg
+                          width="160"
+                          height="32"
+                          viewBox="0 0 160 32"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M25.4885 11.9756L20.3712 11.0991C19.9836 11.0333 19.65 10.7902 19.4672 10.4429L17.0526 5.84639C16.5801 4.94704 15.2923 4.94704 14.8189 5.84639L12.4042 10.4429C12.2214 10.7902 11.8878 11.0333 11.5003 11.0991L6.38298 11.9756C5.38126 12.1475 4.98278 13.3722 5.69292 14.0998L9.31764 17.8161C9.59182 18.0976 9.71979 18.4897 9.66313 18.8782L8.91549 24.0156C8.76925 25.0209 9.81119 25.7786 10.7224 25.328L15.3774 23.0284C15.7293 22.8548 16.1424 22.8548 16.4943 23.0284L21.1493 25.328C22.0605 25.7777 23.1024 25.0209 22.9562 24.0156L22.2086 18.8782C22.1519 18.4897 22.2799 18.0967 22.5541 17.8161L26.1788 14.0998C26.8881 13.3723 26.4905 12.1476 25.4888 11.9756H25.4885Z"
+                            fill="#FF8C42"
+                          />
+                          <path
+                            d="M57.4885 11.9756L52.3712 11.0991C51.9836 11.0333 51.65 10.7902 51.4672 10.4429L49.0526 5.84639C48.5801 4.94704 47.2923 4.94704 46.8189 5.84639L44.4042 10.4429C44.2214 10.7902 43.8878 11.0333 43.5003 11.0991L38.383 11.9756C37.3813 12.1475 36.9828 13.3722 37.6929 14.0998L41.3176 17.8161C41.5918 18.0976 41.7198 18.4897 41.6631 18.8782L40.9155 24.0156C40.7692 25.0209 41.8112 25.7786 42.7224 25.328L47.3774 23.0284C47.7293 22.8548 48.1424 22.8548 48.4943 23.0284L53.1493 25.328C54.0605 25.7777 55.1024 25.0209 54.9562 24.0156L54.2086 18.8782C54.1519 18.4897 54.2799 18.0967 54.5541 17.8161L58.1788 14.0998C58.8881 13.3723 58.4905 12.1476 57.4888 11.9756H57.4885Z"
+                            fill="#FF8C42"
+                          />
+                          <path
+                            d="M89.4885 11.9756L84.3712 11.0991C83.9836 11.0333 83.65 10.7902 83.4672 10.4429L81.0526 5.84639C80.5801 4.94704 79.2923 4.94704 78.8189 5.84639L76.4042 10.4429C76.2214 10.7902 75.8878 11.0333 75.5003 11.0991L70.383 11.9756C69.3813 12.1475 68.9828 13.3722 69.6929 14.0998L73.3176 17.8161C73.5918 18.0976 73.7198 18.4897 73.6631 18.8782L72.9155 24.0156C72.7692 25.0209 73.8112 25.7786 74.7224 25.328L79.3774 23.0284C79.7293 22.8548 80.1424 22.8548 80.4943 23.0284L85.1493 25.328C86.0605 25.7777 87.1024 25.0209 86.9562 24.0156L86.2086 18.8782C86.1519 18.4897 86.2799 18.0967 86.5541 17.8161L90.1788 14.0998C90.8881 13.3723 90.4905 12.1476 89.4888 11.9756H89.4885Z"
+                            fill="#FF8C42"
+                          />
+                          <path
+                            d="M121.488 11.9756L116.371 11.0991C115.984 11.0333 115.65 10.7902 115.467 10.4429L113.053 5.84639C112.58 4.94704 111.292 4.94704 110.819 5.84639L108.404 10.4429C108.221 10.7902 107.888 11.0333 107.5 11.0991L102.383 11.9756C101.381 12.1475 100.983 13.3722 101.693 14.0998L105.318 17.8161C105.592 18.0976 105.72 18.4897 105.663 18.8782L104.915 24.0156C104.769 25.0209 105.811 25.7786 106.722 25.328L111.377 23.0284C111.729 22.8548 112.142 22.8548 112.494 23.0284L117.149 25.328C118.061 25.7777 119.102 25.0209 118.956 24.0156L118.209 18.8782C118.152 18.4897 118.28 18.0967 118.554 17.8161L122.179 14.0998C122.888 13.3723 122.49 12.1476 121.489 11.9756H121.488Z"
+                            fill="#FF8C42"
+                          />
+                          <path
+                            d="M153.488 11.9756L148.371 11.0991C147.984 11.0333 147.65 10.7902 147.467 10.4429L145.053 5.84639C144.58 4.94704 143.292 4.94704 142.819 5.84639L140.404 10.4429C140.221 10.7902 139.888 11.0333 139.5 11.0991L134.383 11.9756C133.381 12.1475 132.983 13.3722 133.693 14.0998L137.318 17.8161C137.592 18.0976 137.72 18.4897 137.663 18.8782L136.915 24.0156C136.769 25.0209 137.811 25.7786 138.722 25.328L143.377 23.0284C143.729 22.8548 144.142 22.8548 144.494 23.0284L149.149 25.328C150.061 25.7777 151.102 25.0209 150.956 24.0156L150.209 18.8782C150.152 18.4897 150.28 18.0967 150.554 17.8161L154.179 14.0998C154.888 13.3723 154.49 12.1476 153.489 11.9756H153.488Z"
+                            fill="#FF8C42"
+                          />
+                        </svg>
+                      </div>
+                      <div class="testimonials-content-wrapper">
+                        <div class="quote-icon-wrapper">
+                          <p>“</p>
+                        </div>
+                        <div class="testimonials-content">
+                          <div class="testimonials-quote">
+                            <p>
+                              Highly professional, competent, reliable, and get
+                              the job done. The Luther Tech team are also able
+                              to communicate very well and remain transparent,
+                              clear and precise.
+                            </p>
+                          </div>
+                          <div class="testimonials-profile">
+                            <div class="testimonials-image-wrapper">
+                              <img
+                                src="../wp-content/uploads/2025/04/Testimonial3.png"
+                                alt="Hadley S."
+                              />
+                            </div>
+                            <div class="testimonials-details">
+                              <p class="name">Hadley S.</p>
+                              <p class="company">Reply</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
+                  <div class="swiper-pagination"></div>
                 </div>
-              </div>
-            </div>
-                      <div class="testimonials-item swiper-slide">
-                              <div class="star-image-wrapper">
-                  <svg width="160" height="32" viewBox="0 0 160 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M25.4885 11.9756L20.3712 11.0991C19.9836 11.0333 19.65 10.7902 19.4672 10.4429L17.0526 5.84639C16.5801 4.94704 15.2923 4.94704 14.8189 5.84639L12.4042 10.4429C12.2214 10.7902 11.8878 11.0333 11.5003 11.0991L6.38298 11.9756C5.38126 12.1475 4.98278 13.3722 5.69292 14.0998L9.31764 17.8161C9.59182 18.0976 9.71979 18.4897 9.66313 18.8782L8.91549 24.0156C8.76925 25.0209 9.81119 25.7786 10.7224 25.328L15.3774 23.0284C15.7293 22.8548 16.1424 22.8548 16.4943 23.0284L21.1493 25.328C22.0605 25.7777 23.1024 25.0209 22.9562 24.0156L22.2086 18.8782C22.1519 18.4897 22.2799 18.0967 22.5541 17.8161L26.1788 14.0998C26.8881 13.3723 26.4905 12.1476 25.4888 11.9756H25.4885Z" fill="#FF8C42"/>
-<path d="M57.4885 11.9756L52.3712 11.0991C51.9836 11.0333 51.65 10.7902 51.4672 10.4429L49.0526 5.84639C48.5801 4.94704 47.2923 4.94704 46.8189 5.84639L44.4042 10.4429C44.2214 10.7902 43.8878 11.0333 43.5003 11.0991L38.383 11.9756C37.3813 12.1475 36.9828 13.3722 37.6929 14.0998L41.3176 17.8161C41.5918 18.0976 41.7198 18.4897 41.6631 18.8782L40.9155 24.0156C40.7692 25.0209 41.8112 25.7786 42.7224 25.328L47.3774 23.0284C47.7293 22.8548 48.1424 22.8548 48.4943 23.0284L53.1493 25.328C54.0605 25.7777 55.1024 25.0209 54.9562 24.0156L54.2086 18.8782C54.1519 18.4897 54.2799 18.0967 54.5541 17.8161L58.1788 14.0998C58.8881 13.3723 58.4905 12.1476 57.4888 11.9756H57.4885Z" fill="#FF8C42"/>
-<path d="M89.4885 11.9756L84.3712 11.0991C83.9836 11.0333 83.65 10.7902 83.4672 10.4429L81.0526 5.84639C80.5801 4.94704 79.2923 4.94704 78.8189 5.84639L76.4042 10.4429C76.2214 10.7902 75.8878 11.0333 75.5003 11.0991L70.383 11.9756C69.3813 12.1475 68.9828 13.3722 69.6929 14.0998L73.3176 17.8161C73.5918 18.0976 73.7198 18.4897 73.6631 18.8782L72.9155 24.0156C72.7692 25.0209 73.8112 25.7786 74.7224 25.328L79.3774 23.0284C79.7293 22.8548 80.1424 22.8548 80.4943 23.0284L85.1493 25.328C86.0605 25.7777 87.1024 25.0209 86.9562 24.0156L86.2086 18.8782C86.1519 18.4897 86.2799 18.0967 86.5541 17.8161L90.1788 14.0998C90.8881 13.3723 90.4905 12.1476 89.4888 11.9756H89.4885Z" fill="#FF8C42"/>
-<path d="M121.488 11.9756L116.371 11.0991C115.984 11.0333 115.65 10.7902 115.467 10.4429L113.053 5.84639C112.58 4.94704 111.292 4.94704 110.819 5.84639L108.404 10.4429C108.221 10.7902 107.888 11.0333 107.5 11.0991L102.383 11.9756C101.381 12.1475 100.983 13.3722 101.693 14.0998L105.318 17.8161C105.592 18.0976 105.72 18.4897 105.663 18.8782L104.915 24.0156C104.769 25.0209 105.811 25.7786 106.722 25.328L111.377 23.0284C111.729 22.8548 112.142 22.8548 112.494 23.0284L117.149 25.328C118.061 25.7777 119.102 25.0209 118.956 24.0156L118.209 18.8782C118.152 18.4897 118.28 18.0967 118.554 17.8161L122.179 14.0998C122.888 13.3723 122.49 12.1476 121.489 11.9756H121.488Z" fill="#FF8C42"/>
-<path d="M153.488 11.9756L148.371 11.0991C147.984 11.0333 147.65 10.7902 147.467 10.4429L145.053 5.84639C144.58 4.94704 143.292 4.94704 142.819 5.84639L140.404 10.4429C140.221 10.7902 139.888 11.0333 139.5 11.0991L134.383 11.9756C133.381 12.1475 132.983 13.3722 133.693 14.0998L137.318 17.8161C137.592 18.0976 137.72 18.4897 137.663 18.8782L136.915 24.0156C136.769 25.0209 137.811 25.7786 138.722 25.328L143.377 23.0284C143.729 22.8548 144.142 22.8548 144.494 23.0284L149.149 25.328C150.061 25.7777 151.102 25.0209 150.956 24.0156L150.209 18.8782C150.152 18.4897 150.28 18.0967 150.554 17.8161L154.179 14.0998C154.888 13.3723 154.49 12.1476 153.489 11.9756H153.488Z" fill="#FF8C42"/>
-</svg>
-                </div>
-                            <div class="testimonials-content-wrapper">
-                <div class="quote-icon-wrapper">
-                  <p>“</p>
-                </div>
-                <div class="testimonials-content">
-                  <div class="testimonials-quote">
-                    <p>One of the most valuable things I gained from Hyper was learning how to cut through the noise and double down on what truly moved the needle.</p>
-                  </div>
-                  <div class="testimonials-profile">
-                    <div class="testimonials-image-wrapper">
-                                              <img src="../wp-content/uploads/2025/04/Adam-Campbell.png" alt="Adam Campbell">
-                                          </div>
-                    <div class="testimonials-details">
-                      <p class="name">Adam Campbell</p>
-                      <p class="company">Magic Mountain</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-                      <div class="testimonials-item swiper-slide">
-                              <div class="star-image-wrapper">
-                  <svg width="160" height="32" viewBox="0 0 160 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M25.4885 11.9756L20.3712 11.0991C19.9836 11.0333 19.65 10.7902 19.4672 10.4429L17.0526 5.84639C16.5801 4.94704 15.2923 4.94704 14.8189 5.84639L12.4042 10.4429C12.2214 10.7902 11.8878 11.0333 11.5003 11.0991L6.38298 11.9756C5.38126 12.1475 4.98278 13.3722 5.69292 14.0998L9.31764 17.8161C9.59182 18.0976 9.71979 18.4897 9.66313 18.8782L8.91549 24.0156C8.76925 25.0209 9.81119 25.7786 10.7224 25.328L15.3774 23.0284C15.7293 22.8548 16.1424 22.8548 16.4943 23.0284L21.1493 25.328C22.0605 25.7777 23.1024 25.0209 22.9562 24.0156L22.2086 18.8782C22.1519 18.4897 22.2799 18.0967 22.5541 17.8161L26.1788 14.0998C26.8881 13.3723 26.4905 12.1476 25.4888 11.9756H25.4885Z" fill="#FF8C42"/>
-<path d="M57.4885 11.9756L52.3712 11.0991C51.9836 11.0333 51.65 10.7902 51.4672 10.4429L49.0526 5.84639C48.5801 4.94704 47.2923 4.94704 46.8189 5.84639L44.4042 10.4429C44.2214 10.7902 43.8878 11.0333 43.5003 11.0991L38.383 11.9756C37.3813 12.1475 36.9828 13.3722 37.6929 14.0998L41.3176 17.8161C41.5918 18.0976 41.7198 18.4897 41.6631 18.8782L40.9155 24.0156C40.7692 25.0209 41.8112 25.7786 42.7224 25.328L47.3774 23.0284C47.7293 22.8548 48.1424 22.8548 48.4943 23.0284L53.1493 25.328C54.0605 25.7777 55.1024 25.0209 54.9562 24.0156L54.2086 18.8782C54.1519 18.4897 54.2799 18.0967 54.5541 17.8161L58.1788 14.0998C58.8881 13.3723 58.4905 12.1476 57.4888 11.9756H57.4885Z" fill="#FF8C42"/>
-<path d="M89.4885 11.9756L84.3712 11.0991C83.9836 11.0333 83.65 10.7902 83.4672 10.4429L81.0526 5.84639C80.5801 4.94704 79.2923 4.94704 78.8189 5.84639L76.4042 10.4429C76.2214 10.7902 75.8878 11.0333 75.5003 11.0991L70.383 11.9756C69.3813 12.1475 68.9828 13.3722 69.6929 14.0998L73.3176 17.8161C73.5918 18.0976 73.7198 18.4897 73.6631 18.8782L72.9155 24.0156C72.7692 25.0209 73.8112 25.7786 74.7224 25.328L79.3774 23.0284C79.7293 22.8548 80.1424 22.8548 80.4943 23.0284L85.1493 25.328C86.0605 25.7777 87.1024 25.0209 86.9562 24.0156L86.2086 18.8782C86.1519 18.4897 86.2799 18.0967 86.5541 17.8161L90.1788 14.0998C90.8881 13.3723 90.4905 12.1476 89.4888 11.9756H89.4885Z" fill="#FF8C42"/>
-<path d="M121.488 11.9756L116.371 11.0991C115.984 11.0333 115.65 10.7902 115.467 10.4429L113.053 5.84639C112.58 4.94704 111.292 4.94704 110.819 5.84639L108.404 10.4429C108.221 10.7902 107.888 11.0333 107.5 11.0991L102.383 11.9756C101.381 12.1475 100.983 13.3722 101.693 14.0998L105.318 17.8161C105.592 18.0976 105.72 18.4897 105.663 18.8782L104.915 24.0156C104.769 25.0209 105.811 25.7786 106.722 25.328L111.377 23.0284C111.729 22.8548 112.142 22.8548 112.494 23.0284L117.149 25.328C118.061 25.7777 119.102 25.0209 118.956 24.0156L118.209 18.8782C118.152 18.4897 118.28 18.0967 118.554 17.8161L122.179 14.0998C122.888 13.3723 122.49 12.1476 121.489 11.9756H121.488Z" fill="#FF8C42"/>
-<path d="M153.488 11.9756L148.371 11.0991C147.984 11.0333 147.65 10.7902 147.467 10.4429L145.053 5.84639C144.58 4.94704 143.292 4.94704 142.819 5.84639L140.404 10.4429C140.221 10.7902 139.888 11.0333 139.5 11.0991L134.383 11.9756C133.381 12.1475 132.983 13.3722 133.693 14.0998L137.318 17.8161C137.592 18.0976 137.72 18.4897 137.663 18.8782L136.915 24.0156C136.769 25.0209 137.811 25.7786 138.722 25.328L143.377 23.0284C143.729 22.8548 144.142 22.8548 144.494 23.0284L149.149 25.328C150.061 25.7777 151.102 25.0209 150.956 24.0156L150.209 18.8782C150.152 18.4897 150.28 18.0967 150.554 17.8161L154.179 14.0998C154.888 13.3723 154.49 12.1476 153.489 11.9756H153.488Z" fill="#FF8C42"/>
-</svg>
-                </div>
-                            <div class="testimonials-content-wrapper">
-                <div class="quote-icon-wrapper">
-                  <p>“</p>
-                </div>
-                <div class="testimonials-content">
-                  <div class="testimonials-quote">
-                    <p>Honestly without Hyper, I wouldn&#039;t have my business. At such an early stage, you need the advice and mentorship, then the validation of the idea. Hyper provides that and more.</p>
-                  </div>
-                  <div class="testimonials-profile">
-                    <div class="testimonials-image-wrapper">
-                                              <img src="../wp-content/uploads/2025/04/86b4f894f921a7967e587ca782f23a6f.png" alt="Ash Brown">
-                                          </div>
-                    <div class="testimonials-details">
-                      <p class="name">Ash Brown</p>
-                      <p class="company">Empiraa</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-                  </div>
-        <div class="swiper-pagination"></div>
-      </div>
 
-      
-    </div>
-  </div>
-</section>
+               
+
+                <!-- <div
+                  class="testimonials-cta"
+                  style="
+                    margin-top: -45px;
+                    text-align: center; 
+                    text-decoration: underline;
+                  "
+                >
+                  Enhance your clinic’s digital presence and start attracting
+                  more patients today
+                </div> -->
+
+                <script>
+                  (function () {
+                    var banner = document.getElementById("banner-cta");
+                    if (window.innerWidth <= 767) {
+                      banner.style.marginTop = "50px";
+                    } else {
+                      banner.style.marginTop = "0px";
+                    }
+                  })();
+                </script>
+
+                <script>
+                  (function () {
+                    const cta = document.querySelector(".testimonials-cta");
+                    function adjustCta() {
+                      if (window.innerWidth < 768) {
+                        cta.style.textAlign = "center";
+                      } else {
+                        cta.style.marginTop = "-45px";
+                        cta.style.textAlign = "left";
+                      }
+                    }
+                    window.addEventListener("resize", adjustCta);
+                    adjustCta();
+                  })();
+                </script>
+              </div>
+            </div>
+          </section>
 
                                                 
-  <section class="section startups">
-    <div class="startups-outer">
-      <div class="startups-container">
-        <div class="startups-items">
-
-                      <div class="startups-item transition-top">
-              <div class="item-content">
-                <div class="content-header">
-                  <h2><a href="../startups/empiraa/index.html">Empiraa</a></h2>
-                  <div class="content-chips">
-                    <p class="status" style="background-color: #E4ECE8;">Status: <span>Live</span></p>
-                                          <p class="info">
-                        Raised $1.8M pre-seed                      </p>
-                                      </div>
-                </div>
-                <div class="content-body">
-                  <div class="body-main">
-                                        <p class="quote">“I was working full-time as a Sales Director, balancing family commitments, and yet, I couldn&#039;t shake a powerful idea I had for a startup: Empiraa. The concept was big, but so were my responsibilities. I knew I needed a partner who could help me move this vision forward in the few hours I could carve out each week. That&#039;s when I connected with Hyper...”</p>
-                  </div>
-                  <!--                                         <a class="website" href="https://empiraa.com" target="_blank" rel="noopener noreferrer">
-                      empiraa.com                    </a>
-                   -->
-
-                </div>
-                <div class="content-footer">
-                                                          <div class="founder">
-                      <div class="image-wrapper">
-                        <img src="../wp-content/uploads/2025/04/86b4f894f921a7967e587ca782f23a6f.png" alt="Ash Brown">
-                      </div>
-                      <div class="founder-details">
-                        <p class="name">Ash Brown</p>
-                        <p class="role">CEO and founder</p>
-                      </div>
-                    </div>
-                  
-                                      <div class="cta">
-                      <a href="../startups/empiraa/index.html">
-                        <span>Read their story</span>
-                        <svg class="orange" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect class="rect" width="42" height="42" rx="21" fill="#FA8A4B"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M26.9932 16.0488C26.9932 15.4998 26.5493 15.0528 25.9993 15.0498L18.0062 14.9998H18.0003C17.4503 14.9998 17.0043 15.4438 17.0003 15.9938C16.9963 16.5458 17.4413 16.9968 17.9943 16.9998L23.5522 17.0348L15.2932 25.2928C14.9022 25.6838 14.9022 26.3168 15.2932 26.7068C15.4882 26.9028 15.7442 26.9998 16.0002 26.9998C16.2563 26.9998 16.5122 26.9028 16.7072 26.7068L24.9952 18.4188L25.0002 24.0008C25.0002 24.5528 25.4482 24.9998 26.0002 24.9998H26.0013C26.5533 24.9998 27.0002 24.5508 27.0002 23.9988L26.9932 16.0488Z" fill="#231F20"/>
-<mask id="mask0_1515_22608" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="15" y="14" width="12" height="13">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M26.9932 16.0488C26.9932 15.4998 26.5493 15.0528 25.9993 15.0498L18.0062 14.9998H18.0003C17.4503 14.9998 17.0043 15.4438 17.0003 15.9938C16.9963 16.5458 17.4413 16.9968 17.9943 16.9998L23.5522 17.0348L15.2932 25.2928C14.9022 25.6838 14.9022 26.3168 15.2932 26.7068C15.4882 26.9028 15.7442 26.9998 16.0002 26.9998C16.2563 26.9998 16.5122 26.9028 16.7072 26.7068L24.9952 18.4188L25.0002 24.0008C25.0002 24.5528 25.4482 24.9998 26.0002 24.9998H26.0013C26.5533 24.9998 27.0002 24.5508 27.0002 23.9988L26.9932 16.0488Z" fill="white"/>
-</mask>
-<g mask="url(#mask0_1515_22608)">
-<rect x="9" y="9" width="24" height="24" fill="white"/>
-</g>
-</svg>
-                      </a>
-                    </div>
-                                  </div>
-              </div>
-              <div class="item-featured-image">
-                <a href="../startups/empiraa/index.html"><img src="../wp-content/uploads/2025/04/Showcasing-product-design%402x.jpg" alt="Empiraa" /></a>
-              </div>
-            </div>
-                      <div class="startups-item transition-top">
-              <div class="item-content">
-                <div class="content-header">
-                  <h2><a href="../startups/ambl/index.html">Ambl</a></h2>
-                  <div class="content-chips">
-                    <p class="status" style="background-color: #E4ECE8;">Status: <span>Live</span></p>
-                                          <p class="info">
-                        Raised £3.05M                      </p>
-                                          <p class="info">
-                        1500+ Partners                      </p>
-                                      </div>
-                </div>
-                <div class="content-body">
-                  <div class="body-main">
-                                        <p class="quote">&quot;We have been working with Hyper since the beginning of our business, and the team have been crucial to the foundation of Ambl. With their help, we were able to successfully take our product from a pitch deck to launch, expanding our network along the way. We are extremely satisfied with the quality of the product and their help.&quot;</p>
-                  </div>
-                  <!--                                         <a class="website" href="https://app.ambl.co" target="_blank" rel="noopener noreferrer">
-                      app.ambl.co                    </a>
-                   -->
-
-                </div>
-                <div class="content-footer">
-                                                          <div class="founder">
-                      <div class="image-wrapper">
-                        <img src="../wp-content/uploads/2025/05/Aaron-1.png" alt="Aaron Solomon">
-                      </div>
-                      <div class="founder-details">
-                        <p class="name">Aaron Solomon</p>
-                        <p class="role">CEO &amp; Founder</p>
-                      </div>
-                    </div>
-                  
-                                      <div class="cta">
-                      <a href="../startups/ambl/index.html">
-                        <span>Read their story</span>
-                        <svg class="orange" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect class="rect" width="42" height="42" rx="21" fill="#FA8A4B"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M26.9932 16.0488C26.9932 15.4998 26.5493 15.0528 25.9993 15.0498L18.0062 14.9998H18.0003C17.4503 14.9998 17.0043 15.4438 17.0003 15.9938C16.9963 16.5458 17.4413 16.9968 17.9943 16.9998L23.5522 17.0348L15.2932 25.2928C14.9022 25.6838 14.9022 26.3168 15.2932 26.7068C15.4882 26.9028 15.7442 26.9998 16.0002 26.9998C16.2563 26.9998 16.5122 26.9028 16.7072 26.7068L24.9952 18.4188L25.0002 24.0008C25.0002 24.5528 25.4482 24.9998 26.0002 24.9998H26.0013C26.5533 24.9998 27.0002 24.5508 27.0002 23.9988L26.9932 16.0488Z" fill="#231F20"/>
-<mask id="mask0_1515_22608" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="15" y="14" width="12" height="13">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M26.9932 16.0488C26.9932 15.4998 26.5493 15.0528 25.9993 15.0498L18.0062 14.9998H18.0003C17.4503 14.9998 17.0043 15.4438 17.0003 15.9938C16.9963 16.5458 17.4413 16.9968 17.9943 16.9998L23.5522 17.0348L15.2932 25.2928C14.9022 25.6838 14.9022 26.3168 15.2932 26.7068C15.4882 26.9028 15.7442 26.9998 16.0002 26.9998C16.2563 26.9998 16.5122 26.9028 16.7072 26.7068L24.9952 18.4188L25.0002 24.0008C25.0002 24.5528 25.4482 24.9998 26.0002 24.9998H26.0013C26.5533 24.9998 27.0002 24.5508 27.0002 23.9988L26.9932 16.0488Z" fill="white"/>
-</mask>
-<g mask="url(#mask0_1515_22608)">
-<rect x="9" y="9" width="24" height="24" fill="white"/>
-</g>
-</svg>
-                      </a>
-                    </div>
-                                  </div>
-              </div>
-              <div class="item-featured-image">
-                <a href="../startups/ambl/index.html"><img src="../wp-content/uploads/2025/05/Showcasing-product-design-6.jpg" alt="Ambl" /></a>
-              </div>
-            </div>
-                      <div class="startups-item transition-top">
-              <div class="item-content">
-                <div class="content-header">
-                  <h2><a href="../startups/strabo/index.html">Strabo</a></h2>
-                  <div class="content-chips">
-                    <p class="status" style="background-color: #E4ECE8;">Status: <span>Live</span></p>
-                                          <p class="info">
-                        Raised £250K                      </p>
-                                      </div>
-                </div>
-                <div class="content-body">
-                  <div class="body-main">
-                                        <p class="quote">&quot;Before joining Hyper, we needed help refining our business model to align with market demand. We had an idea, but it wasn&#039;t fully clear how to adapt it to solve real user pain points in a scalable way.
-
-Hyper pushed us to stress-test our assumptions and build something more robust.&quot;</p>
-                  </div>
-                  <!--                                         <a class="website" href="https://strabo.app" target="_blank" rel="noopener noreferrer">
-                      strabo.app                    </a>
-                   -->
-
-                </div>
-                <div class="content-footer">
-                                                          <div class="founder">
-                      <div class="image-wrapper">
-                        <img src="../wp-content/uploads/2025/05/Michael-Magdongon.png" alt="Michael Magdongon">
-                      </div>
-                      <div class="founder-details">
-                        <p class="name">Michael Magdongon</p>
-                        <p class="role">CEO and founder</p>
-                      </div>
-                    </div>
-                  
-                                      <div class="cta">
-                      <a href="../startups/strabo/index.html">
-                        <span>Read their story</span>
-                        <svg class="orange" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect class="rect" width="42" height="42" rx="21" fill="#FA8A4B"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M26.9932 16.0488C26.9932 15.4998 26.5493 15.0528 25.9993 15.0498L18.0062 14.9998H18.0003C17.4503 14.9998 17.0043 15.4438 17.0003 15.9938C16.9963 16.5458 17.4413 16.9968 17.9943 16.9998L23.5522 17.0348L15.2932 25.2928C14.9022 25.6838 14.9022 26.3168 15.2932 26.7068C15.4882 26.9028 15.7442 26.9998 16.0002 26.9998C16.2563 26.9998 16.5122 26.9028 16.7072 26.7068L24.9952 18.4188L25.0002 24.0008C25.0002 24.5528 25.4482 24.9998 26.0002 24.9998H26.0013C26.5533 24.9998 27.0002 24.5508 27.0002 23.9988L26.9932 16.0488Z" fill="#231F20"/>
-<mask id="mask0_1515_22608" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="15" y="14" width="12" height="13">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M26.9932 16.0488C26.9932 15.4998 26.5493 15.0528 25.9993 15.0498L18.0062 14.9998H18.0003C17.4503 14.9998 17.0043 15.4438 17.0003 15.9938C16.9963 16.5458 17.4413 16.9968 17.9943 16.9998L23.5522 17.0348L15.2932 25.2928C14.9022 25.6838 14.9022 26.3168 15.2932 26.7068C15.4882 26.9028 15.7442 26.9998 16.0002 26.9998C16.2563 26.9998 16.5122 26.9028 16.7072 26.7068L24.9952 18.4188L25.0002 24.0008C25.0002 24.5528 25.4482 24.9998 26.0002 24.9998H26.0013C26.5533 24.9998 27.0002 24.5508 27.0002 23.9988L26.9932 16.0488Z" fill="white"/>
-</mask>
-<g mask="url(#mask0_1515_22608)">
-<rect x="9" y="9" width="24" height="24" fill="white"/>
-</g>
-</svg>
-                      </a>
-                    </div>
-                                  </div>
-              </div>
-              <div class="item-featured-image">
-                <a href="../startups/strabo/index.html"><img src="../wp-content/uploads/2025/05/Strabo-Featured-Image-2.jpg" alt="Strabo" /></a>
-              </div>
-            </div>
-                    
-        </div>
-      </div>
-    </div>
-  </section>
+  
                                                 
-  <section class="section accelerate-process">
-    <div class="accelerate-process-outer">
-      <div class="accelerate-process-container">
-        <div class="accelerate-process-header transition-top">
-                      <h2>Our Accelerate Process</h2>
-                                <p>Hyper&#039;s Accelerate process offers a structured pathway to develop your idea, build your brand and pitch to investors before committing to development. We’ve broken this journey down into 8 stages.</p>
-                  </div>
-
-        <div class="accelerate-process-steps">
-                                                              <div class="step transition-top">
-                <div class="step-content">
-                  <div class="step-number">
-                    <p>01</p>
-                  </div>
-                  <div class="step-text">
-                                          <h3>Breakdown the problem</h3>
-                                                              <p>No matter the shape of your idea, together with our mentors, you&#039;ll find a way to turn it into gold.</p>
-                                      </div>
-                </div>
-
-                                  <div class="testimonial">
-                    <div class="testimonial-quote">
-                      <p>“</p>
-                    </div>
-                    <div class="testimonial-content">
-                      <div class="testimonial-text">
-                                                  <p>The team helped us verify and rigorously challenge our idea from new angles and perspectives.</p>
-                                              </div>
-                      <div class="testimonial-author">
-                                                  <div class="author-image">
-                            <img src="../wp-content/uploads/2025/04/f2b053306ff7b08c16bd67c9e397271f.png" alt="Tom Brown">
-                          </div>
-                                                                          <p>Tom Brown</p>
-                                              </div>
-                    </div>
-                  </div>
-                              </div>
-                                                      <div class="step transition-top">
-                <div class="step-content">
-                  <div class="step-number">
-                    <p>02</p>
-                  </div>
-                  <div class="step-text">
-                                          <h3>Monetise your business</h3>
-                                                              <p>Take your product to the next level with a clearly mapped monetisation model.</p>
-                                      </div>
-                </div>
-
-                                  <div class="testimonial">
-                    <div class="testimonial-quote">
-                      <p>“</p>
-                    </div>
-                    <div class="testimonial-content">
-                      <div class="testimonial-text">
-                                                  <p>The beginning can be hard, but the right people will come to you. It made a world of a difference for me to start with Hyper.</p>
-                                              </div>
-                      <div class="testimonial-author">
-                                                  <div class="author-image">
-                            <img src="../wp-content/uploads/2025/05/Tom-Brown.png" alt="Tom Cooper">
-                          </div>
-                                                                          <p>Tom Cooper</p>
-                                              </div>
-                    </div>
-                  </div>
-                              </div>
-                                                      <div class="step transition-top">
-                <div class="step-content">
-                  <div class="step-number">
-                    <p>03</p>
-                  </div>
-                  <div class="step-text">
-                                          <h3>Build and run a company </h3>
-                                                              <p>Learn how to structure and operate your startup like an experienced founder.</p>
-                                      </div>
-                </div>
-
-                                  <div class="testimonial">
-                    <div class="testimonial-quote">
-                      <p>“</p>
-                    </div>
-                    <div class="testimonial-content">
-                      <div class="testimonial-text">
-                                                  <p>They provided structure and guidance that helped us refine our focus, streamline our efforts, and understand what we needed.</p>
-                                              </div>
-                      <div class="testimonial-author">
-                                                  <div class="author-image">
-                            <img src="../wp-content/uploads/2025/04/Adam-Campbell.png" alt="Adam Campbell">
-                          </div>
-                                                                          <p>Adam Campbell</p>
-                                              </div>
-                    </div>
-                  </div>
-                              </div>
-                                                      <div class="step transition-top">
-                <div class="step-content">
-                  <div class="step-number">
-                    <p>04</p>
-                  </div>
-                  <div class="step-text">
-                                          <h3>Test your solution</h3>
-                                                              <p>Get your idea out there and gather feedback as soon as possible. It’s only going to make your product better.</p>
-                                      </div>
-                </div>
-
-                                  <div class="testimonial">
-                    <div class="testimonial-quote">
-                      <p>“</p>
-                    </div>
-                    <div class="testimonial-content">
-                      <div class="testimonial-text">
-                                                  <p>Hyper’s ability to challenge our assumptions and help us focus on rapid validation has been a game-changer.</p>
-                                              </div>
-                      <div class="testimonial-author">
-                                                  <div class="author-image">
-                            <img src="../wp-content/uploads/2025/05/Michael-Magdongon.png" alt="Michael Magdongon">
-                          </div>
-                                                                          <p>Michael Magdongon</p>
-                                              </div>
-                    </div>
-                  </div>
-                              </div>
-                                                      <div class="step transition-top">
-                <div class="step-content">
-                  <div class="step-number">
-                    <p>05</p>
-                  </div>
-                  <div class="step-text">
-                                          <h3>Design a brand</h3>
-                                                              <p>Your product won’t just solve problems, it will delight and speak directly to your users.</p>
-                                      </div>
-                </div>
-
-                                  <div class="testimonial">
-                    <div class="testimonial-quote">
-                      <p>“</p>
-                    </div>
-                    <div class="testimonial-content">
-                      <div class="testimonial-text">
-                                                  <p>Hyper helped us craft a clearer narrative and build a brand that truly resonates with our audience.</p>
-                                              </div>
-                      <div class="testimonial-author">
-                                                  <div class="author-image">
-                            <img src="../wp-content/uploads/2025/05/Calin-Saftoiu.png" alt="Calin Saftoiu">
-                          </div>
-                                                                          <p>Calin Saftoiu</p>
-                                              </div>
-                    </div>
-                  </div>
-                              </div>
-                                                      <div class="step transition-top">
-                <div class="step-content">
-                  <div class="step-number">
-                    <p>06</p>
-                  </div>
-                  <div class="step-text">
-                                          <h3>Create a proof of concept</h3>
-                                                              <p>Share the real experience of your app with potential users, partners and investors, without any coding.</p>
-                                      </div>
-                </div>
-
-                                  <div class="testimonial">
-                    <div class="testimonial-quote">
-                      <p>“</p>
-                    </div>
-                    <div class="testimonial-content">
-                      <div class="testimonial-text">
-                                                  <p>With their help, we were able to define our product-market fit, which ultimately helped us scale and expand our network.</p>
-                                              </div>
-                      <div class="testimonial-author">
-                                                  <div class="author-image">
-                            <img src="../wp-content/uploads/2025/05/Aaron-1.png" alt="Aaron Solomon">
-                          </div>
-                                                                          <p>Aaron Solomon</p>
-                                              </div>
-                    </div>
-                  </div>
-                              </div>
-                                                      <div class="step transition-top">
-                <div class="step-content">
-                  <div class="step-number">
-                    <p>07</p>
-                  </div>
-                  <div class="step-text">
-                                          <h3>Build the perfect teaser pitch</h3>
-                                                              <p>The breakthrough proposal will help you close deals with partners and attract investors.</p>
-                                      </div>
-                </div>
-
-                                  <div class="testimonial">
-                    <div class="testimonial-quote">
-                      <p>“</p>
-                    </div>
-                    <div class="testimonial-content">
-                      <div class="testimonial-text">
-                                                  <p>Hyper supported me through the challenging process of fundraising, guiding me in perfecting my pitch.</p>
-                                              </div>
-                      <div class="testimonial-author">
-                                                  <div class="author-image">
-                            <img src="../wp-content/uploads/2025/04/86b4f894f921a7967e587ca782f23a6f.png" alt="Ash Brown">
-                          </div>
-                                                                          <p>Ash Brown</p>
-                                              </div>
-                    </div>
-                  </div>
-                              </div>
-                                                      <div class="step transition-top">
-                <div class="step-content">
-                  <div class="step-number">
-                    <p>08</p>
-                  </div>
-                  <div class="step-text">
-                                          <h3>Fund the product </h3>
-                                                              <p>With the right combo of your product’s proof of concept and partners to back you, your valuation can take off. </p>
-                                      </div>
-                </div>
-
-                                  <div class="testimonial">
-                    <div class="testimonial-quote">
-                      <p>“</p>
-                    </div>
-                    <div class="testimonial-content">
-                      <div class="testimonial-text">
-                                                  <p>Hyper turned our idea upside down and within 3 months, helped us raise our first $400k at a $2.3m valuation.</p>
-                                              </div>
-                      <div class="testimonial-author">
-                                                  <div class="author-image">
-                            <img src="../wp-content/uploads/2025/04/Mark-Sellar.png" alt="Mark Sellar">
-                          </div>
-                                                                          <p>Mark Sellar</p>
-                                              </div>
-                    </div>
-                  </div>
-                              </div>
-                                            </div>
-
-      </div>
-    </div>
-  </section>
-                                                
+                                 
   <section class="section faqs transition-top">
     <div class="faqs-container">
       <div class="faqs-wrap ">
         <div class="faqs-content ">
-                      <h2>Frequently asked questions</h2>
+                      <h2 class="text-faq" style="font-size: 3.5em;">Frequently asked questions</h2>
+                      <style>
+  @media (max-width: 768px) {
+    .text-faq {
+  font-size: 34px !important;
+    }
+  }
+</style>
+
                             </div>
 
                   <div class="faqs-lists">
             <div class="accordion">
                               <div class="accordion-item">
                   <button class="accordion-header">
-                    How do I know my idea is worth pursuing?                    <span class="arrow">
+                  How is Luther Tech different from other marketing agencies?                <span class="arrow">
                       <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M24.447 20.3649C24.9433 20.8616 24.9433 21.664 24.447 22.1607C23.9507 22.6574 23.149 22.6574 22.6527 22.1607L15.9081 15.4232L9.17609 22.1607C8.6798 22.6574 7.87808 22.6574 7.38178 22.1607C7.12727 21.9187 7.00002 21.6003 7.00002 21.2692C7.00002 20.9381 7.12727 20.6197 7.36906 20.3649L15.0044 12.7234C15.5007 12.2267 16.3024 12.2267 16.7987 12.7234L24.447 20.3649Z" fill="#0B0D0F" stroke="#F4F4EF" stroke-width="0.2" />
                       </svg>
                     </span>
                   </button>
                   <div class="accordion-content">
-                    <p><p>Every idea has potential, and our Accelerate Process is designed to help you validate and refine yours into a market-ready solution. We&#8217;ll work closely with you to uncover its strengths and set it up for success.</p>
+                    <p><p>Luther Tech specialises in medical, aesthetics and healthcare marketing. We understand the unique compliance requirements, the importance of patient trust and the need for measurable results. Unlike generalist agencies, our strategies are built specifically to help clinics attract more patients and grow sustainably.</p>
 </p>
                   </div>
                 </div>
                               <div class="accordion-item">
                   <button class="accordion-header">
-                    Do I need prior knowledge on building a startup?                    <span class="arrow">
+                   What kind of results can I expect from working with you?                  <span class="arrow">
                       <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M24.447 20.3649C24.9433 20.8616 24.9433 21.664 24.447 22.1607C23.9507 22.6574 23.149 22.6574 22.6527 22.1607L15.9081 15.4232L9.17609 22.1607C8.6798 22.6574 7.87808 22.6574 7.38178 22.1607C7.12727 21.9187 7.00002 21.6003 7.00002 21.2692C7.00002 20.9381 7.12727 20.6197 7.36906 20.3649L15.0044 12.7234C15.5007 12.2267 16.3024 12.2267 16.7987 12.7234L24.447 20.3649Z" fill="#0B0D0F" stroke="#F4F4EF" stroke-width="0.2" />
                       </svg>
                     </span>
                   </button>
                   <div class="accordion-content">
-                    <p><p>No prior experience is necessary. Our program is tailored for first-time founders, and we&#8217;ll provide you with the guidance, resources, and expertise you need to turn your idea into a successful startup.</p>
+                    <p><p>Clients typically see measurable improvements in patient acquisition, retention and revenue. We have helped providers generate millions in new patient revenue and achieve consistent growth year after year. Every strategy is data driven and tailored to your clinic’s goals.</p>
 </p>
                   </div>
                 </div>
                               <div class="accordion-item">
                   <button class="accordion-header">
-                    How much time will I need to invest?                    <span class="arrow">
+                 How long does it take to see results?                 <span class="arrow">
                       <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M24.447 20.3649C24.9433 20.8616 24.9433 21.664 24.447 22.1607C23.9507 22.6574 23.149 22.6574 22.6527 22.1607L15.9081 15.4232L9.17609 22.1607C8.6798 22.6574 7.87808 22.6574 7.38178 22.1607C7.12727 21.9187 7.00002 21.6003 7.00002 21.2692C7.00002 20.9381 7.12727 20.6197 7.36906 20.3649L15.0044 12.7234C15.5007 12.2267 16.3024 12.2267 16.7987 12.7234L24.447 20.3649Z" fill="#0B0D0F" stroke="#F4F4EF" stroke-width="0.2" />
                       </svg>
                     </span>
                   </button>
                   <div class="accordion-content">
-                    <p><p>Our 12-week Accelerate Process is designed to work around your schedule and those working full-time. You&#8217;ll need to invest a few hours each week to collaborate with our team, ensuring steady progress.</p>
+                    <p><p>Most clinics begin to see clear results within three to six months. Marketing in healthcare is about building both trust and visibility, which takes time. Our systems are designed for steady, predictable growth rather than short lived spikes.
+
+ </p>
 </p>
                   </div>
                 </div>
                               <div class="accordion-item">
                   <button class="accordion-header">
-                    How do I raise the funds I need?                    <span class="arrow">
+                Will your marketing approach comply with healthcare regulations?
+                    <span class="arrow">
                       <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M24.447 20.3649C24.9433 20.8616 24.9433 21.664 24.447 22.1607C23.9507 22.6574 23.149 22.6574 22.6527 22.1607L15.9081 15.4232L9.17609 22.1607C8.6798 22.6574 7.87808 22.6574 7.38178 22.1607C7.12727 21.9187 7.00002 21.6003 7.00002 21.2692C7.00002 20.9381 7.12727 20.6197 7.36906 20.3649L15.0044 12.7234C15.5007 12.2267 16.3024 12.2267 16.7987 12.7234L24.447 20.3649Z" fill="#0B0D0F" stroke="#F4F4EF" stroke-width="0.2" />
                       </svg>
                     </span>
                   </button>
                   <div class="accordion-content">
-                    <p><p>Securing funding becomes much more attainable with a validated idea and a compelling pitch. We&#8217;ll guide you through refining your concept, validating your idea and connecting you with investors, increasing your chances of raising the capital you need.</p>
+                    <p><p>Yes. Compliance is central to everything we do. Our team has experience working within healthcare marketing standards, including those for medical aesthetics and regulated healthcare services. All campaigns are reviewed to ensure they meet industry requirements.
+</p>
 </p>
                   </div>
                 </div>
                               <div class="accordion-item">
                   <button class="accordion-header">
-                    How much will development cost me?                    <span class="arrow">
+               What level of involvement is required from my side?                 <span class="arrow">
                       <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M24.447 20.3649C24.9433 20.8616 24.9433 21.664 24.447 22.1607C23.9507 22.6574 23.149 22.6574 22.6527 22.1607L15.9081 15.4232L9.17609 22.1607C8.6798 22.6574 7.87808 22.6574 7.38178 22.1607C7.12727 21.9187 7.00002 21.6003 7.00002 21.2692C7.00002 20.9381 7.12727 20.6197 7.36906 20.3649L15.0044 12.7234C15.5007 12.2267 16.3024 12.2267 16.7987 12.7234L24.447 20.3649Z" fill="#0B0D0F" stroke="#F4F4EF" stroke-width="0.2" />
                       </svg>
                     </span>
                   </button>
                   <div class="accordion-content">
-                    <p><p>Development costs vary based on the scope of your project, but after we&#8217;ve helped you validate your idea and secure funding, we&#8217;ll work with you to design your minimum viable product focused on building a great user experience that’s cost-effectively.</p>
+                    <p><p>We handle the heavy lifting. You can be as involved as you like, but our systems are designed to run with minimal disruption to your clinic. We provide clear reporting so you always know how campaigns are performing.
+
+</p>
 </p>
                   </div>
                 </div>
                               <div class="accordion-item">
                   <button class="accordion-header">
-                    How long will it take to launch my product?                    <span class="arrow">
+                    How do you measure success and return on investment?
+                 <span class="arrow">
                       <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M24.447 20.3649C24.9433 20.8616 24.9433 21.664 24.447 22.1607C23.9507 22.6574 23.149 22.6574 22.6527 22.1607L15.9081 15.4232L9.17609 22.1607C8.6798 22.6574 7.87808 22.6574 7.38178 22.1607C7.12727 21.9187 7.00002 21.6003 7.00002 21.2692C7.00002 20.9381 7.12727 20.6197 7.36906 20.3649L15.0044 12.7234C15.5007 12.2267 16.3024 12.2267 16.7987 12.7234L24.447 20.3649Z" fill="#0B0D0F" stroke="#F4F4EF" stroke-width="0.2" />
                       </svg>
                     </span>
                   </button>
                   <div class="accordion-content">
-                    <p><p>The timeline to launch your product depends on its complexity, but our structured process is designed for efficiency and to create a clear path to launch. Starting with our 12-week Accelerate Process, we&#8217;ll guide you through each phase to bring your product to market as smoothly and swiftly as possible.</p>
+                    <p><p>We focus on metrics that matter to clinics, such as new patient enquiries, appointment bookings, retention rates and revenue growth. Every campaign is tracked and reported, giving you clear visibility on performance and a measurable return on investment.
+</p>
 </p>
                   </div>
                 </div>
@@ -955,93 +714,239 @@ Hyper pushed us to stress-test our assumptions and build something more robust.&
     </div>
   </section>
                                                 
-  <section class="section prefooter transition-top">
-    <div class="prefooter-outer">
-      <div class="prefooter-container">
-        <h2>Become the entrepreneur you&#039;ve always wanted to be.</h2>
-        <a href="book-meeting/index.html">
-          <span>Speak with one of our startup mentors today</span>
-          <svg class="orange" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect class="rect" width="42" height="42" rx="21" fill="#FA8A4B"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M26.9932 16.0488C26.9932 15.4998 26.5493 15.0528 25.9993 15.0498L18.0062 14.9998H18.0003C17.4503 14.9998 17.0043 15.4438 17.0003 15.9938C16.9963 16.5458 17.4413 16.9968 17.9943 16.9998L23.5522 17.0348L15.2932 25.2928C14.9022 25.6838 14.9022 26.3168 15.2932 26.7068C15.4882 26.9028 15.7442 26.9998 16.0002 26.9998C16.2563 26.9998 16.5122 26.9028 16.7072 26.7068L24.9952 18.4188L25.0002 24.0008C25.0002 24.5528 25.4482 24.9998 26.0002 24.9998H26.0013C26.5533 24.9998 27.0002 24.5508 27.0002 23.9988L26.9932 16.0488Z" fill="#231F20"/>
-<mask id="mask0_1515_22608" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="15" y="14" width="12" height="13">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M26.9932 16.0488C26.9932 15.4998 26.5493 15.0528 25.9993 15.0498L18.0062 14.9998H18.0003C17.4503 14.9998 17.0043 15.4438 17.0003 15.9938C16.9963 16.5458 17.4413 16.9968 17.9943 16.9998L23.5522 17.0348L15.2932 25.2928C14.9022 25.6838 14.9022 26.3168 15.2932 26.7068C15.4882 26.9028 15.7442 26.9998 16.0002 26.9998C16.2563 26.9998 16.5122 26.9028 16.7072 26.7068L24.9952 18.4188L25.0002 24.0008C25.0002 24.5528 25.4482 24.9998 26.0002 24.9998H26.0013C26.5533 24.9998 27.0002 24.5508 27.0002 23.9988L26.9932 16.0488Z" fill="white"/>
-</mask>
-<g mask="url(#mask0_1515_22608)">
-<rect x="9" y="9" width="24" height="24" fill="white"/>
-</g>
-</svg>
-        </a>
-      </div>
-    </div>
-  </section>
+ 
                         
 
-    <footer>
-  <div class="footer-outer">
-    <div class="footer-container">
-      <div class="footer-main">
-        <div class="footer-left">
-          <div class="footer-company">
-            <div class="logo"><a href="../index.html" class="custom-logo-link" rel="home"><img width="828" height="166" src="../wp-content/uploads/2025/04/Hyper-Logo-Large-Black-Transparent-Borderless-1.png" class="custom-logo" alt="Hyper" decoding="async" srcset="https://hyperhq.com/wp-content/uploads/2025/04/Hyper-Logo-Large-Black-Transparent-Borderless-1.png 828w, https://hyperhq.com/wp-content/uploads/2025/04/Hyper-Logo-Large-Black-Transparent-Borderless-1-300x60.png 300w, https://hyperhq.com/wp-content/uploads/2025/04/Hyper-Logo-Large-Black-Transparent-Borderless-1-768x154.png 768w" sizes="(max-width: 828px) 100vw, 828px" /></a></div>
-                          <p><a href="mailto:team@hyperhq.com">team@hyperhq.com</a></p>
+   <footer>
+            <div class="footer-outer">
+              <div class="footer-container">
+                <div class="footer-main">
+                  <div class="footer-left">
+                    <div
+                      style="margin-bottom: 30px"
+                      class="footer-company"
+                      id="footerCompany"
+                    >
+                      <div class="logo">
+                        <a
+                          href="../index.html"
+                          class="custom-logo-link"
+                          rel="home"
+                          ><img
+                            width="828"
+                            height="166"
+                            src="../wp-content/uploads/2025/04/Logo-Mobile.svg"
+                            class="custom-logo-footer"
+                            alt="Hyper"
+                            decoding="async"
+                            srcset="
+                              ../wp-content/uploads/2025/04/Logo-Mobile.svg         828w,
+                              ../wp-content/uploads/2025/04/Logo-Mobile-300x60.svg  300w,
+                              ../wp-content/uploads/2025/04/Logo-Mobile-768x154.svg 768w
+                            "
+                            sizes="(max-width: 828px) 100vw, 828px"
+                        /></a>
                       </div>
+                      <p>
+                        <a href="mailto:jj@luther.tech">jj@luther.tech</a>
+                      </p>
+                    </div>
 
-                      <div class="social-links">
-                                                                <a href="https://www.facebook.com/hyperhq" target="_blank" rel="noopener noreferrer">
-                    <?xml version="1.0" encoding="UTF-8"?> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="33" viewBox="0 0 12 33" fill="none"><path d="M9.49054 9.93478H11.3662V6.75478C10.4581 6.66012 9.54557 6.61339 8.63251 6.61478C5.91873 6.61478 4.06298 8.27478 4.06298 11.3148V13.9348H1V17.4948H4.06298V26.6148H7.73456V17.4948H10.7876L11.2465 13.9348H7.73456V11.6648C7.73456 10.6148 8.01392 9.93478 9.49054 9.93478Z" fill="#0B0D0F"></path></svg>                   </a>
-                                                                                <a href="https://www.instagram.com/teamhyper/" target="_blank" rel="noopener noreferrer">
-                    <?xml version="1.0" encoding="UTF-8"?> <svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none"><path d="M11.1575 6.68825C10.0392 6.74102 9.27548 6.91949 8.60785 7.18183C7.91689 7.45111 7.33125 7.81246 6.74855 8.39726C6.16584 8.98207 5.80701 9.56813 5.53963 10.2601C5.28086 10.9292 5.10554 11.6936 5.05614 12.8125C5.00674 13.9315 4.99581 14.2911 5.00128 17.1454C5.00674 19.9996 5.01936 20.3574 5.07359 21.4786C5.12698 22.5968 5.30482 23.3602 5.56716 24.0281C5.83686 24.719 6.19779 25.3045 6.78281 25.8874C7.36782 26.4703 7.95347 26.8283 8.64716 27.0961C9.31563 27.3544 10.0802 27.5306 11.1989 27.5796C12.3176 27.6286 12.6777 27.6399 15.5311 27.6344C18.3845 27.629 18.7438 27.6164 19.8648 27.5632C20.9859 27.51 21.7454 27.3309 22.4134 27.0698C23.1044 26.7995 23.6902 26.4392 24.2727 25.854C24.8552 25.2687 25.2138 24.6822 25.481 23.9898C25.74 23.3213 25.9159 22.5568 25.9645 21.4389C26.0135 20.317 26.025 19.9588 26.0196 17.105C26.0141 14.2512 26.0013 13.8934 25.9481 12.7726C25.8949 11.6517 25.7169 10.8906 25.4547 10.2223C25.1846 9.53135 24.8241 8.94633 24.2393 8.363C23.6545 7.77967 23.0676 7.42126 22.3754 7.15471C21.7065 6.89594 20.9424 6.71958 19.8236 6.67123C18.7049 6.62288 18.3448 6.61048 15.4903 6.61594C12.6359 6.62141 12.2785 6.6336 11.1575 6.68825ZM11.2803 25.6887C10.2555 25.6442 9.69906 25.4739 9.32824 25.3314C8.83719 25.1422 8.4874 24.9135 8.11785 24.5475C7.74831 24.1815 7.52128 23.8305 7.32957 23.3405C7.18557 22.9697 7.01215 22.4139 6.96422 21.3891C6.91209 20.2815 6.90116 19.9489 6.89506 17.1428C6.88897 14.3368 6.89969 14.0046 6.94825 12.8966C6.99197 11.8727 7.16329 11.3156 7.3056 10.945C7.49479 10.4533 7.72266 10.1042 8.08948 9.73483C8.45629 9.36549 8.80629 9.13804 9.29671 8.94633C9.6671 8.80171 10.2229 8.62976 11.2473 8.58099C12.3557 8.52843 12.6878 8.51792 15.4935 8.51183C18.2992 8.50573 18.6321 8.51624 19.741 8.56501C20.7649 8.60958 21.3222 8.77922 21.6924 8.92237C22.1836 9.11156 22.5332 9.33879 22.9026 9.70624C23.2719 10.0737 23.4996 10.4224 23.6913 10.9139C23.8361 11.2832 24.0081 11.8388 24.0564 12.8638C24.1092 13.9722 24.1212 14.3046 24.1262 17.1101C24.1312 19.9155 24.1214 20.2487 24.0728 21.3563C24.028 22.3811 23.8582 22.9377 23.7155 23.3089C23.5263 23.7998 23.2982 24.1498 22.9312 24.5189C22.5641 24.888 22.2146 25.1155 21.7239 25.3072C21.354 25.4516 20.7975 25.624 19.774 25.6728C18.6656 25.7249 18.3334 25.7358 15.5267 25.7419C12.72 25.748 12.3889 25.7367 11.2805 25.6887M19.8486 11.5077C19.8491 11.7572 19.9234 12.001 20.0624 12.2082C20.2013 12.4153 20.3986 12.5767 20.6293 12.6717C20.8599 12.7668 21.1136 12.7913 21.3582 12.7422C21.6028 12.6931 21.8273 12.5726 22.0034 12.3958C22.1795 12.2191 22.2992 11.9941 22.3474 11.7494C22.3956 11.5046 22.3701 11.251 22.2742 11.0207C22.1783 10.7904 22.0163 10.5938 21.8086 10.4556C21.6009 10.3174 21.3568 10.2439 21.1074 10.2444C20.7729 10.245 20.4525 10.3785 20.2164 10.6154C19.9804 10.8523 19.8481 11.1733 19.8486 11.5077ZM10.1138 17.1357C10.1197 20.1165 12.5405 22.5274 15.5206 22.5217C18.5008 22.516 20.9133 20.0955 20.9077 17.1147C20.902 14.1339 18.4806 11.7224 15.5 11.7283C12.5194 11.7341 10.1081 14.1553 10.1138 17.1357ZM12.007 17.1319C12.0056 16.439 12.2097 15.7612 12.5936 15.1843C12.9774 14.6074 13.5237 14.1572 14.1634 13.8908C14.803 13.6243 15.5073 13.5535 16.1872 13.6874C16.8671 13.8212 17.4921 14.1537 17.983 14.6427C18.474 15.1317 18.8089 15.7553 18.9454 16.4347C19.0819 17.114 19.014 17.8186 18.75 18.4593C18.4861 19.1001 18.0382 19.6481 17.4628 20.0342C16.8874 20.4204 16.2104 20.6272 15.5175 20.6286C15.0574 20.6295 14.6016 20.5398 14.1761 20.3646C13.7507 20.1894 13.3639 19.9321 13.0379 19.6074C12.7119 19.2827 12.4531 18.897 12.2762 18.4722C12.0993 18.0475 12.0078 17.592 12.007 17.1319Z" fill="black"></path></svg>                   </a>
-                                                                                <a href="https://www.linkedin.com/company/hyperhq/" target="_blank" rel="noopener noreferrer">
-                    <?xml version="1.0" encoding="UTF-8"?> <svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none"><path d="M5.36719 7.05414C5.36719 6.34706 5.61759 5.76372 6.11838 5.30414C6.61917 4.84454 7.27022 4.61475 8.07148 4.61475C8.85846 4.61475 9.49517 4.84099 9.98166 5.29353C10.4825 5.7602 10.7329 6.36827 10.7329 7.11778C10.7329 7.79656 10.4896 8.36221 10.0031 8.81475C9.50234 9.28141 8.84414 9.51475 8.02856 9.51475H8.0071C7.22012 9.51475 6.58341 9.28141 6.09692 8.81475C5.61042 8.34808 5.36719 7.7612 5.36719 7.05414ZM5.6462 25.6147V11.445H10.4109V25.6147H5.6462ZM13.0508 25.6147H17.8155V17.7026C17.8155 17.2077 17.8728 16.8258 17.9872 16.5572C18.1876 16.0764 18.4916 15.6698 18.8994 15.3375C19.3072 15.0051 19.8187 14.839 20.434 14.839C22.0365 14.839 22.8378 15.9067 22.8378 18.042V25.6147H27.6025V17.4905C27.6025 15.3976 27.1017 13.8102 26.1001 12.7284C25.0985 11.6466 23.775 11.1057 22.1295 11.1057C20.2837 11.1057 18.8457 11.8905 17.8155 13.4602V13.5026H17.7941L17.8155 13.4602V11.445H13.0508C13.0794 11.8976 13.0938 13.3046 13.0938 15.6663C13.0938 18.0279 13.0794 21.344 13.0508 25.6147Z" fill="#0B0D0F"></path></svg>                   </a>
-                                                                                <a href="https://www.youtube.com/@wearehyper" target="_blank" rel="noopener noreferrer">
-                    <?xml version="1.0" encoding="UTF-8"?> <svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none"><path d="M28.4999 9.46189C28.1998 8.34062 27.3186 7.45946 26.1973 7.15931C24.1671 6.61475 16.0222 6.61475 16.0222 6.61475C16.0222 6.61475 7.87745 6.61475 5.84714 7.15931C4.72587 7.45946 3.84471 8.34062 3.54456 9.46189C3 11.4922 3 15.7308 3 15.7308C3 15.7308 3 19.9693 3.54456 21.9997C3.84471 23.1209 4.72587 24.0021 5.84714 24.3022C7.87745 24.8468 16.0222 24.8468 16.0222 24.8468C16.0222 24.8468 24.1671 24.8468 26.1973 24.3022C27.3186 24.0021 28.1998 23.1209 28.4999 21.9997C29.0445 19.9693 29.0445 15.7308 29.0445 15.7308C29.0445 15.7308 29.0423 11.4922 28.4999 9.46189Z" fill="#282828"></path><path d="M13.4138 19.636L20.1801 15.7298L13.4138 11.8235V19.636Z" fill="white"></path></svg>                   </a>
-                                          </div>
+                    <style>
+                      .custom-logo-footer {
+                        max-width: 30px;
+                        height: auto;
+                      }
 
+                      @media (max-width: 768px) {
+                        .custom-logo-footer {
+                          max-width: 35px !important;
+                          height: auto !important;
+                          margin-top: 6px;
+                        }
+                      }
+                    </style>
+
+                    <div class="social-links">
+                      <!-- <a
+                        href="https://www.facebook.com/hyperhq"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <?xml version="1.0" encoding="UTF-8"?>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="33"
+                          viewBox="0 0 12 33"
+                          fill="none"
+                        >
+                          <path
+                            d="M9.49054 9.93478H11.3662V6.75478C10.4581 6.66012 9.54557 6.61339 8.63251 6.61478C5.91873 6.61478 4.06298 8.27478 4.06298 11.3148V13.9348H1V17.4948H4.06298V26.6148H7.73456V17.4948H10.7876L11.2465 13.9348H7.73456V11.6648C7.73456 10.6148 8.01392 9.93478 9.49054 9.93478Z"
+                            fill="#0B0D0F"
+                          ></path>
+                        </svg>
+                      </a> -->
+                      <a
+                        href="https://www.instagram.com/teamhyper/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <?xml version="1.0" encoding="UTF-8"?>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="32"
+                          height="33"
+                          viewBox="0 0 32 33"
+                          fill="none"
+                        >
+                          <path
+                            d="M11.1575 6.68825C10.0392 6.74102 9.27548 6.91949 8.60785 7.18183C7.91689 7.45111 7.33125 7.81246 6.74855 8.39726C6.16584 8.98207 5.80701 9.56813 5.53963 10.2601C5.28086 10.9292 5.10554 11.6936 5.05614 12.8125C5.00674 13.9315 4.99581 14.2911 5.00128 17.1454C5.00674 19.9996 5.01936 20.3574 5.07359 21.4786C5.12698 22.5968 5.30482 23.3602 5.56716 24.0281C5.83686 24.719 6.19779 25.3045 6.78281 25.8874C7.36782 26.4703 7.95347 26.8283 8.64716 27.0961C9.31563 27.3544 10.0802 27.5306 11.1989 27.5796C12.3176 27.6286 12.6777 27.6399 15.5311 27.6344C18.3845 27.629 18.7438 27.6164 19.8648 27.5632C20.9859 27.51 21.7454 27.3309 22.4134 27.0698C23.1044 26.7995 23.6902 26.4392 24.2727 25.854C24.8552 25.2687 25.2138 24.6822 25.481 23.9898C25.74 23.3213 25.9159 22.5568 25.9645 21.4389C26.0135 20.317 26.025 19.9588 26.0196 17.105C26.0141 14.2512 26.0013 13.8934 25.9481 12.7726C25.8949 11.6517 25.7169 10.8906 25.4547 10.2223C25.1846 9.53135 24.8241 8.94633 24.2393 8.363C23.6545 7.77967 23.0676 7.42126 22.3754 7.15471C21.7065 6.89594 20.9424 6.71958 19.8236 6.67123C18.7049 6.62288 18.3448 6.61048 15.4903 6.61594C12.6359 6.62141 12.2785 6.6336 11.1575 6.68825ZM11.2803 25.6887C10.2555 25.6442 9.69906 25.4739 9.32824 25.3314C8.83719 25.1422 8.4874 24.9135 8.11785 24.5475C7.74831 24.1815 7.52128 23.8305 7.32957 23.3405C7.18557 22.9697 7.01215 22.4139 6.96422 21.3891C6.91209 20.2815 6.90116 19.9489 6.89506 17.1428C6.88897 14.3368 6.89969 14.0046 6.94825 12.8966C6.99197 11.8727 7.16329 11.3156 7.3056 10.945C7.49479 10.4533 7.72266 10.1042 8.08948 9.73483C8.45629 9.36549 8.80629 9.13804 9.29671 8.94633C9.6671 8.80171 10.2229 8.62976 11.2473 8.58099C12.3557 8.52843 12.6878 8.51792 15.4935 8.51183C18.2992 8.50573 18.6321 8.51624 19.741 8.56501C20.7649 8.60958 21.3222 8.77922 21.6924 8.92237C22.1836 9.11156 22.5332 9.33879 22.9026 9.70624C23.2719 10.0737 23.4996 10.4224 23.6913 10.9139C23.8361 11.2832 24.0081 11.8388 24.0564 12.8638C24.1092 13.9722 24.1212 14.3046 24.1262 17.1101C24.1312 19.9155 24.1214 20.2487 24.0728 21.3563C24.028 22.3811 23.8582 22.9377 23.7155 23.3089C23.5263 23.7998 23.2982 24.1498 22.9312 24.5189C22.5641 24.888 22.2146 25.1155 21.7239 25.3072C21.354 25.4516 20.7975 25.624 19.774 25.6728C18.6656 25.7249 18.3334 25.7358 15.5267 25.7419C12.72 25.748 12.3889 25.7367 11.2805 25.6887M19.8486 11.5077C19.8491 11.7572 19.9234 12.001 20.0624 12.2082C20.2013 12.4153 20.3986 12.5767 20.6293 12.6717C20.8599 12.7668 21.1136 12.7913 21.3582 12.7422C21.6028 12.6931 21.8273 12.5726 22.0034 12.3958C22.1795 12.2191 22.2992 11.9941 22.3474 11.7494C22.3956 11.5046 22.3701 11.251 22.2742 11.0207C22.1783 10.7904 22.0163 10.5938 21.8086 10.4556C21.6009 10.3174 21.3568 10.2439 21.1074 10.2444C20.7729 10.245 20.4525 10.3785 20.2164 10.6154C19.9804 10.8523 19.8481 11.1733 19.8486 11.5077ZM10.1138 17.1357C10.1197 20.1165 12.5405 22.5274 15.5206 22.5217C18.5008 22.516 20.9133 20.0955 20.9077 17.1147C20.902 14.1339 18.4806 11.7224 15.5 11.7283C12.5194 11.7341 10.1081 14.1553 10.1138 17.1357ZM12.007 17.1319C12.0056 16.439 12.2097 15.7612 12.5936 15.1843C12.9774 14.6074 13.5237 14.1572 14.1634 13.8908C14.803 13.6243 15.5073 13.5535 16.1872 13.6874C16.8671 13.8212 17.4921 14.1537 17.983 14.6427C18.474 15.1317 18.8089 15.7553 18.9454 16.4347C19.0819 17.114 19.014 17.8186 18.75 18.4593C18.4861 19.1001 18.0382 19.6481 17.4628 20.0342C16.8874 20.4204 16.2104 20.6272 15.5175 20.6286C15.0574 20.6295 14.6016 20.5398 14.1761 20.3646C13.7507 20.1894 13.3639 19.9321 13.0379 19.6074C12.7119 19.2827 12.4531 18.897 12.2762 18.4722C12.0993 18.0475 12.0078 17.592 12.007 17.1319Z"
+                            fill="black"
+                          ></path>
+                        </svg>
+                      </a>
+                      <a
+                        href="https://www.linkedin.com/company/hyperhq/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <?xml version="1.0" encoding="UTF-8"?>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="32"
+                          height="33"
+                          viewBox="0 0 32 33"
+                          fill="none"
+                        >
+                          <path
+                            d="M5.36719 7.05414C5.36719 6.34706 5.61759 5.76372 6.11838 5.30414C6.61917 4.84454 7.27022 4.61475 8.07148 4.61475C8.85846 4.61475 9.49517 4.84099 9.98166 5.29353C10.4825 5.7602 10.7329 6.36827 10.7329 7.11778C10.7329 7.79656 10.4896 8.36221 10.0031 8.81475C9.50234 9.28141 8.84414 9.51475 8.02856 9.51475H8.0071C7.22012 9.51475 6.58341 9.28141 6.09692 8.81475C5.61042 8.34808 5.36719 7.7612 5.36719 7.05414ZM5.6462 25.6147V11.445H10.4109V25.6147H5.6462ZM13.0508 25.6147H17.8155V17.7026C17.8155 17.2077 17.8728 16.8258 17.9872 16.5572C18.1876 16.0764 18.4916 15.6698 18.8994 15.3375C19.3072 15.0051 19.8187 14.839 20.434 14.839C22.0365 14.839 22.8378 15.9067 22.8378 18.042V25.6147H27.6025V17.4905C27.6025 15.3976 27.1017 13.8102 26.1001 12.7284C25.0985 11.6466 23.775 11.1057 22.1295 11.1057C20.2837 11.1057 18.8457 11.8905 17.8155 13.4602V13.5026H17.7941L17.8155 13.4602V11.445H13.0508C13.0794 11.8976 13.0938 13.3046 13.0938 15.6663C13.0938 18.0279 13.0794 21.344 13.0508 25.6147Z"
+                            fill="#0B0D0F"
+                          ></path>
+                        </svg>
+                      </a>
+                      <a
+                        href="https://www.youtube.com/@wearehyper"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <?xml version="1.0" encoding="UTF-8"?>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="32"
+                          height="33"
+                          viewBox="0 0 32 33"
+                          fill="none"
+                        >
+                          <path
+                            d="M28.4999 9.46189C28.1998 8.34062 27.3186 7.45946 26.1973 7.15931C24.1671 6.61475 16.0222 6.61475 16.0222 6.61475C16.0222 6.61475 7.87745 6.61475 5.84714 7.15931C4.72587 7.45946 3.84471 8.34062 3.54456 9.46189C3 11.4922 3 15.7308 3 15.7308C3 15.7308 3 19.9693 3.54456 21.9997C3.84471 23.1209 4.72587 24.0021 5.84714 24.3022C7.87745 24.8468 16.0222 24.8468 16.0222 24.8468C16.0222 24.8468 24.1671 24.8468 26.1973 24.3022C27.3186 24.0021 28.1998 23.1209 28.4999 21.9997C29.0445 19.9693 29.0445 15.7308 29.0445 15.7308C29.0445 15.7308 29.0423 11.4922 28.4999 9.46189Z"
+                            fill="#282828"
+                          ></path>
+                          <path
+                            d="M13.4138 19.636L20.1801 15.7298L13.4138 11.8235V19.636Z"
+                            fill="white"
+                          ></path>
+                        </svg>
+                      </a>
+                    </div>
                   </div>
 
-        <div class="footer-links">
-                                    <div class="footer-column">
-                <h4>Company</h4>
-                <ul>
-                                                                                  <li><a href="../accelerate/index.html">The Accelerate Process</a></li>
-                                                                <li><a href="../startups/index.html">Our portfolio of startups</a></li>
-                                                                <li><a href="https://apollo.hyperhq.com/feed">Apollo community</a></li>
-                                                      </ul>
-              </div>
-                          <div class="footer-column">
-                <h4>Resources</h4>
-                <ul>
-                                                                                  <li><a href="../insights/index.html">Insights from our team</a></li>
-                                                                <li><a href="https://apollo.hyperhq.com/c/weekly-events">Free events for founders</a></li>
-                                                                <li><a href="index.html">Get started with Hyper</a></li>
-                                                      </ul>
-              </div>
-                          <div class="footer-column">
-                <h4>Help</h4>
-                <ul>
-                                                                                  <li><a href="../contact/index.html">Contact Us</a></li>
-                                                                <li><a href="../privacy-policy/index.html">Privacy Policy</a></li>
-                                                                <li><a href="../terms-and-conditions/index.html">Terms and Conditions</a></li>
-                                                      </ul>
-              </div>
-                              </div>
-      </div>
+                  <div class="footer-links">
+                    <div
+                      id="footerColumn"
+                      style="margin-bottom: 30px"
+                      class="footer-column"
+                    >
+                      <h4>Company</h4>
+                      <ul>
+                        <li>
+                          <a href="../privacy-policy/index.html"
+                            >Privacy Policy</a
+                          >
+                        </li>
+                        <li>
+                          <a href="../terms-and-conditions/index.html"
+                            >Terms and Conditions</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                    <div
+                      id="footerColumn"
+                      style="margin-bottom: 30px"
+                      class="footer-column"
+                    >
+                      <h4>Resources</h4>
+                      <ul>
+                        <li>
+                          <a href="../insights/index.html"
+                            >Insights from our team</a
+                          >
+                        </li>
+                        <li>
+                          <a href="https://apollo.hyperhq.com/c/weekly-events"
+                            >Free events for clinic owners</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                    <div
+                      id="footerColumn"
+                      style="margin-bottom: 30px"
+                      class="footer-column"
+                    >
+                      <h4>Help</h4>
+                      <ul>
+                        <li>
+                          <a href="../contact/index.html">Contact Us</a>
+                        </li>
+                        <li>
+                          <a style="font-weight: 500" href="tel:+442080045580"
+                            >+44 20 8004 5580</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
 
-      <div class="footer-bottom">
-        <div class="site-details">
-          <p class="site">Hyper Startup Studio</p>
-          <p class="rights">All rights reserved 2025</p>
-        </div>
+                <script>
+                  (function () {
+                    if (window.innerWidth <= 768) {
+                      document.getElementById(
+                        "footerCompany"
+                      ).style.marginBottom = "30px";
+                    }
+                  })();
+                </script>
 
+                <script>
+                  (function () {
+                    if (window.innerWidth <= 768) {
+                      document.getElementById(
+                        "footerColumn"
+                      ).style.marginBottom = "30px";
+                    }
+                  })();
+                </script>
+
+                <div class="footer-bottom">
+                  <div class="site-details">
+                    <p class="site">Luther Tech Ltd</p>
+                    <p class="rights">All rights reserved 2025</p>
+                  </div>
+                  <!-- 
                   <div class="business-details">
-            <p class="abn">Australian ABN is 51 607 921 648<br />
-United Kingdom CRN is 11317088</p>
-          </div>
+                    <p class="abn">
+                      First Floor Office, 3 Hornton Place, London, United
+                      Kingdom, W8 4LZ<br />
+                      Company registration number 10216070
+                    </p>
+                  </div> -->
+                </div>
               </div>
-    </div>
-  </div>
-</footer>
+            </div>
+          </footer>
     
 </div>
 </div>
