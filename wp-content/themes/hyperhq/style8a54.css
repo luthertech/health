@@ -26,6 +26,7 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 .ytp-impression-link-content{
     display: none !important;
 }
+
 @media screen and (max-width: 768px) {
     .startup-breadcrumbs-container-mobile{
         width: 350px !important;

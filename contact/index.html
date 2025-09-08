@@ -44,7 +44,7 @@
       window.userCountry = userCountry;
     </script>
 
-    <title>Contact &#x2d; Hyper Startup Studio</title>
+    <title>Contact &#x2d; Luther Tech</title>
     <style>
       img:is([sizes="auto" i], [sizes^="auto," i]) {
         contain-intrinsic-size: 3000px 1500px;
@@ -59,7 +59,7 @@
     <link rel="canonical" href="index.html" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_US" />
-    <meta property="og:site_name" content="Hyper Startup Studio" />
+    <meta property="og:site_name" content="Luther Tech" />
     <meta property="og:title" content="Contact" />
     <meta property="og:url" content="https://hyperhq.com/contact/" />
     <meta
@@ -82,7 +82,7 @@
             "@type": "WebSite",
             "@id": "https://hyperhq.com/#/schema/WebSite",
             "url": "https://hyperhq.com/",
-            "name": "Hyper Startup Studio",
+            "name": "Luther Tech",
             "description": "The safest way to launch your startup",
             "inLanguage": "en-US",
             "potentialAction": {
@@ -96,12 +96,12 @@
             "publisher": {
               "@type": "Organization",
               "@id": "https://hyperhq.com/#/schema/Organization",
-              "name": "Hyper Startup Studio",
+              "name": "Luther Tech",
               "url": "https://hyperhq.com/",
               "sameAs": [
                 "https://www.facebook.com/hyperhq",
                 "https://www.instagram.com/teamhyper",
-                "https://www.youtube.com/@wearehyper",
+                "https://www.youtube.com/@luthertech",
                 "https://www.linkedin.com/company/hyperhq"
               ],
               "logo": {
@@ -118,7 +118,7 @@
             "@type": "WebPage",
             "@id": "https://hyperhq.com/contact/",
             "url": "https://hyperhq.com/contact/",
-            "name": "Contact &#x2d; Hyper Startup Studio",
+            "name": "Contact &#x2d; Luther Tech",
             "inLanguage": "en-US",
             "isPartOf": { "@id": "https://hyperhq.com/#/schema/WebSite" },
             "breadcrumb": {
@@ -129,7 +129,7 @@
                   "@type": "ListItem",
                   "position": 1,
                   "item": "https://hyperhq.com/",
-                  "name": "Hyper Startup Studio"
+                  "name": "Luther Tech"
                 },
                 { "@type": "ListItem", "position": 2, "name": "Contact" }
               ]
@@ -864,7 +864,7 @@
                   <!-- Mobile: for screens < 768px -->
                   <source
                     media="(max-width: 767px)"
-                    srcset="../wp-content/uploads/2025/04/Logo-Mobile.svg"
+                    srcset="../wp-content/uploads/2025/04/Logo.svg"
                     type="image/svg+xml"
                   />
                   <!-- Desktop / fallback -->
@@ -906,7 +906,7 @@
 
               @media (max-width: 768px) {
                 .custom-logo {
-                  max-width: 35px !important;
+                  max-width: 180px !important;
                   height: auto !important;
                   margin-top: 6px;
                 }
@@ -918,7 +918,7 @@
                 Our process
               </a> -->
               <a href="../startups/index.html" class="menu-item"> Portfolio </a>
-              <a href="../insights/index.html" class="menu-item"> Insights </a>
+              <!-- <a href="../insights/index.html" class="menu-item"> Insights </a> -->
               <!-- <a
                 href="https://apollo.hyperhq.com/feed"
                 class="menu-item"
@@ -975,7 +975,7 @@
               Our process
             </a> -->
             <a href="../startups/index.html" class="menu-item"> Portfolio </a>
-            <a href="../insights/index.html" class="menu-item"> Insights </a>
+            <!-- <a href="../insights/index.html" class="menu-item"> Insights </a> -->
             <!-- <a
               href="https://apollo.hyperhq.com/feed"
               class="menu-item"
@@ -1021,7 +1021,6 @@
                       <ul></ul>
                     </div>
                     <form
-                      action="https://hyperhq.com/contact/#wpcf7-f613-o1"
                       method="post"
                       class="wpcf7-form init"
                       aria-label="Contact form"
@@ -1129,23 +1128,141 @@
                           <input
                             class="wpcf7-form-control wpcf7-submit has-spinner"
                             type="submit"
+                            style="
+                              background-color: #6ce057;
+                              color: black;
+                              font-weight: 500;
+                              width: 218px;
+                              height: 68px;
+                              gap: 8px;
+                              opacity: 1;
+                              border-radius: 12px;
+                              display: flex;
+                              align-items: center;
+                              justify-content: center;
+                              text-decoration: none;
+                            "
                             value="Book a time with us"
                           />
                         </p>
                       </div>
                       <div
                         class="wpcf7-response-output"
+                        id="wpcf7-response-output"
                         aria-hidden="true"
+                        style="
+                          margin-top: 15px;
+                          font-weight: 500;
+                          color: #00d084;
+                        "
                       ></div>
                     </form>
                   </div>
 
+                  <script src="../config.js"></script>
+
                   <!-- Redirect Script -->
+
+                  <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                      const form = document.querySelector(".wpcf7-form");
+                      if (!form) return;
+
+                      const responseDiv = form.querySelector(
+                        ".wpcf7-response-output"
+                      );
+                      const submitButton = form.querySelector(".wpcf7-submit");
+
+                      form.addEventListener("submit", async function (e) {
+                        e.preventDefault();
+                        responseDiv.textContent = "";
+                        responseDiv.style.color = "black";
+
+                        // Get form values
+                        const firstName = form
+                          .querySelector('[name="first-name"]')
+                          .value.trim();
+                        const lastName = form
+                          .querySelector('[name="last-name"]')
+                          .value.trim();
+                        const email = form
+                          .querySelector('[name="your-email"]')
+                          .value.trim();
+                        const phone = form
+                          .querySelector('[name="your-phone"]')
+                          .value.trim();
+                        const fullName = `${firstName} ${lastName}`.trim();
+
+                        // Basic validation
+                        if (!firstName || !lastName || !email || !phone) {
+                          responseDiv.textContent = "Please fill all fields.";
+                          responseDiv.style.color = "red";
+                          return;
+                        }
+
+                        const env =
+                          window.APP_CONFIG.ENV === "staging"
+                            ? window.APP_CONFIG.STAGING
+                            : window.APP_CONFIG.PRODUCTION;
+
+                        submitButton.disabled = true;
+                        submitButton.value = "Sending...";
+
+                        const formData = {
+                          to: "jj@luthertech.com",
+                          subject: "New Callback Request",
+                          html: `
+                                <h2>New Callback Request</h2>
+                                <p><strong>Name:</strong> ${fullName}</p>
+                                <p><strong>Email:</strong> ${email}</p>
+                                <p><strong>Phone:</strong> ${phone}</p>
+                              `,
+                        };
+
+                        try {
+                          const response = await fetch(
+                            `${env.API_BASE}/send-email`,
+                            {
+                              method: "POST",
+                              headers: { "Content-Type": "application/json" },
+                              body: JSON.stringify(formData),
+                            }
+                          );
+
+                          const result = await response.json();
+
+                          if (response.ok) {
+                            responseDiv.textContent =
+                              "Your request has been sent successfully!";
+                            responseDiv.style.color = "green";
+                            form.reset();
+                            const currentURL = window.location.href.replace(
+                              /\/$/,
+                              ""
+                            );
+                            window.location.href = currentURL + "/thank-you";
+                          } else {
+                            responseDiv.textContent =
+                              "Failed to send request: " +
+                              (result.error || "Unknown error");
+                            responseDiv.style.color = "red";
+                          }
+                        } catch (error) {
+                          console.error("Error sending request:", error);
+                          responseDiv.textContent =
+                            "Something went wrong. Please try again later.";
+                          responseDiv.style.color = "red";
+                        } finally {
+                          submitButton.disabled = false;
+                          submitButton.value = "Book a time with us";
+                        }
+                      });
+                    });
+                  </script>
                   <script>
                     document.addEventListener('wpcf7mailsent', function(event) {
                       if (event.detail.contactFormId == ) {
-                        const currentURL = window.location.href.replace(/\/$/, '');
-                        window.location.href = currentURL + '/thank-you';
+
                       }
                     }, false);
                   </script>
@@ -1232,7 +1349,7 @@
                         /></a>
                       </div>
                       <p>
-                        <a href="mailto:jj@luther.tech">jj@luther.tech</a>
+                        <a href="mailto:jj@luthertech.com">jj@luthertech.com</a>
                       </p>
                     </div>
 
@@ -1272,7 +1389,7 @@
                         </svg>
                       </a> -->
                       <a
-                        href="https://www.instagram.com/teamhyper/"
+                        href="https://www.instagram.com/luthertech/"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -1291,7 +1408,7 @@
                         </svg>
                       </a>
                       <a
-                        href="https://www.linkedin.com/company/hyperhq/"
+                        href="https://www.linkedin.com/company/luthertech/"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -1310,7 +1427,7 @@
                         </svg>
                       </a>
                       <a
-                        href="https://www.youtube.com/@wearehyper"
+                        href="https://www.youtube.com/@luthertech"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -1363,13 +1480,12 @@
                       <h4>Resources</h4>
                       <ul>
                         <li>
-                          <a href="../insights/index.html"
-                            >Insights from our team</a
-                          >
+                          <a>Insights from our team</a>
                         </li>
                         <li>
-                          <a href="https://apollo.hyperhq.com/c/weekly-events"
-                            >Free events for clinic owners</a
+                          <a
+                            href="https://chat.whatsapp.com/I8nvtuJLHDGFgyOQttKoEW?mode=ems_copy_c"
+                            >Join our WhatsApp Community</a
                           >
                         </li>
                       </ul>
