@@ -941,6 +941,7 @@
           </div>
         </div>
       </header>
+
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <section class="section calendly-section transition-top">
@@ -1218,7 +1219,7 @@
           </script>
 
           <footer>
-            <div class="footer-outer">
+            <div id="footerOuter" class="footer-outer">
               <div class="footer-container">
                 <div class="footer-main">
                   <div class="footer-left">
@@ -1446,6 +1447,16 @@
               </div>
             </div>
           </footer>
+
+          <script>
+            (function () {
+              if (window.innerWidth > 768) {
+                // Desktop only
+                document.getElementById("footerOuter").style.marginTop =
+                  "100px";
+              }
+            })();
+          </script>
         </div>
       </div>
 
