@@ -1084,11 +1084,7 @@
 
                   <div class="website">
                     <p class="label">Website</p>
-                    <a
-                      class="value"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
+                    <a class="value" target="_blank" rel="noopener noreferrer">
                       orla.co.uk
                     </a>
                   </div>
@@ -1480,25 +1476,46 @@
             function validateField(key) {
               const field = fields[key];
               const value = field.input.value.trim();
-              const isValid = field.validate(value);
+              let isValid = false;
+
+              if (key === "email") {
+                if (!value) {
+                  // Show "required" error, hide "format" error
+                  field.errors[0].style.display = "block"; // required
+                  field.errors[1].style.display = "none"; // format
+                } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+                  // Show "format" error only
+                  field.errors[0].style.display = "none"; // required
+                  field.errors[1].style.display = "block"; // format
+                } else {
+                  // Valid email
+                  field.errors[0].style.display = "none";
+                  field.errors[1].style.display = "none";
+                  isValid = true;
+                }
+              } else if (key === "phone_number") {
+                if (!value) {
+                  field.errors[0].style.display = "block"; // required
+                  field.errors[1].style.display = "none"; // format
+                } else if (!/^[0-9+\-\s]{8,15}$/.test(value)) {
+                  field.errors[0].style.display = "none";
+                  field.errors[1].style.display = "block";
+                } else {
+                  field.errors[0].style.display = "none";
+                  field.errors[1].style.display = "none";
+                  isValid = true;
+                }
+              } else {
+                // For name field (only required check)
+                if (!value) {
+                  field.errors[0].style.display = "block";
+                } else {
+                  field.errors[0].style.display = "none";
+                  isValid = true;
+                }
+              }
 
               field.item.classList.toggle("input-error", !isValid);
-              field.errors.forEach((errorEl, i) => {
-                if (key === "email" && i === 1) {
-                  errorEl.style.display = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(
-                    value
-                  )
-                    ? "none"
-                    : "block";
-                } else if (key === "phone_number" && i === 1) {
-                  errorEl.style.display = /^[0-9+\-\s]{8,15}$/.test(value)
-                    ? "none"
-                    : "block";
-                } else {
-                  errorEl.style.display = value ? "none" : "block";
-                }
-              });
-
               return isValid;
             }
 
