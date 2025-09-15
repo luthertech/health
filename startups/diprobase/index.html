@@ -1445,6 +1445,8 @@
             const submitBtn = document.getElementById("submit_button");
             const formMessage = document.getElementById("form_message");
 
+            let validationActivated = false; // flag
+
             const fields = {
               full_name: {
                 input: nameInput,
@@ -1481,23 +1483,20 @@
 
               if (key === "email") {
                 if (!value) {
-                  // Show "required" error, hide "format" error
                   field.errors[0].style.display = "block"; // required
                   field.errors[1].style.display = "none"; // format
                 } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
-                  // Show "format" error only
-                  field.errors[0].style.display = "none"; // required
-                  field.errors[1].style.display = "block"; // format
+                  field.errors[0].style.display = "none";
+                  field.errors[1].style.display = "block";
                 } else {
-                  // Valid email
                   field.errors[0].style.display = "none";
                   field.errors[1].style.display = "none";
                   isValid = true;
                 }
               } else if (key === "phone_number") {
                 if (!value) {
-                  field.errors[0].style.display = "block"; // required
-                  field.errors[1].style.display = "none"; // format
+                  field.errors[0].style.display = "block";
+                  field.errors[1].style.display = "none";
                 } else if (!/^[0-9+\-\s]{8,15}$/.test(value)) {
                   field.errors[0].style.display = "none";
                   field.errors[1].style.display = "block";
@@ -1507,7 +1506,6 @@
                   isValid = true;
                 }
               } else {
-                // For name field (only required check)
                 if (!value) {
                   field.errors[0].style.display = "block";
                 } else {
@@ -1520,10 +1518,13 @@
               return isValid;
             }
 
+            // Attach input listeners, but only validate after first click
             Object.keys(fields).forEach((key) => {
-              fields[key].input.addEventListener("input", () =>
-                validateField(key)
-              );
+              fields[key].input.addEventListener("input", () => {
+                if (validationActivated) {
+                  validateField(key);
+                }
+              });
             });
 
             const env =
@@ -1532,6 +1533,8 @@
                 : window.APP_CONFIG.PRODUCTION;
 
             submitBtn.addEventListener("click", async () => {
+              validationActivated = true; // enable live validation from now
+
               const isNameValid = validateField("full_name");
               const isEmailValid = validateField("email");
               const isPhoneValid = validateField("phone_number");
@@ -1565,6 +1568,7 @@
                   nameInput.value = "";
                   emailInput.value = "";
                   phoneInput.value = "";
+                  validationActivated = false; // reset after success
                 } else {
                   formMessage.textContent =
                     "Failed to send request: " +

@@ -629,63 +629,27 @@
                   data-utm-medium="" data-utm-content="">
 
                   <div class="wpcf7 no-js" id="wpcf7-f145-o1" lang="en-US" dir="ltr" data-wpcf7-id="145">
-                    <div class="screen-reader-response">
+                    <!-- <div class="screen-reader-response">
                       <p role="status" aria-live="polite" aria-atomic="true"></p>
                       <ul></ul>
-                    </div>
-                    <form action="https://hyperhq.com/start/#wpcf7-f145-o1" method="post" class="wpcf7-form init"
-                      aria-label="Contact form" novalidate="novalidate" data-status="init">
-                      <div style="display: none;">
-                        <input type="hidden" name="_wpcf7" value="145" />
-                        <input type="hidden" name="_wpcf7_version" value="6.0.5" />
-                        <input type="hidden" name="_wpcf7_locale" value="en_US" />
-                        <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f145-o1" />
-                        <input type="hidden" name="_wpcf7_container_post" value="0" />
-                        <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
-                      </div>
-                      <p><span class="wpcf7-form-control-wrap" data-name="first-name"><input size="40" maxlength="400"
-                            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" autocomplete="given-name"
-                            aria-required="true" aria-invalid="false" placeholder="First name" value="" type="text"
-                            name="first-name" /></span>
-                      </p>
-                      <p><span class="wpcf7-form-control-wrap" data-name="last-name"><input size="40" maxlength="400"
-                            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" autocomplete="family-name"
-                            aria-required="true" aria-invalid="false" placeholder="Last name" value="" type="text"
-                            name="last-name" /></span>
-                      </p>
-                      <p><span class="wpcf7-form-control-wrap" data-name="your-email"><input size="40" maxlength="400"
-                            class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email"
-                            autocomplete="email" aria-required="true" aria-invalid="false" placeholder="Email" value=""
-                            type="email" name="your-email" /></span>
-                      </p>
-                      <p><span class="wpcf7-form-control-wrap" data-name="your-phone"><input size="40" maxlength="400"
-                            class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel"
-                            autocomplete="tel" aria-required="true" aria-invalid="false" placeholder="Phone number"
-                            value="" type="tel" name="your-phone" /></span>
-                      </p>
-                      <div class="hidden">
-                        <p><span class="wpcf7-form-control-wrap" data-name="agent"><input size="40" maxlength="400"
-                              class="wpcf7-form-control wpcf7-text field-agent" aria-invalid="false" value=""
-                              type="text" name="agent" /></span>
-                        </p>
-                        <p><span class="wpcf7-form-control-wrap" data-name="utm_source"><input size="40" maxlength="400"
-                              class="wpcf7-form-control wpcf7-text field-utm_source" aria-invalid="false" value=""
-                              type="text" name="utm_source" /></span>
-                        </p>
-                        <p><span class="wpcf7-form-control-wrap" data-name="utm_campaign"><input size="40"
-                              maxlength="400" class="wpcf7-form-control wpcf7-text field-utm_campaign"
-                              aria-invalid="false" value="" type="text" name="utm_campaign" /></span>
-                        </p>
-                        <p><span class="wpcf7-form-control-wrap" data-name="utm_medium"><input size="40" maxlength="400"
-                              class="wpcf7-form-control wpcf7-text field-utm_medium" aria-invalid="false" value=""
-                              type="text" name="utm_medium" /></span>
-                        </p>
-                        <p><span class="wpcf7-form-control-wrap" data-name="utm_content"><input size="40"
-                              maxlength="400" class="wpcf7-form-control wpcf7-text field-utm_content"
-                              aria-invalid="false" value="" type="text" name="utm_content" /></span>
-                        </p>
-                      </div>
-                      <div class="btn-form-submit">
+                    </div> -->
+                  <form method="post" class="wpcf7-form init" aria-label="Contact form"
+      novalidate="novalidate" data-status="init">
+
+  <div>
+    <input type="text" name="first-name" placeholder="First Name" />
+  </div>
+  <div>
+    <input type="text" name="last-name" placeholder="Last Name" />
+  </div>
+  <div>
+    <input type="text" name="your-email" placeholder="Your Email" />
+  </div>
+  <div>
+    <input type="text" name="your-phone" placeholder="Your Phone" />
+  </div>
+
+   <div class="btn-form-submit">
                         <p><input class="wpcf7-form-control wpcf7-submit has-spinner" style="
                       background-color: #6ce057;
                       color: black;
@@ -702,71 +666,135 @@
                     " type="submit" value="Book a time with us" />
                         </p>
                       </div>
-                      <div class="wpcf7-response-output" aria-hidden="true"></div>
-                    </form>
+</form>
+
                   </div>
 
                   <script src="../config.js"></script>
 
 
-                  <script>
-                    document.addEventListener('DOMContentLoaded', function () {
-                      const formWrapper = document.querySelector('.form-container [data-wpcf7-id]');
-                      if (!formWrapper) return;
-                      const form = formWrapper.querySelector('form');
-                      if (!form) return;
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const formWrapper = document.querySelector('.form-container [data-wpcf7-id]');
+  if (!formWrapper) return;
+  const form = formWrapper.querySelector('form');
+  if (!form) return;
 
-                      form.addEventListener('submit', async function (event) {
-                        event.preventDefault();
+  // Create error message elements under each field dynamically
+  function showError(input, message) {
+    let errorEl = input.parentNode.querySelector('.custom-error');
+    if (!errorEl) {
+      errorEl = document.createElement('small');
+      errorEl.classList.add('custom-error');
+      errorEl.style.color = 'red';
+      errorEl.style.display = 'block';
+      input.parentNode.appendChild(errorEl);
+    }
+    errorEl.textContent = message;
+  }
 
-                        const firstName = form.querySelector('[name="first-name"]').value.trim();
-                        const lastName = form.querySelector('[name="last-name"]').value.trim();
-                        const email = form.querySelector('[name="your-email"]').value.trim();
-                        const phone = form.querySelector('[name="your-phone"]').value.trim();
-                        const agent = form.querySelector('[name="agent"]')?.value || '';
+  function clearError(input) {
+    const errorEl = input.parentNode.querySelector('.custom-error');
+    if (errorEl) errorEl.remove();
+  }
 
-                        const fullName = `${firstName} ${lastName}`.trim();
+  function validateField(input, rules) {
+    const value = input.value.trim();
+    if (rules.required && !value) {
+      showError(input, `${input.placeholder} is required`);
+      return false;
+    }
+    if (rules.type === 'email') {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (value && !emailRegex.test(value)) {
+        showError(input, 'Enter a valid email address');
+        return false;
+      }
+    }
+    if (rules.type === 'tel') {
+      const phoneRegex = /^[0-9+\-\s]{8,15}$/;
+      if (value && !phoneRegex.test(value)) {
+        showError(input, 'Enter a valid phone number');
+        return false;
+      }
+    }
+    clearError(input);
+    return true;
+  }
 
-                        const env = window.APP_CONFIG.ENV === "staging"
-                          ? window.APP_CONFIG.STAGING
-                          : window.APP_CONFIG.PRODUCTION;
+  // Add real-time validation (input + blur events)
+  function attachValidation(input, rules) {
+    input.addEventListener('input', () => validateField(input, rules));
+    input.addEventListener('blur', () => validateField(input, rules));
+  }
 
+  const firstNameInput = form.querySelector('[name="first-name"]');
+  const lastNameInput = form.querySelector('[name="last-name"]');
+  const emailInput = form.querySelector('[name="your-email"]');
+  const phoneInput = form.querySelector('[name="your-phone"]');
 
-                        const emailPayload = {
-                          to: 'jj@luther.tech',
-                          subject: 'New Meeting Booking Request',
-                          html: `
+  attachValidation(firstNameInput, { required: true });
+  attachValidation(lastNameInput, { required: true });
+  attachValidation(emailInput, { required: true, type: 'email' });
+  attachValidation(phoneInput, { required: true, type: 'tel' });
+
+  form.addEventListener('submit', async function (event) {
+    event.preventDefault();
+
+    const agent = form.querySelector('[name="agent"]')?.value || '';
+
+    // Validate all fields before submission
+    const isFirstValid = validateField(firstNameInput, { required: true });
+    const isLastValid = validateField(lastNameInput, { required: true });
+    const isEmailValid = validateField(emailInput, { required: true, type: 'email' });
+    const isPhoneValid = validateField(phoneInput, { required: true, type: 'tel' });
+
+    if (!isFirstValid || !isLastValid || !isEmailValid || !isPhoneValid) {
+      return; // Stop submission if invalid
+    }
+
+    const fullName = `${firstNameInput.value.trim()} ${lastNameInput.value.trim()}`.trim();
+
+    const env = window.APP_CONFIG.ENV === "staging"
+      ? window.APP_CONFIG.STAGING
+      : window.APP_CONFIG.PRODUCTION;
+
+    const emailPayload = {
+      to: 'jj@luther.tech',
+      subject: 'New Meeting Booking Request',
+      html: `
         <h2>New Booking Request</h2>
         <p><strong>Full Name:</strong> ${fullName}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
+        <p><strong>Email:</strong> ${emailInput.value.trim()}</p>
+        <p><strong>Phone:</strong> ${phoneInput.value.trim()}</p>
       `
-                        };
+    };
 
-                        try {
-                          const response = await fetch(`${env.API_BASE}/send-email`, {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify(emailPayload)
-                          });
+    try {
+      const response = await fetch(`${env.API_BASE}/send-email`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(emailPayload)
+      });
 
-                          const result = await response.json();
+      const result = await response.json();
 
-                          if (response.ok) {
-                            const currentBaseURL = window.location.origin;
-                            const redirectURL = `${currentBaseURL}/start/book-meeting?agent=${encodeURIComponent(agent)}&fullname=${encodeURIComponent(fullName)}&email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}`;
-                            window.location.href = redirectURL;
-                          } else {
-                            alert('Failed to send booking request: ' + (result.error || 'Unknown error'));
-                          }
-                        } catch (error) {
-                          console.error('Error sending booking request:', error);
-                          alert('Something went wrong. Please try again later.');
-                        }
-                      });
-                    });
+      if (response.ok) {
+        const currentBaseURL = window.location.origin;
+        const redirectURL = `${currentBaseURL}/start/book-meeting?agent=${encodeURIComponent(agent)}&fullname=${encodeURIComponent(fullName)}&email=${encodeURIComponent(emailInput.value.trim())}&phone=${encodeURIComponent(phoneInput.value.trim())}`;
+        window.location.href = redirectURL;
+      } else {
+        alert('Failed to send booking request: ' + (result.error || 'Unknown error'));
+      }
+    } catch (error) {
+      console.error('Error sending booking request:', error);
+      alert('Something went wrong. Please try again later.');
+    }
+  });
+});
+</script>
 
-                  </script>
+
 
                 </div>
               </div>
@@ -1229,7 +1257,7 @@
                     <h4>Help</h4>
                     <ul>
                       <li>
-                        <a href="../../contact/index.html">Contact Us</a>
+                        <a href="../contact/index.html">Contact Us</a>
                       </li>
                       <li>
                         <a style="font-weight: 500" href="tel:+442080045580">+44 20 8004 5580</a>
