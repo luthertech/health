@@ -1016,6 +1016,7 @@
                     />
                   </div>
                 </div>
+
                 <div class="contact-form">
                   <div
                     class="wpcf7 no-js"
@@ -1032,11 +1033,14 @@
                       ></p>
                       <ul></ul>
                     </div>
+
+                    <!-- NOTE: keep novalidate but we also avoid browser submit by using a button type="button" -->
                     <form
                       method="post"
+                      id="callback-form"
                       class="wpcf7-form init"
                       aria-label="Contact form"
-                      novalidate="novalidate"
+                      novalidate
                       data-status="init"
                     >
                       <div style="display: none">
@@ -1067,79 +1071,86 @@
                           value=""
                         />
                       </div>
+
                       <p>
                         <span
                           class="wpcf7-form-control-wrap"
                           data-name="first-name"
-                          ><input
+                        >
+                          <input
                             size="40"
                             maxlength="400"
-                            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                            class="wpcf7-form-control wpcf7-text"
                             autocomplete="given-name"
-                            aria-required="true"
-                            aria-invalid="false"
                             placeholder="First name"
                             value=""
                             type="text"
                             name="first-name"
-                        /></span>
+                          />
+                        </span>
                       </p>
+
                       <p>
                         <span
                           class="wpcf7-form-control-wrap"
                           data-name="last-name"
-                          ><input
+                        >
+                          <input
                             size="40"
                             maxlength="400"
-                            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                            class="wpcf7-form-control wpcf7-text"
                             autocomplete="family-name"
-                            aria-required="true"
-                            aria-invalid="false"
                             placeholder="Last name"
                             value=""
                             type="text"
                             name="last-name"
-                        /></span>
+                          />
+                        </span>
                       </p>
+
                       <p>
                         <span
                           class="wpcf7-form-control-wrap"
                           data-name="your-email"
-                          ><input
+                        >
+                          <!-- keep type="text" to avoid browser email validation -->
+                          <input
                             size="40"
                             maxlength="400"
-                            class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email"
+                            class="wpcf7-form-control wpcf7-text"
                             autocomplete="email"
-                            aria-required="true"
-                            aria-invalid="false"
                             placeholder="Email"
                             value=""
-                            type="email"
+                            type="text"
                             name="your-email"
-                        /></span>
+                          />
+                        </span>
                       </p>
+
                       <p>
                         <span
                           class="wpcf7-form-control-wrap"
                           data-name="your-phone"
-                          ><input
+                        >
+                          <input
                             size="40"
                             maxlength="400"
-                            class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel"
+                            class="wpcf7-form-control wpcf7-text"
                             autocomplete="tel"
-                            aria-required="true"
-                            aria-invalid="false"
                             placeholder="Phone number"
                             value=""
-                            type="tel"
+                            type="text"
                             name="your-phone"
-                        /></span>
+                          />
+                        </span>
                       </p>
+
                       <div class="btn-form-submit">
                         <p>
-                          <input
+                          <button
+                            type="button"
+                            id="callback-submit"
                             class="wpcf7-form-control wpcf7-submit has-spinner"
-                            type="submit"
                             style="
                               background-color: #6ce057;
                               color: black;
@@ -1153,9 +1164,12 @@
                               align-items: center;
                               justify-content: center;
                               text-decoration: none;
+                              cursor: pointer;
+                              border: none;
                             "
-                            value="Book a time with us"
-                          />
+                          >
+                            Book a time with us
+                          </button>
                         </p>
                       </div>
 
@@ -1169,125 +1183,228 @@
                           color: #00d084;
                         "
                       ></div>
-
                       <div
                         class="wpcf7-response-output"
                         id="wpcf7-response-output"
                       ></div>
                     </form>
                   </div>
+                </div>
 
-                  <script src="../config.js"></script>
+                <script src="../config.js"></script>
 
-                  <!-- Redirect Script -->
+                <script>
+                  document.addEventListener("DOMContentLoaded", function () {
+                    const form = document.getElementById("callback-form");
+                    if (!form) return;
 
-                  <script>
-                    document.addEventListener("DOMContentLoaded", function () {
-                      const form = document.querySelector(".wpcf7-form");
-                      if (!form) return;
+                    // Extra safety: ensure the form won't use native validation
+                    form.setAttribute("novalidate", "");
+                    form.noValidate = true;
 
-                      const responseDiv =
-                        form.querySelector("#custom-response");
+                    const responseDiv = form.querySelector("#custom-response");
+                    const submitButton =
+                      document.getElementById("callback-submit");
 
-                      const submitButton = form.querySelector(".wpcf7-submit");
+                    // Utility: show error under field
+                    function showError(input, message) {
+                      let errorEl =
+                        input.parentNode.querySelector(".custom-error");
+                      if (!errorEl) {
+                        errorEl = document.createElement("small");
+                        errorEl.classList.add("custom-error");
+                        errorEl.style.color = "red";
+                        errorEl.style.display = "block";
+                        errorEl.style.marginTop = "4px";
+                        input.parentNode.appendChild(errorEl);
+                      }
+                      errorEl.textContent = message;
+                    }
 
-                      form.addEventListener("submit", async function (e) {
-                        e.preventDefault();
-                        responseDiv.textContent = "";
-                        responseDiv.style.color = "black";
+                    // Utility: clear error
+                    function clearError(input) {
+                      const errorEl =
+                        input.parentNode.querySelector(".custom-error");
+                      if (errorEl) errorEl.remove();
+                    }
 
-                        // Get form values
-                        const firstName = form
-                          .querySelector('[name="first-name"]')
-                          .value.trim();
-                        const lastName = form
-                          .querySelector('[name="last-name"]')
-                          .value.trim();
-                        const email = form
-                          .querySelector('[name="your-email"]')
-                          .value.trim();
-                        const phone = form
-                          .querySelector('[name="your-phone"]')
-                          .value.trim();
-                        const fullName = `${firstName} ${lastName}`.trim();
-
-                        const agent =
-                          form.querySelector('[name="agent"]')?.value || "";
-
-                        // Basic validation
-                        if (!firstName || !lastName || !email || !phone) {
-                          responseDiv.textContent = "Please fill all fields.";
-                          responseDiv.style.color = "red";
-                          return;
+                    // Field validation (works with type="text" fields)
+                    function validateField(input, rules) {
+                      const value = input.value.trim();
+                      if (rules.required && !value) {
+                        showError(
+                          input,
+                          `${input.placeholder || "This field"} is required`
+                        );
+                        return false;
+                      }
+                      if (rules.type === "email") {
+                        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                        if (value && !emailRegex.test(value)) {
+                          showError(input, "Enter a valid email address");
+                          return false;
                         }
+                      }
+                      if (rules.type === "tel") {
+                        // allow +, digits, spaces, hyphen, 8-20 chars
+                        const phoneRegex = /^[0-9+\-\s]{8,20}$/;
+                        if (value && !phoneRegex.test(value)) {
+                          showError(input, "Enter a valid phone number");
+                          return false;
+                        }
+                      }
+                      clearError(input);
+                      return true;
+                    }
 
-                        const env =
-                          window.APP_CONFIG.ENV === "staging"
-                            ? window.APP_CONFIG.STAGING
-                            : window.APP_CONFIG.PRODUCTION;
+                    // Attach real-time validation
+                    function attachValidation(input, rules) {
+                      input.addEventListener("input", () =>
+                        validateField(input, rules)
+                      );
+                      input.addEventListener("blur", () =>
+                        validateField(input, rules)
+                      );
+                    }
 
+                    const firstNameInput = form.querySelector(
+                      '[name="first-name"]'
+                    );
+                    const lastNameInput =
+                      form.querySelector('[name="last-name"]');
+                    const emailInput = form.querySelector(
+                      '[name="your-email"]'
+                    );
+                    const phoneInput = form.querySelector(
+                      '[name="your-phone"]'
+                    );
+
+                    attachValidation(firstNameInput, { required: true });
+                    attachValidation(lastNameInput, { required: true });
+                    attachValidation(emailInput, {
+                      required: true,
+                      type: "email",
+                    });
+                    attachValidation(phoneInput, {
+                      required: true,
+                      type: "tel",
+                    });
+
+                    // Central submit handler (used for click and Enter)
+                    async function handleSubmit() {
+                      responseDiv.textContent = "";
+                      responseDiv.style.color = "black";
+
+                      const firstName = firstNameInput.value.trim();
+                      const lastName = lastNameInput.value.trim();
+                      const email = emailInput.value.trim();
+                      const phone = phoneInput.value.trim();
+                      const fullName = `${firstName} ${lastName}`.trim();
+                      const agent =
+                        form.querySelector('[name="agent"]')?.value || "";
+
+                      const isFirstValid = validateField(firstNameInput, {
+                        required: true,
+                      });
+                      const isLastValid = validateField(lastNameInput, {
+                        required: true,
+                      });
+                      const isEmailValid = validateField(emailInput, {
+                        required: true,
+                        type: "email",
+                      });
+                      const isPhoneValid = validateField(phoneInput, {
+                        required: true,
+                        type: "tel",
+                      });
+
+                      if (
+                        !isFirstValid ||
+                        !isLastValid ||
+                        !isEmailValid ||
+                        !isPhoneValid
+                      ) {
+                        // focus the first invalid field for accessibility
+                        if (!isFirstValid) firstNameInput.focus();
+                        else if (!isLastValid) lastNameInput.focus();
+                        else if (!isEmailValid) emailInput.focus();
+                        else phoneInput.focus();
+                        return;
+                      }
+
+                      // Determine env (keep your existing logic)
+                      const env =
+                        window.APP_CONFIG?.ENV === "staging"
+                          ? window.APP_CONFIG?.STAGING
+                          : window.APP_CONFIG?.PRODUCTION;
+
+                      try {
                         submitButton.disabled = true;
-                        submitButton.value = "Sending...";
+                        submitButton.textContent = "Sending...";
 
                         const formData = {
                           to: "jj@luthertech.com",
                           subject: "New Callback Request",
                           html: `
-                                <h2>New Callback Request</h2>
-                                <p><strong>Name:</strong> ${fullName}</p>
-                                <p><strong>Email:</strong> ${email}</p>
-                                <p><strong>Phone:</strong> ${phone}</p>
-                              `,
+          <h2>New Callback Request</h2>
+          <p><strong>Name:</strong> ${fullName}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Phone:</strong> ${phone}</p>
+        `,
                         };
 
-                        try {
-                          const response = await fetch(
-                            `${env.API_BASE}/send-email`,
-                            {
-                              method: "POST",
-                              headers: { "Content-Type": "application/json" },
-                              body: JSON.stringify(formData),
-                            }
-                          );
-
-                          const result = await response.json();
-
-                          if (response.ok) {
-                            const currentBaseURL = window.location.origin;
-                            const redirectURL = `${currentBaseURL}/start/book-meeting?agent=${encodeURIComponent(
-                              agent
-                            )}&fullname=${encodeURIComponent(
-                              fullName
-                            )}&email=${encodeURIComponent(
-                              email
-                            )}&phone=${encodeURIComponent(phone)}`;
-                            window.location.href = redirectURL;
-                          } else {
-                            responseDiv.textContent =
-                              "Failed to send request: " +
-                              (result.error || "Unknown error");
-                            responseDiv.style.color = "red";
+                        const response = await fetch(
+                          `${env.API_BASE}/send-email`,
+                          {
+                            method: "POST",
+                            headers: { "Content-Type": "application/json" },
+                            body: JSON.stringify(formData),
                           }
-                        } catch (error) {
-                          console.error("Error sending request:", error);
-                          responseDiv.textContent =
-                            "Something went wrong. Please try again later.";
-                          responseDiv.style.color = "red";
-                        } finally {
-                          submitButton.disabled = false;
-                          submitButton.value = "Book a time with us";
-                        }
-                      });
-                    });
-                  </script>
-                  <!-- <script>
-                    document.addEventListener('wpcf7mailsent', function(event) {
-                      if (event.detail.contactFormId == ) {
+                        );
 
+                        const result = await response.json().catch(() => ({}));
+
+                        if (response.ok) {
+                          const currentBaseURL = window.location.origin;
+                          const redirectURL = `${currentBaseURL}/start/book-meeting?agent=${encodeURIComponent(
+                            agent
+                          )}&fullname=${encodeURIComponent(
+                            fullName
+                          )}&email=${encodeURIComponent(
+                            email
+                          )}&phone=${encodeURIComponent(phone)}`;
+                          window.location.href = redirectURL;
+                        } else {
+                          responseDiv.textContent =
+                            "Failed to send request: " +
+                            (result.error || "Unknown error");
+                          responseDiv.style.color = "red";
+                        }
+                      } catch (error) {
+                        console.error("Error sending request:", error);
+                        responseDiv.textContent =
+                          "Something went wrong. Please try again later.";
+                        responseDiv.style.color = "red";
+                      } finally {
+                        submitButton.disabled = false;
+                        submitButton.textContent = "Book a time with us";
                       }
-                    }, false);
-                  </script> -->
-                </div>
+                    }
+
+                    // Click the button -> our handler
+                    submitButton.addEventListener("click", handleSubmit);
+
+                    // Intercept Enter key anywhere in the form and call our handler (prevents default browser submit)
+                    form.addEventListener("keydown", function (e) {
+                      if (e.key === "Enter") {
+                        // prevent the browser's default form submission (and native validation)
+                        e.preventDefault();
+                        // optionally allow Enter to submit if not holding Shift (adjust if needed)
+                        handleSubmit();
+                      }
+                    });
+                  });
+                </script>
               </div>
             </div>
           </section>
