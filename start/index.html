@@ -722,35 +722,38 @@ document.addEventListener('DOMContentLoaded', function () {
     return true;
   }
 
-  // Add real-time validation (input + blur events)
-  function attachValidation(input, rules) {
-    input.addEventListener('input', () => validateField(input, rules));
-    input.addEventListener('blur', () => validateField(input, rules));
-  }
+ 
+
+  function attachClearOnBlur(input, rules) {
+  input.addEventListener('blur', () => {
+    validateField(input, rules); 
+  });
+}
 
   const firstNameInput = form.querySelector('[name="first-name"]');
   const lastNameInput = form.querySelector('[name="last-name"]');
   const emailInput = form.querySelector('[name="your-email"]');
   const phoneInput = form.querySelector('[name="your-phone"]');
 
-  attachValidation(firstNameInput, { required: true });
-  attachValidation(lastNameInput, { required: true });
-  attachValidation(emailInput, { required: true, type: 'email' });
-  attachValidation(phoneInput, { required: true, type: 'tel' });
+attachClearOnBlur(firstNameInput, { required: true });
+attachClearOnBlur(lastNameInput, { required: true });
+attachClearOnBlur(emailInput, { required: true, type: 'email' });
+attachClearOnBlur(phoneInput, { required: true, type: 'tel' });
+
+
 
   form.addEventListener('submit', async function (event) {
     event.preventDefault();
 
     const agent = form.querySelector('[name="agent"]')?.value || '';
 
-    // Validate all fields before submission
     const isFirstValid = validateField(firstNameInput, { required: true });
     const isLastValid = validateField(lastNameInput, { required: true });
     const isEmailValid = validateField(emailInput, { required: true, type: 'email' });
     const isPhoneValid = validateField(phoneInput, { required: true, type: 'tel' });
 
     if (!isFirstValid || !isLastValid || !isEmailValid || !isPhoneValid) {
-      return; // Stop submission if invalid
+      return; 
     }
 
     const fullName = `${firstNameInput.value.trim()} ${lastNameInput.value.trim()}`.trim();
