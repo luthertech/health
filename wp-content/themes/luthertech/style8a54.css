@@ -1,5 +1,5 @@
 /*!
-Theme Name: hyperhq
+Theme Name: luthertech
 Theme URI: http://underscores.me/
 Author: Underscores.me
 Author URI: http://underscores.me/
@@ -9,29 +9,29 @@ Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
 License URI: LICENSE
-Text Domain: hyperhq
+Text Domain: luthertech
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
 
 /* Mobile breadcrumbs */
 
-.submit-button{
-    background-color: #6CE057 !important;
-    color: #152E40 !important;
+.submit-button {
+  background-color: #6ce057 !important;
+  color: #152e40 !important;
 }
 .startup-breadcrumbs-container-mobile:hover svg .rect {
   fill: black; /* changes the orange circle background to black */
 }
 
-.ytp-impression-link-content{
-    display: none !important;
+.ytp-impression-link-content {
+  display: none !important;
 }
 
 @media screen and (max-width: 768px) {
-    .startup-breadcrumbs-container-mobile{
-        width: 350px !important;
-    }
-    .startup-breadcrumbs-container-mobile span{
-        font-size: 12px !important;
-    }
+  .startup-breadcrumbs-container-mobile {
+    width: 350px !important;
+  }
+  .startup-breadcrumbs-container-mobile span {
+    font-size: 12px !important;
+  }
 }
