@@ -747,34 +747,18 @@
     <!-- Google Analytics snippet added by Site Kit -->
     <!-- Google Ads snippet added by Site Kit -->
     <script
-      src="https://www.googletagmanager.com/gtag/js?id=G-BS3N82JBQ0"
-      id="google_gtagjs-js"
       async
+      src="https://www.googletagmanager.com/gtag/js?id=G-L9TJKYR8EX"
     ></script>
-    <script id="google_gtagjs-js-after">
+    <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
       }
-      gtag("set", "linker", { domains: ["luthertech.com"] });
       gtag("js", new Date());
-      gtag("set", "developer_id.dZTNiMT", true);
-      gtag("config", "G-BS3N82JBQ0", { googlesitekit_post_type: "page" });
-      gtag("config", "AW-10901392232");
-      window._googlesitekit = window._googlesitekit || {};
-      window._googlesitekit.throttledEvents = [];
-      window._googlesitekit.gtagEvent = (name, data) => {
-        var key = JSON.stringify({ name, data });
-        if (!!window._googlesitekit.throttledEvents[key]) {
-          return;
-        }
-        window._googlesitekit.throttledEvents[key] = true;
-        setTimeout(() => {
-          delete window._googlesitekit.throttledEvents[key];
-        }, 5);
-        gtag("event", name, { ...data, event_source: "site-kit" });
-      };
+      gtag("config", "G-L9TJKYR8EX");
     </script>
+
     <link rel="https://api.w.org/" href="../wp-json/index.html" />
     <link
       rel="alternate"
